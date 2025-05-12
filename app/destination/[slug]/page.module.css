@@ -57,10 +57,25 @@
   background-color: #fff;
 }
 
+/* Default: Mobile first - 1 card */
 .cardGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(1, 1fr);
   gap: 20px;
-  max-width: 1200px;
+  width: 95vw;
   margin: 0 auto;
+}
+
+/* Tablet (optional: 2 cards) */
+@media (min-width: 640px) {
+  .cardGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Laptop: 4 cards */
+@media (min-width: 1024px) {
+  .cardGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

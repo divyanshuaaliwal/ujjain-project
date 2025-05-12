@@ -1,24 +1,39 @@
 'use client';
 
 import React from "react";
-
-import Image from 'next/image';
 import { Clock, MapPin, Check, Star } from "lucide-react";
 import './Packages.css';
+import Image from "next/image";
+import { useParams } from "next/navigation";
+
 
 const Package = ({ PackageList = [] }) => {
+
+    const { slug } = useParams();
+    
+    function capitalizeWithHyphens(str) {
+        return str
+            .split('-')
+            .map(part => part.charAt(0).toUpperCase() + part.slice(1).toLowerCase())
+            .join('-');
+    }
+
     return (
+
+            
         <div className="package-section">
-            <div className="package-container">
-                <div className="package-header">
-                    <h2 className="package-title">
-                        Mahakaleshwar Tour Packages
-                    </h2>
-                    <p className="package-subtitle">
-                        Curated spiritual journeys for a complete Ujjain experience
-                    </p>
-                    <div className="title-line"></div>
-                </div>
+            <div>
+               <div className="package-container">
+    <h2 className="package-title">
+        {capitalizeWithHyphens(slug)} Tour Packages
+    </h2>
+    <p className="package-subtitle">
+        Curated spiritual journeys for a complete Ujjain experience
+    </p>
+    <div className="title-line"></div>
+    <div className="title-line secondary-line"></div> {/* second line */}
+</div>
+
 
                 <div className="package-grid">
                     {

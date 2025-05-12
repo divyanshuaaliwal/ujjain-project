@@ -19,7 +19,6 @@ const TemplePage = () => {
     const HotelList = hotels.filter(
         (item) => item.location?.toLowerCase() === slug.toLowerCase()
     );
-    // console.log(HotelList);
     
     const PackagesList = packages.filter(
         (item) => item.location?.toLowerCase() === slug.toLowerCase()

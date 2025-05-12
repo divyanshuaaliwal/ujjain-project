@@ -1,0 +1,90 @@
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.mediaWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.media {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: white;
+    z-index: 10;
+    animation: slideUp 1s ease forwards;
+}
+
+.animatedText {
+    font-size: 3rem;
+    font-weight: bold;
+    animation: fadeText 2s ease-in-out;
+}
+
+.arrowLeft, .arrowRight {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: background 0.3s;
+}
+
+.arrowLeft:hover, .arrowRight:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.arrowLeft {
+    left: 20px;
+}
+
+.arrowRight {
+    right: 20px;
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes fadeText {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0.6;
+    }
+    to {
+        opacity: 1;
+    }
+}

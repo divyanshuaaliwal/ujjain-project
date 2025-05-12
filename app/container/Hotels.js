@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { useParams } from "next/navigation";
 import { Star, MapPin, Wifi, Coffee, Utensils, Heart } from 'lucide-react';
 import './Hotels.css';
 import Image from 'next/image';
@@ -15,38 +16,32 @@ function HotelCard({
     offerPercent = 15,
     image = "/placeholder.jpg"
 }) {
-    // Convert rating to an array for stars
     const fullStars = Math.floor(rating);
     const hasHalfStar = rating % 1 >= 0.5;
 
     return (
         <div className="hotel-card">
-            {/* Wishlist heart button */}
             <button className="wishlist-button">
                 <Heart size={18} className="heart-icon" />
             </button>
 
-            {/* Discount badge */}
             {offerPercent > 0 && (
                 <div className="discount-badge">
                     {offerPercent}% OFF
                 </div>
             )}
 
-            {/* Image container */}
             <div className="hotel-image-container">
                 <Image
                     src={image}
                     alt={name}
                     fill
                     className="hotel-image"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
                 <div className="hotel-overlay"></div>
             </div>
 
             <div className="hotel-content">
-                {/* Hotel name and rating */}
                 <div className="hotel-header">
                     <h3 className="hotel-name">{name}</h3>
                     <div className="rating-container">
@@ -69,13 +64,11 @@ function HotelCard({
                     </div>
                 </div>
 
-                {/* Distance with icon */}
                 <div className="hotel-distance">
                     <MapPin size={18} className="pin-icon" />
                     <span>{distance} from Mahakaleshwar Temple</span>
                 </div>
 
-                {/* Amenities */}
                 <div className="amenities-container">
                     {amenities.includes("Free WiFi") && (
                         <div className="amenity">
@@ -97,7 +90,6 @@ function HotelCard({
                     )}
                 </div>
 
-                {/* Price and booking */}
                 <div className="price-booking">
                     <div className="price-container">
                         <span className="price-label">Price starts from</span>
@@ -116,16 +108,21 @@ function HotelCard({
     );
 }
 
-export default function Hotels({HotelList = []}) {
+export default function Hotels({ HotelList = [] }) {
+    const { slug } = useParams();
 
-    
-    // console.log(HotelList);
-    
+    function capitalizeWithHyphens(str) {
+        return str
+            .split('-')
+            .map(part => part.charAt(0).toUpperCase() + part.slice(1).toLowerCase())
+            .join('-');
+    }
+
     return (
         <section className="hotels-section">
             <div className="container">
                 <h1 className="hotels-title">
-                    Mahakaleshwar Hotels
+                    {capitalizeWithHyphens(slug)} Hotels
                 </h1>
                 <div className="title-underline"></div>
                 <h2 className="hotels-subtitle">
@@ -133,21 +130,19 @@ export default function Hotels({HotelList = []}) {
                 </h2>
 
                 <div className="hotels-grid">
-                    {
-                        HotelList.map( (hotel, index) => (
-                            <HotelCard
-                                key={index}
-                                name={hotel.name}
-                                priceRange={hotel.priceRange}
-                                distance={hotel.distance}
-                                rating={hotel.rating}
-                                image={hotel.image}
-                                reviews={hotel.reviews || 186}
-                                amenities={hotel.amenities || ["Free WiFi", "Breakfast", "Restaurant"]}
-                                offerPercent={hotel.offerPercent || 15}
-                            />
-                        ))
-                    }
+                    {HotelList.map((hotel, index) => (
+                        <HotelCard
+                            key={index}
+                            name={hotel.name}
+                            priceRange={hotel.priceRange}
+                            distance={hotel.distance}
+                            rating={hotel.rating}
+                            image={hotel.image}
+                            reviews={hotel.reviews || 186}
+                            amenities={hotel.amenities || ["Free WiFi", "Breakfast", "Restaurant"]}
+                            offerPercent={hotel.offerPercent || 15}
+                        />
+                    ))}
                 </div>
             </div>
         </section>

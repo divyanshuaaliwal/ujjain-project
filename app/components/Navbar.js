@@ -1,15 +1,28 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
-import { Phone, Mail, ChevronDown } from "lucide-react";
+import { Phone, Mail, ChevronDown, Menu } from "lucide-react";
+import { useState, useEffect } from "react";
 import "./navbar.css";
-
-// import img1 from "../assets/ShivJee1.jpg";
-// import img2 from "../assets/Temple.jpg";
-// import img3 from "../assets/Trishul.png";
+import shivji from "../images/shiv.avif";
+import temple from "../images/temple.jpg";
+import Image from "next/image";
 
 export default function ChardhamTourUI() {
+    const [menuOpen, setMenuOpen] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+
+        handleResize(); // Initial check
+        window.addEventListener("resize", handleResize);
+
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
     const menuLinks = [
         { title: "Home", path: "/" },
         { title: "Mahakaleshwar", path: "/destination/mahakaleshwar" },
@@ -33,28 +46,31 @@ export default function ChardhamTourUI() {
                 { title: "Tour 2", link: "/tours/tour-2" }
             ]
         },
-        { title: "Ujjain Yatra", dropdown: false },
-        { title: "Temple Wise Darshan", dropdown: false },
-        { title: "Hotels Near Mandir", dropdown: false },
-        { title: "Useful Links", dropdown: false },
-        { title: "Travel Community", dropdown: false },
-        { title: "Customer Support", dropdown: false },
+        { title: "Ujjain Yatra", dropdown: false, link: "/ujjain-yatra" },
+        { title: "Temple Wise Darshan", dropdown: false, link: "/temple-wise-darshan" },
+        { title: "Hotels Near Mandir", dropdown: false, link: "/hotels-near-mandir" },
+        { title: "Useful Links", dropdown: false, link: "/useful-links" },
+        { title: "Travel Community", dropdown: false, link: "/travel-community" },
+        { title: "Customer Support", dropdown: false, link: "/support" },
     ];
 
     return (
         <div className="navbar">
-            {/* Top Menu */}
-            <div className="top-nav">
-                {
-                    menuLinks.map((item, index) => (
-                        <Link key={index} href={item.path} className="nav-link">
-                            {item.title}
-                        </Link>
-                    ))
-                }
+            {/* Hamburger for mobile */}
+            <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+                <Menu size={24} />
             </div>
 
-            {/* Logo + Contact */}
+            {/* Top navigation */}
+            <div className={`top-nav ${menuOpen ? "open" : ""}`}>
+                {menuLinks.map((item, index) => (
+                    <Link key={index} href={item.path} className="nav-link">
+                        {item.title}
+                    </Link>
+                ))}
+            </div>
+
+            {/* Logo + contact */}
             <div className="logo-section">
                 <div className="logo-left">
                     <div>
@@ -65,11 +81,12 @@ export default function ChardhamTourUI() {
                         <div className="approved-by">Approved by</div>
                         <div className="approved-text">Uttarakhand Tourism</div>
                     </div>
-                    {/* <div className="image-group">
-                        <Image src={img1} alt="img1" width={100} height={100} />
-                        <Image src={img2} alt="img2" width={100} height={100} />
-                        <Image src={img3} alt="img3" width={100} height={100} />
-                    </div> */}
+                </div>
+
+                <div className="middle-images">
+                    <Image src={shivji} alt="Shiva" width={70} height={70} />
+                    <Image src={temple} alt="Temple" width={70} height={70} />
+                    <Image src={shivji} alt="Shiva" width={70} height={70} />
                 </div>
 
                 <div className="contact-right">
@@ -86,16 +103,20 @@ export default function ChardhamTourUI() {
                 </div>
             </div>
 
-            {/* Bottom Menu with Dropdowns */}
-            <div className="bottom-nav">
+            {/* Bottom Navigation */}
+            <div className={`bottom-nav ${menuOpen ? "open" : ""}`}>
                 <ul>
                     {navMenu.map((item, index) => (
                         <li key={index} className="nav-item">
-                            <a href={item.dropdown ? "#" : item.link || "#"} className="nav-title">
+                            <a
+                                href={item.dropdown ? "#" : item.link || "#"}
+                                className="nav-title"
+                            >
                                 {item.title}
                                 {item.dropdown && <ChevronDown size={14} className="dropdown-icon" />}
                             </a>
-                            {item.dropdown && item.dropdownItems?.length > 0 && (
+                            {/* Only show dropdowns on desktop */}
+                            {item.dropdown && !isMobile && item.dropdownItems?.length > 0 && (
                                 <ul className="dropdown">
                                     {item.dropdownItems.map((subItem, subIndex) => (
                                         <li key={subIndex}>

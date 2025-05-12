@@ -1,42 +1,41 @@
 .hotels-section {
-  padding: 2.5rem 0;
-  background-color: #f8fafc; /* slate-50 */
+  background-color: #f8fafc;
 }
 
 .container {
-  width: 95vw;
-  max-width: 1400px;
+  max-width: 95vw;
+  width: 100%;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
 .hotels-title {
-  font-size: 2.5rem;
-  color: #ea580c; /* orange-600 */
+  font-size: 2.25rem;
+  color: #ea580c;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 @media (min-width: 768px) {
   .hotels-title {
-    font-size: 3rem;
+    font-size: 2.75rem;
   }
 }
 
 .title-underline {
   width: 6rem;
   height: 0.25rem;
-  background-color: #ea580c; /* orange-600 */
+  background-color: #ea580c;
   margin: 0 auto 1.5rem;
 }
 
 .hotels-subtitle {
-  font-size: 1.25rem;
-  color: #1f2937; /* gray-800 */
+  font-size: 1.125rem;
+  color: #1f2937;
   font-weight: 600;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   max-width: 48rem;
   margin-left: auto;
   margin-right: auto;
@@ -44,14 +43,15 @@
 
 @media (min-width: 768px) {
   .hotels-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
   }
 }
 
 .hotels-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0.75rem;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
 @media (min-width: 768px) {
@@ -66,23 +66,22 @@
   }
 }
 
-/* Hotel Card Styles */
 .hotel-card {
   background-color: white;
   border-radius: 0.75rem;
   overflow: hidden;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  border: 1px solid #f3f4f6; /* gray-100 */
+  border: 1px solid #f3f4f6;
   position: relative;
+  margin-bottom: 1.5rem;
 }
 
 .hotel-card:hover {
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-  transform: translateY(-2px);
+  transform: translateY(-5px);
 }
 
-/* Wishlist button */
 .wishlist-button {
   position: absolute;
   top: 0.75rem;
@@ -103,33 +102,33 @@
 }
 
 .heart-icon {
-  color: #6b7280; /* gray-500 */
+  color: #6b7280;
   transition: color 0.2s ease;
 }
 
 .wishlist-button:hover .heart-icon {
-  color: #ef4444; /* red-500 */
+  color: #ef4444;
 }
 
-/* Discount badge */
 .discount-badge {
   position: absolute;
   top: 0.75rem;
   left: 0.75rem;
-  background-color: #ef4444; /* red-500 */
+  background-color: #ef4444;
   color: white;
   font-size: 0.75rem;
   font-weight: 700;
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
   z-index: 10;
+  transform: scale(0.9);
 }
 
-/* Image container */
 .hotel-image-container {
-  height: 16rem;
+  height: 14rem;
   overflow: hidden;
   position: relative;
+  margin-bottom: 1rem;
 }
 
 .hotel-image {
@@ -155,23 +154,21 @@
   opacity: 1;
 }
 
-/* Hotel content */
 .hotel-content {
-  padding: 1.5rem;
+  padding: 1.25rem;
 }
 
-/* Hotel header */
 .hotel-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .hotel-name {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #1f2937; /* gray-800 */
+  color: #1f2937;
 }
 
 .rating-container {
@@ -186,49 +183,47 @@
 }
 
 .star-filled {
-  fill: #facc15; /* yellow-400 */
-  color: #facc15; /* yellow-400 */
+  fill: #facc15;
+  color: #facc15;
 }
 
 .star-half {
-  color: #facc15; /* yellow-400 */
+  color: #facc15;
 }
 
 .star-empty {
-  color: #d1d5db; /* gray-300 */
+  color: #d1d5db;
 }
 
 .reviews {
   font-size: 0.875rem;
-  color: #4b5563; /* gray-600 */
+  color: #4b5563;
   margin-top: 0.25rem;
 }
 
-/* Hotel distance */
 .hotel-distance {
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
-  color: #374151; /* gray-700 */
+  margin-bottom: 1.25rem;
+  color: #374151;
 }
 
 .pin-icon {
-  color: #ea580c; /* orange-500 */
+  color: #ea580c;
   margin-right: 0.5rem;
 }
 
-/* Amenities */
 .amenities-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1.25rem;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .amenity {
   display: flex;
   align-items: center;
-  background-color: #f3f4f6; /* gray-100 */
+  background-color: #f3f4f6;
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
   font-size: 0.875rem;
@@ -236,21 +231,20 @@
 
 .amenity-icon {
   margin-right: 0.25rem;
-  color: #ea580c; /* orange-500 */
+  color: #ea580c;
 }
 
-/* Price and booking */
 .price-booking {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-top: 1rem;
-  border-top: 1px solid #f3f4f6; /* gray-100 */
+  border-top: 1px solid #f3f4f6;
 }
 
 .price-label {
   font-size: 0.875rem;
-  color: #6b7280; /* gray-500 */
+  color: #6b7280;
 }
 
 .price {
@@ -261,17 +255,17 @@
 .price-amount {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #ea580c; /* orange-600 */
+  color: #ea580c;
 }
 
 .price-night {
   font-size: 0.875rem;
-  color: #6b7280; /* gray-500 */
+  color: #6b7280;
   margin-left: 0.25rem;
 }
 
 .view-deal-button {
-  background-color: #ea580c; /* orange-600 */
+  background-color: #ea580c;
   color: white;
   font-weight: 500;
   padding: 0.5rem 1.5rem;
@@ -283,5 +277,5 @@
 }
 
 .view-deal-button:hover {
-  background-color: #c2410c; /* orange-700 */
+  background-color: #c2410c;
 }
