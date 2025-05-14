@@ -6,12 +6,14 @@ import { useState, useEffect } from "react";
 import "./navbar.css";
 import shivji from "../images/shiv.avif";
 import temple from "../images/temple.jpg";
+import trishul from "../images/trishul.jpg";
+import Damroo from "../images/Damroo.png";
 import Image from "next/image";
 
 export default function ChardhamTourUI() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
-
+    const [activeItem, setActiveItem] = useState(null);
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 768);
@@ -40,7 +42,7 @@ export default function ChardhamTourUI() {
     const navMenu = [
         {
             title: "Darshan Tours",
-            dropdown: true,
+            dropdown: false,
             dropdownItems: [
                 { title: "Tour 1", link: "/tours/tour-1" },
                 { title: "Tour 2", link: "/tours/tour-2" }
@@ -86,7 +88,8 @@ export default function ChardhamTourUI() {
                 <div className="middle-images">
                     <Image src={shivji} alt="Shiva" width={70} height={70} />
                     <Image src={temple} alt="Temple" width={70} height={70} />
-                    <Image src={shivji} alt="Shiva" width={70} height={70} />
+                    <Image src={trishul} alt="trishul" width={70} height={70} />
+                    <Image src={Damroo} alt="Damroo" width={70} height={70} />
                 </div>
 
                 <div className="contact-right">
@@ -98,25 +101,30 @@ export default function ChardhamTourUI() {
                     <div className="contact-item">
                         <span>Mail Us:</span>
                         <Mail size={16} />
-                        <a href="mailto:yatra@chardhamtour.in">yatra@chardhamtour.in</a>
+                        <a href="mailto:yatra@chardhamtour.in">info@mahakaleshwarguide.com</a>
                     </div>
                 </div>
             </div>
 
-            {/* Bottom Navigation */}
+                 {/* Bottom Navigation */}
             <div className={`bottom-nav ${menuOpen ? "open" : ""}`}>
                 <ul>
                     {navMenu.map((item, index) => (
-                        <li key={index} className="nav-item">
+                        <li 
+                            key={index} 
+                            className={`nav-item ${activeItem === index ? 'active' : ''}`}
+                            onClick={() => item.dropdown && toggleDropdown(index)}
+                        >
                             <a
                                 href={item.dropdown ? "#" : item.link || "#"}
                                 className="nav-title"
+                                onClick={(e) => item.dropdown && e.preventDefault()}
                             >
                                 {item.title}
                                 {item.dropdown && <ChevronDown size={14} className="dropdown-icon" />}
                             </a>
-                            {/* Only show dropdowns on desktop */}
-                            {item.dropdown && !isMobile && item.dropdownItems?.length > 0 && (
+                            {/* Show dropdowns based on context */}
+                            {item.dropdown && (isMobile ? activeItem === index : true) && item.dropdownItems?.length > 0 && (
                                 <ul className="dropdown">
                                     {item.dropdownItems.map((subItem, subIndex) => (
                                         <li key={subIndex}>

@@ -1,10 +1,15 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+
+import HeroCarousel from './components/HeroCarousel';
+import HelicopterPackages from './container/HelicopterPackages';
+import TourPackages from './container/TourPackages';
+import './globals.css';
 
 export default function Home() {
     return (
-        <div >
-
+        <div>
+            <HeroCarousel />
+            <HelicopterPackages />
+            <TourPackages />
         </div>
     );
 }

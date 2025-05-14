@@ -23,16 +23,17 @@ const Package = ({ PackageList = [] }) => {
             
         <div className="package-section">
             <div>
-               <div className="package-container">
-    <h2 className="package-title">
-        {capitalizeWithHyphens(slug)} Tour Packages
-    </h2>
-    <p className="package-subtitle">
-        Curated spiritual journeys for a complete Ujjain experience
-    </p>
-    <div className="title-line"></div>
-    <div className="title-line secondary-line"></div> {/* second line */}
-</div>
+                
+                <div className="package-container">
+                    <h2 className="package-title">
+                        {capitalizeWithHyphens(slug)} Tour Packages
+                    </h2>
+                    <div className="title-line"></div>
+                    
+                    <p className="package-subtitle">
+                        Curated spiritual journeys for a complete Ujjain experience
+                    </p>
+                </div>
 
 
                 <div className="package-grid">

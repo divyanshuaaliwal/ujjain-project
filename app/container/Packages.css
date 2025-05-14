@@ -8,30 +8,46 @@
     margin: 0 auto;
 }
 
-.package-header {
+.package-head {
     text-align: center;
     margin-bottom: 3rem;
 }
 
 .package-title {
     color: #ea580c;
-    font-size: 2.5rem;
-    font-weight: bold;
+    font-size: 2.25rem;
+   font-weight: 700;
+     text-align: center;
     margin-bottom: 0.5rem;
 }
 
+@media (min-width: 768px) {
+  .package-title {
+    font-size: 2.75rem;
+  }
+}
 .package-subtitle {
-    font-size: 1.2rem;
-    color: #374151;
-    margin-bottom: 1rem;
+  font-size: 1.125rem;
+  color: #1f2937;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2rem;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .package-subtitle {
+    font-size: 1.375rem;
+  }
 }
 
 .title-line {
-    width: 6rem;
-    height: 4px;
-    background-color: #ea580c;
-    margin: 0 auto;
-    border-radius: 2px;
+  width: 6rem;
+  height: 0.25rem;
+  background-color: #ea580c;
+  margin: 0 auto 1.5rem;
 }
 
 .package-grid {

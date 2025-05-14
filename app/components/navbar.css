@@ -92,9 +92,12 @@
 }
 
 /* Bottom Navigation */
+
+/* Bottom Navigation - IMPROVED */
 .bottom-nav {
-    background-color: #e46e0f;
-    padding: 10px 0;
+    background: linear-gradient(to right, #f17525, #e46e0f, #d45600);
+    padding: 0;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.1);
 }
 
 .bottom-nav ul {
@@ -103,11 +106,13 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .nav-item {
     position: relative;
+    margin: 0;
 }
 
 .nav-title {
@@ -116,7 +121,39 @@
     font-weight: 500;
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 15px 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    white-space: nowrap;
+}
+
+.nav-title:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.nav-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-title:hover::after {
+    width: 80%;
+}
+
+.dropdown-icon {
+    margin-left: 6px;
+    transition: transform 0.3s;
+}
+
+.nav-item:hover .dropdown-icon {
+    transform: rotate(180deg);
 }
 
 /* Dropdown */
@@ -126,32 +163,35 @@
     top: 100%;
     left: 0;
     background-color: white;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    min-width: 220px;
     z-index: 1000;
-    padding: 0;
-    border-radius: 4px;
+    padding: 8px 0;
+    border-radius: 8px;
     overflow: hidden;
+    transform-origin: top center;
 }
 
 .nav-item:hover .dropdown {
     display: block;
-    animation: fadeIn 0.2s ease-in-out;
+    animation: growDown 0.3s ease-in-out forwards;
 }
 
 .dropdown-link {
     display: block;
-    padding: 10px 16px;
+    padding: 12px 20px;
     text-decoration: none;
-    color: #333;
-    border-bottom: 1px solid #eee;
-    transition: all 0.3s ease;
+    color: #444;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    border-left: 3px solid transparent;
 }
 
 .dropdown-link:hover {
-    background-color: #f7f7f7;
+    background-color: #f8f8f8;
     color: #e46e0f;
-    padding-left: 20px;
+    border-left: 3px solid #e46e0f;
+    padding-left: 24px;
 }
 
 .dropdown li {
@@ -161,6 +201,7 @@
 .dropdown li:last-child .dropdown-link {
     border-bottom: none;
 }
+
 
 /* Hamburger for mobile */
 .hamburger {

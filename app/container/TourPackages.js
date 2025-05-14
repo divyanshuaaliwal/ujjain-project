@@ -3,7 +3,7 @@ import "./TourPackages.css";
 
 const TourPackages = () => {
   return (
-    <div className="container">
+    <div className="parent-container">
       <div className="header">
         <h1>Suggested Mahakal Tour Packages</h1>
       </div>
