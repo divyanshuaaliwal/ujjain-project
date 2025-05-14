@@ -1,6 +1,6 @@
 .package-parent {
     padding: 25px 0;
-    background: linear-gradient(to bottom, #fff1f0, #fffaf5);
+    background: var(--gradient-bg);
 
 }
 
@@ -13,7 +13,7 @@
 
 .package-title {
   font-size: 2.25rem;
-  color: #ea580c;
+  color: var(--primary-orange);
   font-weight: 700;
   text-align: center;
   margin-bottom: 0.5rem;
@@ -44,7 +44,7 @@
 .title-line {
   width: 6rem;
   height: 0.25rem;
-  background-color: #ea580c;
+  background-color: var(--primary-orange);
   margin: 0 auto 1.5rem;
 }
 
@@ -83,7 +83,7 @@
 }
 
 .featured-badge {
-    background-color: #ea580c;
+    background-color: var(--primary-orange);
 }
 
 .popular-badge {
@@ -174,7 +174,7 @@
 }
 
 .current-price {
-    color: #ea580c;
+    color: var(--primary-orange);
     font-weight: bold;
 }
 
@@ -240,7 +240,7 @@
 }
 
 .book-now-button {
-    background-color: #ea580c;
+    background-color: var(--primary-orange);
     color: white;
 }
 
@@ -250,8 +250,8 @@
 
 .view-details-button {
     background-color: white;
-    color: #ea580c;
-    border: 1px solid #ea580c;
+    color: var(--primary-orange);
+    border: 1px solid var(--primary-orange);
 }
 
 .view-details-button:hover {

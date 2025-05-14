@@ -52,6 +52,10 @@ export default function Home() {
             <h1 className={styles.heading}>
                 <span className={styles.icon}>🚁</span> Mahakaleshwar Helicopter Tour Packages
             </h1>
+             <div className={styles.TitleUnderline}></div>
+            <h2 className={styles.Subtitle}>
+                Fly closer to divinity with our Mahakal helicopter tour packages
+            </h2>
 
             <div className={styles.cardContainer}>
                 {packages.map((pkg, index) => (
@@ -65,7 +69,7 @@ export default function Home() {
                                 src={pkg.image}
                                 alt={pkg.alt}
                                 fill
-                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 className={styles.packageImage}
                                 priority={index < 2}
                             />
@@ -74,8 +78,8 @@ export default function Home() {
                         <div className={styles.cardBody}>
                             <div className={styles.cardContent}>
                                 <h3>{pkg.title}</h3>
-                                <p className={styles.detail}><span className={styles.icon}>🕒</span> {pkg.duration}</p>
-                                <p className={styles.detail}><span className={styles.icon}>📍</span> {pkg.route}</p>
+                                <p className={styles.detail}>🕒 {pkg.duration}</p>
+                                <p className={styles.detail}>📍 {pkg.route}</p>
                                 <p className={styles.price}>
                                     <strong>{pkg.price}</strong>
                                     <span className={styles.oldPrice}>{pkg.oldPrice}</span>

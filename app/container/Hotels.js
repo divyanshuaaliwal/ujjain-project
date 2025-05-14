@@ -130,19 +130,21 @@ export default function Hotels({ HotelList = [] }) {
                 </h2>
 
                 <div className="hotels-grid">
-                    {HotelList.map((hotel) => (
-                        <HotelCard
-                            key={hotel.id}
-                            name={hotel.name}
-                            priceRange={hotel.priceRange}
-                            distance={hotel.distance}
-                            rating={hotel.rating}
-                            image={hotel.image}
-                            reviews={hotel.reviews || 186}
-                            amenities={hotel.amenities || ["Free WiFi", "Breakfast", "Restaurant"]}
-                            offerPercent={hotel.offerPercent || 15}
-                        />
-                    ))}
+                    {
+                        HotelList.map((hotel) => (
+                            <HotelCard
+                                key={hotel.id}
+                                name={hotel.name}
+                                priceRange={hotel.priceRange}
+                                distance={hotel.distance}
+                                rating={hotel.rating}
+                                image={hotel.image}
+                                reviews={hotel.reviews || 186}
+                                amenities={hotel.amenities || ["Free WiFi", "Breakfast", "Restaurant"]}
+                                offerPercent={hotel.offerPercent || 15}
+                            />
+                        ))
+                    }
                 </div>
             </div>
         </section>
