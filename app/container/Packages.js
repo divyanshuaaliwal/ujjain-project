@@ -10,7 +10,7 @@ import { useParams } from "next/navigation";
 const Package = ({ PackageList = [] }) => {
 
     const { slug } = useParams();
-    
+
     function capitalizeWithHyphens(str) {
         return str
             .split('-')
@@ -20,20 +20,18 @@ const Package = ({ PackageList = [] }) => {
 
     return (
 
-            
-        <div className="package-section">
-            <div>
-                
-                <div className="package-container">
-                    <h2 className="package-title">
-                        {capitalizeWithHyphens(slug)} Tour Packages
-                    </h2>
-                    <div className="title-line"></div>
-                    
-                    <p className="package-subtitle">
-                        Curated spiritual journeys for a complete Ujjain experience
-                    </p>
-                </div>
+
+        <div className="package-parent">
+            <div className="package-container-main">
+                <h1 className="package-title">
+                    {capitalizeWithHyphens(slug)} Tour Packages
+                </h1>
+                <div className="title-line"></div>
+
+                <p className="package-subtitle">
+                    Curated spiritual journeys for a complete Ujjain experience
+                </p>
+
 
 
                 <div className="package-grid">

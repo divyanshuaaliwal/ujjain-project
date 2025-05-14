@@ -2,12 +2,14 @@
 
 .hero-section {
   overflow: hidden;
-  padding: 40px 0;
+  padding: 25px 0;
   background-color: #fff8f0;
   text-align: center;
 }
 
 .container {
+    max-width: 95vw;
+  width: 100%;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -36,7 +38,7 @@
 .subheading {
   font-size: 24px;
   color: #333;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 @media (min-width: 768px) {
@@ -45,11 +47,11 @@
   }
 }
 
-.button-wrapper {
+/* .button-wrapper {
   margin-top: 10px;
-}
+} */
 
-.plan-button {
+/* .plan-button {
   background-color: #e67e22;
   color: white;
   padding: 12px 25px;
@@ -58,11 +60,11 @@
   border-radius: 6px;
   cursor: pointer;
   transition: 0.3s ease;
-}
+} */
 
-.plan-button:hover {
+/* .plan-button:hover {
   background-color: #ca6f1e;
-}
+} */
 
 .card-section {
   background-color: #fff;

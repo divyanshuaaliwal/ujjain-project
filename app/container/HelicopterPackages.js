@@ -1,11 +1,11 @@
 // pages/index.js
-import Head from 'next/head';
+import Image from 'next/image';
+import React from 'react';
 import './HelicopterPackages.css';
 import mahakalPackage1 from '../images/mahakalPackage1.jpg';
 import mahakalPackage2 from '../images/mahakalPackage2.png';
 import mahakalPackage3 from '../images/mahakalPackage3.jpg';
 import mahakalPackage4 from '../images/mahakalPackage4.jpg';
-import Image from 'next/image';
 
 export default function Home() {
     const packages = [
@@ -16,6 +16,7 @@ export default function Home() {
             price: '₹ 55,000/-',
             oldPrice: '₹ 60,000/-',
             image: mahakalPackage1,
+            alt: 'Mahakaleshwar Temple aerial view',
         },
         {
             title: 'Ujjain & Omkareshwar Jyotirling Darshan',
@@ -24,6 +25,7 @@ export default function Home() {
             price: '₹ 85,000/-',
             oldPrice: '₹ 90,000/-',
             image: mahakalPackage2,
+            alt: 'Omkareshwar temple view',
         },
         {
             title: 'Ujjain Mahakal with Local Sightseeing',
@@ -32,6 +34,7 @@ export default function Home() {
             price: '₹ 5,999/-',
             oldPrice: '₹ 6,999/-',
             image: mahakalPackage3,
+            alt: 'Ujjain local sightseeing',
         },
         {
             title: 'Panch Jyotirling Yatra by Helicopter',
@@ -40,38 +43,54 @@ export default function Home() {
             price: '₹ 2,20,000/-',
             oldPrice: '₹ 2,30,000/-',
             image: mahakalPackage4,
+            alt: 'Panch Jyotirling aerial view',
         },
     ];
 
     return (
         <div className="parent-container">
-            <h1 className="heading">🚁 Mahakaleshwar Helicopter Tour Packages</h1>
+
+            <h1 className="heading">
+                <span className="icon">🚁</span> Mahakaleshwar Helicopter Tour Packages
+            </h1>
+            
             <div className="card-container">
-                {
-                    packages.map((pkg, index) => (
-                        <div className="card" key={index}>
+                {packages.map((pkg, index) => (
+                    <div 
+                        className="card" 
+                        key={index}
+                        style={{ animationDelay: `${index * 0.1}s` }}
+                    >
+                        <div className="image-container">
                             <Image
                                 src={pkg.image}
-                                alt={pkg.title}
-                                width={350}
-                                height={250}
+                                alt={pkg.alt}
+                                fill
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                className="package-image"
+                                priority={index < 2}
                             />
-                            <div className="card-body">
+                        </div>
+                        
+                        <div className="card-body">
+                            <div className="card-content">
                                 <h3>{pkg.title}</h3>
-                                <p><span>🕒</span> {pkg.duration}</p>
-                                <p><span>📍</span> {pkg.route}</p>
+                                <p className="detail"><span className="icon">🕒</span> {pkg.duration}</p>
+                                <p className="detail"><span className="icon">📍</span> {pkg.route}</p>
                                 <p className="price">
                                     <strong>{pkg.price}</strong>
-                                    <span className="old-price">{pkg.oldPrice}</span> per person
+                                    <span className="old-price">{pkg.oldPrice}</span> 
+                                    <span className="per-person">per person</span>
                                 </p>
-                                <div className="buttons">
-                                    <button className="read-more">Read More</button>
-                                    <button className="enquiry">Enquiry Now »</button>
-                                </div>
+                            </div>
+                            
+                            <div className="buttons">
+                                <button className="read-more">Read More</button>
+                                <button className="enquiry">Enquiry Now »</button>
                             </div>
                         </div>
-                    ))
-                }
+                    </div>
+                ))}
             </div>
         </div>
     );

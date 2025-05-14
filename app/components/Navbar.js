@@ -101,7 +101,7 @@ export default function ChardhamTourUI() {
                     <div className="contact-item">
                         <span>Mail Us:</span>
                         <Mail size={16} />
-                        <a href="mailto:yatra@chardhamtour.in">info@mahakaleshwarguide.com</a>
+                        <a href="mailto:info@mahakaleshwarguide.com">info@mahakaleshwarguide.com</a>
                     </div>
                 </div>
             </div>

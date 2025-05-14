@@ -1,6 +1,6 @@
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import HeroCarousel from './components/HeroCarousel';
+// import HeroCarousel from './components/HeroCarousel';
 
 import './globals.css';
 
@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
             <body>
 
                 <Navbar />
-                <HeroCarousel/>
+                {/* <HeroCarousel/> */}
                 {children}
 
                 <Footer />

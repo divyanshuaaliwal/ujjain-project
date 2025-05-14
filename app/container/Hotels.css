@@ -1,12 +1,13 @@
 .hotels-section {
-  background-color: #f8fafc;
+background: linear-gradient(to bottom, #faf7ff, #f8f8f8);
+  padding: 25px 0;
 }
 
 .container {
   max-width: 95vw;
   width: 100%;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 20px 0;
 }
 
 .hotels-title {

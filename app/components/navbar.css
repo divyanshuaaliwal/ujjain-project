@@ -72,6 +72,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
 }
 
 .contact-item {
@@ -90,8 +91,6 @@
 .contact-item a:hover {
     text-decoration: underline;
 }
-
-/* Bottom Navigation */
 
 /* Bottom Navigation - IMPROVED */
 .bottom-nav {

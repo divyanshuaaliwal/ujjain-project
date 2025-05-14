@@ -1,24 +1,22 @@
-.package-section {
-    padding: 4rem 1rem;
-    background: linear-gradient(to bottom, #fff3e0, #ffffff);
+.package-parent {
+    padding: 25px 0;
+    background: linear-gradient(to bottom, #fff1f0, #fffaf5);
+
 }
 
-.package-container {
-    width: 95vw;
-    margin: 0 auto;
+.package-container-main {
+  max-width: 95vw;
+  width: 100%;
+  margin: 0 auto;
 }
 
-.package-head {
-    text-align: center;
-    margin-bottom: 3rem;
-}
 
 .package-title {
-    color: #ea580c;
-    font-size: 2.25rem;
-   font-weight: 700;
-     text-align: center;
-    margin-bottom: 0.5rem;
+  font-size: 2.25rem;
+  color: #ea580c;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5rem;
 }
 
 @media (min-width: 768px) {

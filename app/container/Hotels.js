@@ -1,4 +1,4 @@
-'use client';
+'use client'
 
 import React from 'react';
 import { useParams } from "next/navigation";
@@ -130,9 +130,9 @@ export default function Hotels({ HotelList = [] }) {
                 </h2>
 
                 <div className="hotels-grid">
-                    {HotelList.map((hotel, index) => (
+                    {HotelList.map((hotel) => (
                         <HotelCard
-                            key={index}
+                            key={hotel.id}
                             name={hotel.name}
                             priceRange={hotel.priceRange}
                             distance={hotel.distance}
