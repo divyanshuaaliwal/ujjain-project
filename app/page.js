@@ -13,7 +13,7 @@ export default function Home() {
             <Pooja/>
             <HelicopterPackages />
             <TourPackages />
-            {/* <Contact/> */}
+            <Contact/>
         </>
     );
 }

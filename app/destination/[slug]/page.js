@@ -8,7 +8,6 @@ import { tourPackages } from "@/app/Data/tourPackagesData";
 import Temples from "@/app/container/Temples";
 import Hotels from "@/app/container/Hotels";
 import Packages from "@/app/container/Packages";
-import "./page.css"
 const TemplePage = () => {
 
     const { slug } = useParams();
@@ -29,13 +28,8 @@ const TemplePage = () => {
 
     return (
         <>
-            {/* Temples */}
-           <Temples TempleList={TempleList} />
-
-            {/* Hotels */}
+            <Temples TempleList={TempleList} />
             <Hotels HotelList={HotelList} />
-
-            {/* Packages */}
             <Packages PackageList={PackagesList} />
         </>
     );
