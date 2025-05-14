@@ -81,7 +81,7 @@ export default function ChardhamTourUI() {
                     </div>
                     <div>
                         <div className="approved-by">Approved by</div>
-                        <div className="approved-text">Uttarakhand Tourism</div>
+                        <div className="approved-text">Madhya Pradesh Tourism</div>
                     </div>
                 </div>
 

@@ -10,7 +10,7 @@ const HeroCarousel = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isMuted, setIsMuted] = useState(true);
 
-    // Auto-play next video every 8 seconds
+   
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % videoData.length);

@@ -1,5 +1,3 @@
-/* PujaBooking.module.css */
-
 .ParentDiv {
     padding: 25px 0;
     background: linear-gradient(to bottom, #fff1f0, #fffaf5);
@@ -11,7 +9,6 @@
     margin: 0 auto;
 }
 
-
 .poojaTitle {
     font-size: 2.25rem;
     color: #ea580c;
@@ -21,11 +18,10 @@
 }
 
 @media (min-width: 768px) {
-  .poojaTitle {
-    font-size: 2.75rem;
-  }
+    .poojaTitle {
+        font-size: 2.75rem;
+    }
 }
-
 
 .poojaTitle span {
     color: #f5a623;
@@ -44,14 +40,14 @@
 }
 
 .poojaSectionDesc {
-   font-size: 1.125rem;
+    font-size: 1.125rem;
     color: #666;
-     font-weight: 600;
-  text-align: center;
-  margin-bottom: 2rem;
-  max-width: 48rem;
-  margin-left: auto;
-  margin-right: auto;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2rem;
+    max-width: 48rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .grid {
@@ -67,6 +63,9 @@
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .card:hover {
@@ -81,13 +80,11 @@
 
 .content {
     padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
-.date {
-    color: #6b46c1;
-    font-weight: bold;
-    margin-bottom: 8px;
-}
 
 .title {
     font-size: 1.1rem;
@@ -103,7 +100,7 @@
 }
 
 .button {
-    margin-top: 10px;
+    margin-top: auto; /* Fixes button at bottom */
     padding: 8px 12px;
     background: #6b46c1;
     color: white;

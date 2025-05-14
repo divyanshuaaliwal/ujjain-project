@@ -11,7 +11,6 @@ const PujaGrid = () => {
         <div key={index} className={styles.card}>
           <Image src={puja.image} alt={puja.title} className={styles.image} />
           <div className={styles.content}>
-            <div className={styles.date}>{puja.date}</div>
             <h3 className={styles.title}>{puja.title}</h3>
             <p className={styles.subtitle}>{puja.subtitle}</p>
             <p className={styles.location}>{puja.location}</p>
