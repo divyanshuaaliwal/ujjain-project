@@ -118,7 +118,7 @@
 
   .grid {
     grid-template-columns: 1fr; /* Stack grid items on smaller screens */
-    padding: 10px;
+    padding: 15px; /* Increased padding on mobile */
   }
 
   .card {

@@ -222,28 +222,13 @@
 }
 
 @media (max-width: 480px) {
-
     .cardContainer {
         grid-template-columns: 1fr;
-    }
-
-    .buttons {
-        flex-direction: column;
-    }
-
-    .imageContainer {
-        height: 200px;
-    }
-}
-
-
-@media (max-width: 480px) {
-    .cardContainer {
-        grid-template-columns: 1fr;
+        padding: 0; /* Reduce side padding */
     }
 
     .card {
-        max-width: 95vw; /* Increase card width */
+        max-width: 100vw; /* Increase card width */
         margin: 0 auto;   /* Center it */
     }
 

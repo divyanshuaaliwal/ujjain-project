@@ -257,3 +257,9 @@
 .view-details-button:hover {
     background-color: #fff7ed;
 }
+
+@media (max-width: 480px) {
+  .package-parent {
+    padding: 80px 20px; /* Adjust top/bottom and side padding for mobile */
+  }
+}
