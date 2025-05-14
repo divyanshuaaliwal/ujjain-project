@@ -1,106 +1,68 @@
+'use client';
 import Link from 'next/link';
-import "./TourPackages.css";
+import styles from './TourPackages.module.css';
+
+import {tourPackagesData} from"../Data/mahakalTourPackagesData"
+import Image from 'next/image';
 
 const TourPackages = () => {
+
   return (
-    <div className="parent-container">
-      <div className="header">
-        <h1>Suggested Mahakal Tour Packages</h1>
-      </div>
-      <div className="package-container">
-        <div className="package">
-          <div className="package-header">
-            <span>Mahakaleshwar Darshan Express</span>
-          </div>
-          <div className="package-body">
-            <h3>₹999 per person</h3>
-            <p className="duration">Duration: 1 Day</p>
-            <p>Includes:</p>
-            <ul>
-              <li>VIP Darshan Pass</li>
-              <li>Rudrabhishek Puja</li>
-              <li>Mandir Prasad</li>
-              <li>Local Guide</li>
-            </ul>
-            <p>Experience the divine energy of Mahakaleshwar...</p>
-          </div>
-          <div className="package-footer">
-            <Link className="book-btn" href="/book-now">
-             Book Now
-            </Link>
-          </div>
+    <section className={styles.tourSection}>
+      <div className={styles.container}>
+        <div className={styles.tourHeader}>
+          <h2 className={styles.sectionTitle}>Discover Our<br /><span>Mahakal Tour Packages</span></h2>
+          <p className={styles.sectionDesc}>Embark on a divine journey with our carefully curated spiritual experiences</p>
         </div>
 
-        <div className="package">
-          <div className="package-header">
-            <span>Mahakal Weekend Retreat Express</span>
-          </div>
-          <div className="package-body">
-            <h3>₹2,499 per person</h3>
-            <p className="duration">Duration: 2 Days / 1 Night</p>
-            <p>Includes:</p>
-            <ul>
-              <li>3-star Hotel Stay</li>
-              <li>VIP Darshan</li>
-              <li>Evening Aarti Experience</li>
-              <li>Complimentary Breakfast</li>
-            </ul>
-            <p>Perfect for weekend travellers...</p>
-          </div>
-          <div className="package-footer">
-            <Link  className="book-btn" href="/book-now">
-              Book Now
-            </Link>
-          </div>
-        </div>
-
-        <div className="package">
-          <div className="package-header">
-            <span>Mahakal + Omkareshwar Jyotirling Yatra</span>
-          </div>
-          <div className="package-body">
-            <h3>₹5,999 per person</h3>
-            <p className="duration">Duration: 3 Days / 2 Nights</p>
-            <p>Includes:</p>
-            <ul>
-              <li>AC Cab Travel</li>
-              <li>Hotel Stay (Ujjain + Omkareshwar)</li>
-              <li>VIP Darshan at both Jyotirlings</li>
-              <li>Puja Kit</li>
-            </ul>
-            <p>Cover two sacred Jyotirlings...</p>
-          </div>
-          <div className="package-footer">
-            <Link className="book-btn" href="/book-now">
-              Book Now
-            </Link>
-          </div>
-        </div>
-
-        <div className="package">
-          <div className="package-header">
-            <span>Ujjain Spiritual Trail</span>
-          </div>
-          <div className="package-body">
-            <h3>₹9,999 per person</h3>
-            <p className="duration">Duration: 5 Days / 4 Nights</p>
-            <p>Includes:</p>
-            <ul>
-              <li>Mahakaleshwar, Omkareshwar, Kal Bhairav...</li>
-              <li>Daily Puja and Spiritual Session</li>
-              <li>Guide for each temple</li>
-              <li>Comfortable stay & meals</li>
-            </ul>
-            <p>An immersive spiritual journey...</p>
-          </div>
-          <div className="package-footer">
-            <Link className="book-btn" href="/book-now">
-              Book Now
-            </Link>
-          </div>
+        <div className={styles.tourGrid}>
+          {tourPackagesData.map((pkg) => (
+            <div 
+              key={pkg.id} 
+              className={styles.tourCard}
+              
+            >
+              <div className={styles.cardImageWrapper}>
+                <div className={styles.cardImage}>
+                  <Image src={pkg.image} alt={pkg.title} />
+                </div>
+                <span className={styles.packageDuration}>{pkg.duration}</span>
+              </div>
+              
+              <div className={styles.cardContent}>
+                <h3 className={styles.packageTitle}>{pkg.title}</h3>
+                <div className={styles.packagePrice}>
+                  <span className={styles.priceValue}>{pkg.price}</span>
+                  <span className={styles.priceLabel}>per person</span>
+                </div>
+                
+                <div className={styles.packageDetails}>
+                  <div className={styles.packageIncludes}>
+                    <h4>Package Includes:</h4>
+                    <ul>
+                      {pkg.includes.map((item, idx) => (
+                        <li key={idx}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <p className={styles.packageDescription}>
+                    {pkg.description}
+                  </p>
+                </div>
+                
+                <div className={styles.cardFooter}>
+                  <Link href={`/book-now?package=${pkg.id}`} className={styles.bookButton}>
+                    Book This Package
+                  </Link>
+                </div>
+              </div>
+            
+            </div>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

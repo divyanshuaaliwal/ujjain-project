@@ -15,9 +15,7 @@ export default function RootLayout({ children }) {
             <body>
 
                 <Navbar />
-                {/* <HeroCarousel/> */}
                 {children}
-
                 <Footer />
             </body>
         </html>

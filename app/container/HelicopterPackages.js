@@ -1,7 +1,7 @@
-// pages/index.js
 import Image from 'next/image';
 import React from 'react';
-import './HelicopterPackages.css';
+import styles from './HelicopterPackages.module.css';
+
 import mahakalPackage1 from '../images/mahakalPackage1.jpg';
 import mahakalPackage2 from '../images/mahakalPackage2.png';
 import mahakalPackage3 from '../images/mahakalPackage3.jpg';
@@ -48,45 +48,44 @@ export default function Home() {
     ];
 
     return (
-        <div className="parent-container">
-
-            <h1 className="heading">
-                <span className="icon">🚁</span> Mahakaleshwar Helicopter Tour Packages
+        <div className={styles.parentContainer}>
+            <h1 className={styles.heading}>
+                <span className={styles.icon}>🚁</span> Mahakaleshwar Helicopter Tour Packages
             </h1>
-            
-            <div className="card-container">
+
+            <div className={styles.cardContainer}>
                 {packages.map((pkg, index) => (
-                    <div 
-                        className="card" 
+                    <div
+                        className={styles.card}
                         key={index}
                         style={{ animationDelay: `${index * 0.1}s` }}
                     >
-                        <div className="image-container">
+                        <div className={styles.imageContainer}>
                             <Image
                                 src={pkg.image}
                                 alt={pkg.alt}
                                 fill
                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                className="package-image"
+                                className={styles.packageImage}
                                 priority={index < 2}
                             />
                         </div>
-                        
-                        <div className="card-body">
-                            <div className="card-content">
+
+                        <div className={styles.cardBody}>
+                            <div className={styles.cardContent}>
                                 <h3>{pkg.title}</h3>
-                                <p className="detail"><span className="icon">🕒</span> {pkg.duration}</p>
-                                <p className="detail"><span className="icon">📍</span> {pkg.route}</p>
-                                <p className="price">
+                                <p className={styles.detail}><span className={styles.icon}>🕒</span> {pkg.duration}</p>
+                                <p className={styles.detail}><span className={styles.icon}>📍</span> {pkg.route}</p>
+                                <p className={styles.price}>
                                     <strong>{pkg.price}</strong>
-                                    <span className="old-price">{pkg.oldPrice}</span> 
-                                    <span className="per-person">per person</span>
+                                    <span className={styles.oldPrice}>{pkg.oldPrice}</span>
+                                    <span className={styles.perPerson}>per person</span>
                                 </p>
                             </div>
-                            
-                            <div className="buttons">
-                                <button className="read-more">Read More</button>
-                                <button className="enquiry">Enquiry Now »</button>
+
+                            <div className={styles.buttons}>
+                                <button className={styles.readMore}>Read More</button>
+                                <button className={styles.enquiry}>Enquiry Now »</button>
                             </div>
                         </div>
                     </div>

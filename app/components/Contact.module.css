@@ -1,18 +1,18 @@
-.contact-container {
-    /* padding: 40px 20px; */
-    max-width: 90vh;
+.contactContainer {
+    padding: 40px 20px;
+    background: #f9f9f9;
+    max-width: 95vw;
     margin: 0 auto;
-    font-family: Arial, sans-serif;
 }
 
-.contact-title {
+.contactTitle {
     text-align: center;
     font-size: 32px;
     color: #e56a00;
     margin-bottom: 10px;
 }
 
-.contact-subtitle {
+.contactSubtitle {
     text-align: center;
     font-size: 20px;
     font-weight: 600;
@@ -20,25 +20,25 @@
     margin-bottom: 40px;
 }
 
-.contact-content {
+.contactContent {
     display: flex;
     gap: 40px;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.contact-left {
+.contactLeft {
     flex: 1;
     min-width: 300px;
 }
 
-.contact-info h3 {
+.contactInfo h3 {
     margin: 10px 0 5px;
     color: #e56a00;
     font-size: 18px;
 }
 
-.contact-info p {
+.contactInfo p {
     margin: 0 0 15px;
     color: #333;
 }
@@ -50,7 +50,7 @@
     margin-top: 20px;
 }
 
-.contact-form {
+.contactForm {
     flex: 1;
     min-width: 300px;
     background: #fff;
@@ -59,14 +59,14 @@
     border-radius: 10px;
 }
 
-.contact-form label {
+.contactForm label {
     display: block;
     margin-bottom: 15px;
     font-weight: bold;
 }
 
-.contact-form input,
-.contact-form textarea {
+.contactForm input,
+.contactForm textarea {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
@@ -75,7 +75,7 @@
     border-radius: 6px;
 }
 
-.contact-form button {
+.contactForm button {
     margin-top: 10px;
     width: 100%;
     padding: 12px;
@@ -89,17 +89,17 @@
     transition: background 0.3s;
 }
 
-.contact-form button:hover {
+.contactForm button:hover {
     background-color: #c45600;
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
-    .contact-content {
+    .contactContent {
         flex-direction: column;
     }
 
-    .contact-form, .contact-left {
+    .contactForm, .contactLeft {
         width: 100%;
     }
 }

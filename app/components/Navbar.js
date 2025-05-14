@@ -33,9 +33,9 @@ export default function ChardhamTourUI() {
         { title: "Mangalnath Mandir", path: "/destination/mangalnath-mandir" },
         { title: "Hotels", path: "/hotels" },
         { title: "Blog", path: "/blog" },
-        { title: "B2B Registration", path: "/b2b-registration" },
-        { title: "Register", path: "/register" },
         { title: "Booking Form", path: "/booking-form" },
+        { title: "B2B Registration", path: "/b2b-registration" },
+        { title: "Bhasm Aarti", path: "/bhasm-aarti" },
         { title: "Pay Online", path: "/pay-online" },
     ];
 

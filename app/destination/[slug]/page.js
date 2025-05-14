@@ -1,6 +1,5 @@
 "use client";
 import { useParams } from "next/navigation";
-import { packages } from "@/app/data";
 import { templesData } from "@/app/Data/templesData";
 import { hotels } from "@/app/Data/hotelsData";
 import { tourPackages } from "@/app/Data/tourPackagesData";

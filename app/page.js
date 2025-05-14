@@ -2,16 +2,18 @@
 import Contact from './components/Contact';
 import HeroCarousel from './components/HeroCarousel';
 import HelicopterPackages from './container/HelicopterPackages';
+import Pooja from './container/Pooja';
 import TourPackages from './container/TourPackages';
 import './globals.css';
 
 export default function Home() {
     return (
-        <div>
+        <>
             <HeroCarousel />
+            <Pooja/>
             <HelicopterPackages />
             <TourPackages />
             <Contact/>
-        </div>
+        </>
     );
 }
