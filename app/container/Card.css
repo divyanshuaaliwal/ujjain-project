@@ -94,6 +94,7 @@
   transition: color 0.2s ease;
 }
 
+
 .card:hover .card-title {
   color: var(--primary-orange); /* orange-600 */
 }

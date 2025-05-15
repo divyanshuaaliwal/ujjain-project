@@ -28,9 +28,9 @@ const TemplePage = () => {
 
     return (
         <>
-            <Temples TempleList={TempleList} />
-            <Hotels HotelList={HotelList} />
-            <Packages PackageList={PackagesList} />
+            <Temples TempleList={TempleList} slug={slug} />
+            <Hotels HotelList={HotelList}  slug={slug} />
+            <Packages PackageList={PackagesList}  slug={slug} />
         </>
     );
 };

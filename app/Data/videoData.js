@@ -1,4 +1,4 @@
-// import video1 from "../images/asd";
+// import video1 from "../assets/asd";
 export const videoData = [
     {
         id: 1,

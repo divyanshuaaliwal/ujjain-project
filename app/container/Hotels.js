@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react';
-import { useParams } from "next/navigation";
 import { Star, MapPin, Wifi, Coffee, Utensils, Heart } from 'lucide-react';
 import './Hotels.css';
 import Image from 'next/image';
@@ -108,9 +107,7 @@ function HotelCard({
     );
 }
 
-export default function Hotels({ HotelList = [] }) {
-    const { slug } = useParams();
-
+export default function Hotels({ HotelList = [], slug }) {
     function capitalizeWithHyphens(str) {
         return str
             .split('-')

@@ -4,10 +4,10 @@ import Link from "next/link";
 import { Phone, Mail, ChevronDown, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import "./navbar.css";
-import shivji from "../images/shiv.avif";
-import temple from "../images/temple.jpg";
-import trishul from "../images/trishul.jpg";
-import Damroo from "../images/Damroo.png";
+import shivji from "../assets/shiv.avif";
+import temple from "../assets/temple.jpg";
+import trishul from "../assets/trishul.jpg";
+import Damroo from "../assets/Damroo.png";
 import Image from "next/image";
 
 export default function ChardhamTourUI() {
@@ -52,7 +52,6 @@ export default function ChardhamTourUI() {
         { title: "Harsiddhi Mata", path: "/destination/harsiddhi-mata" },
         { title: "Kal Bhairav", path: "/destination/kal-bhairav" },
         { title: "Mangalnath Mandir", path: "/destination/mangalnath-mandir" },
-        { title: "Hotels", path: "/hotels" },
         { title: "Blog", path: "/blog" },
         { title: "Booking Form", path: "/booking-form" },
         { title: "B2B Registration", path: "/b2b-registration" },
@@ -122,7 +121,7 @@ export default function ChardhamTourUI() {
                             </div>
                         </div>
 
-                        <div className="middle-images">
+                        <div className="middle-assets">
                             <Image src={shivji} alt="Shiva" width={70} height={70} />
                             <Image src={temple} alt="Temple" width={70} height={70} />
                             <Image src={trishul} alt="trishul" width={70} height={70} />

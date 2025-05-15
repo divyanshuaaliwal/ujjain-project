@@ -2,10 +2,10 @@ import Image from 'next/image';
 import React from 'react';
 import styles from './HelicopterPackages.module.css';
 
-import mahakalPackage1 from '../images/mahakalPackage1.jpg';
-import mahakalPackage2 from '../images/mahakalPackage2.png';
-import mahakalPackage3 from '../images/mahakalPackage3.jpg';
-import mahakalPackage4 from '../images/mahakalPackage4.jpg';
+import mahakalPackage1 from '../assets/mahakalPackage1.jpg';
+import mahakalPackage2 from '../assets/mahakalPackage2.png';
+import mahakalPackage3 from '../assets/mahakalPackage3.jpg';
+import mahakalPackage4 from '../assets/mahakalPackage4.jpg';
 
 export default function Home() {
     const packages = [

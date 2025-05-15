@@ -1,22 +1,22 @@
-import package1 from "../images/package1.jpeg"
-import package2 from "../images/package2.jpeg"
-import package3 from "../images/package3.png"
-import package4 from "../images/package4.jpeg"
+import package1 from "../assets/package1.jpeg"
+import package2 from "../assets/package2.jpeg"
+import package3 from "../assets/package3.png"
+import package4 from "../assets/package4.jpeg"
 
-import package5 from "../images/package1.jpeg"
-import package6 from "../images/package2.jpeg"
-import package7 from "../images/package3.png"
-import package8 from "../images/package4.jpeg"
+import package5 from "../assets/package1.jpeg"
+import package6 from "../assets/package2.jpeg"
+import package7 from "../assets/package3.png"
+import package8 from "../assets/package4.jpeg"
 
-import package9 from "../images/package1.jpeg"
-import package10 from "../images/package2.jpeg"
-import package11 from "../images/package3.png"
-import package12 from "../images/package4.jpeg"
+import package9 from "../assets/package1.jpeg"
+import package10 from "../assets/package2.jpeg"
+import package11 from "../assets/package3.png"
+import package12 from "../assets/package4.jpeg"
 
-import package13 from "../images/package1.jpeg"
-import package14 from "../images/package2.jpeg"
-import package15 from "../images/package3.png"
-import package16 from "../images/package4.jpeg"
+import package13 from "../assets/package1.jpeg"
+import package14 from "../assets/package2.jpeg"
+import package15 from "../assets/package3.png"
+import package16 from "../assets/package4.jpeg"
 
 export const tourPackages = [
     {

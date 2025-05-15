@@ -7,9 +7,7 @@ import Image from "next/image";
 import { useParams } from "next/navigation";
 
 
-const Package = ({ PackageList = [] }) => {
-
-    const { slug } = useParams();
+const Package = ({ PackageList = [], slug}) => {
 
     function capitalizeWithHyphens(str) {
         return str

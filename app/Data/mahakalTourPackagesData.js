@@ -1,7 +1,7 @@
-import hotel1 from "../images/hotel1.jpg"
-import hotel2 from "../images/hotel2.webp"
-import hotel3 from "../images/hotel3.jpg"
-import hotel4 from "../images/hotel4.jpg"
+import hotel1 from "../assets/hotel1.jpg"
+import hotel2 from "../assets/hotel2.webp"
+import hotel3 from "../assets/hotel3.jpg"
+import hotel4 from "../assets/hotel4.jpg"
 
 
 export const tourPackagesData = [

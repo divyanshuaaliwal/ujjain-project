@@ -1,22 +1,22 @@
-import hotel1 from "../images/hotel1.jpg"
-import hotel2 from "../images/hotel2.webp"
-import hotel3 from "../images/hotel3.jpg"
-import hotel4 from "../images/hotel4.jpg"
+import hotel1 from "../assets/hotel1.jpg"
+import hotel2 from "../assets/hotel2.webp"
+import hotel3 from "../assets/hotel3.jpg"
+import hotel4 from "../assets/hotel4.jpg"
 
-import hotel5 from "../images/hotel1.jpg"
-import hotel6 from "../images/hotel2.webp"
-import hotel7 from "../images/hotel3.jpg"
-import hotel8 from "../images/hotel4.jpg"
+import hotel5 from "../assets/hotel1.jpg"
+import hotel6 from "../assets/hotel2.webp"
+import hotel7 from "../assets/hotel3.jpg"
+import hotel8 from "../assets/hotel4.jpg"
 
-import hotel9 from "../images/hotel1.jpg"
-import hotel10 from "../images/hotel2.webp"
-import hotel11 from "../images/hotel3.jpg"
-import hotel12 from "../images/hotel4.jpg"
+import hotel9 from "../assets/hotel1.jpg"
+import hotel10 from "../assets/hotel2.webp"
+import hotel11 from "../assets/hotel3.jpg"
+import hotel12 from "../assets/hotel4.jpg"
 
-import hotel13 from "../images/hotel1.jpg"
-import hotel14 from "../images/hotel2.webp"
-import hotel15 from "../images/hotel3.jpg"
-import hotel16 from "../images/hotel4.jpg"
+import hotel13 from "../assets/hotel1.jpg"
+import hotel14 from "../assets/hotel2.webp"
+import hotel15 from "../assets/hotel3.jpg"
+import hotel16 from "../assets/hotel4.jpg"
 
 
 export const hotels = [

@@ -5,7 +5,8 @@
   --button-color: #6b46c1;
   --button-hover: #5531a7;
   --button-shadow: rgba(107, 70, 193, 0.4);
-  --gradient-bg: linear-gradient(to bottom, #fff1f0, #fffaf5);
+  --gradient-bg: linear-gradient(to bottom, #fff3e0, #ffffff);
+
 }
 
 * {

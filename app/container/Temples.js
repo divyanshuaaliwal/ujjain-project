@@ -1,13 +1,11 @@
 'use client';
 
 import React from 'react';
-import { useParams } from "next/navigation";
 import './Temples.css';
 import Card from './Card';
 
-export default function Temples({ TempleList = [] }) {
-    
-    const { slug } = useParams();
+export default function Temples({ TempleList = [], slug }) {
+ 
 
     function capitalizeWithHyphens(str) {
         return str
@@ -30,12 +28,14 @@ export default function Temples({ TempleList = [] }) {
                 <div className="temples-grid">
                     {TempleList.map((item) => (
                         <Card
+                            id={item.id}
                             key={item.id}
                             title={item.title}
                             description={item.description}
                             image={item.image}
                             alt={item.alt}
                             link={item.link}
+                            slug={slug}
                         />
                     ))}
                 </div>
