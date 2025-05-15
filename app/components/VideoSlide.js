@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import styles from './HeroCarousel.module.css'; // Import CSS module properly
 
-const VideoSlide = ({ video, isMuted }) => {
+const VideoSlide = ({ video }) => {
     const videoRef = useRef(null);
 
     useEffect(() => {
@@ -24,7 +24,7 @@ const VideoSlide = ({ video, isMuted }) => {
                 src={video.src}
                 loop
                 autoPlay
-                muted={isMuted}
+                muted={true}
                 playsInline
             />
             <div className={styles.videoOverlay}></div>

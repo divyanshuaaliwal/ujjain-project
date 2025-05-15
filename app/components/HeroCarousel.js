@@ -8,13 +8,12 @@ const HeroCarousel = () => {
     
     
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [isMuted, setIsMuted] = useState(true);
 
    
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % videoData.length);
-        }, 8000);
+        }, 5000);
 
         return () => clearInterval(interval);
     }, []);
@@ -27,13 +26,9 @@ const HeroCarousel = () => {
         setCurrentIndex((prev) => (prev - 1 + videoData.length) % videoData.length);
     };
 
-    const toggleMute = () => {
-        setIsMuted(!isMuted);
-    };
-
     return (
         <div className={styles.carouselContainer}>
-            <VideoSlide video={videoData[currentIndex]} isMuted={isMuted} />
+            <VideoSlide video={videoData[currentIndex]} />
 
             <div className={styles.contentOverlay}>
                 <h1 className={styles.title}>{videoData[currentIndex].title}</h1>
@@ -41,9 +36,9 @@ const HeroCarousel = () => {
 
                 <div className={styles.controls}>
                     <button onClick={goToPrev} className={styles.navButton}>⟨</button>
-                    <button onClick={toggleMute} className={styles.muteButton}>
-                        {isMuted ? "Unmute 🔇" : "Mute 🔊"}
-                    </button>
+                    <div className={styles.muteButton}>
+                        {"🔱 Spiritual Energy"}
+                    </div>
                     <button onClick={goToNext} className={styles.navButton}>⟩</button>
                 </div>
             </div>
