@@ -6,13 +6,23 @@ const VideoSlide = ({ video }) => {
     const videoRef = useRef(null);
 
     useEffect(() => {
-        if (videoRef.current) {
-            videoRef.current.load(); // Ensure it resets the video before playing a new one
-            videoRef.current.play().catch(error => {
-                console.error("Video playback error:", error);
-            });
+        const videoElement = videoRef.current;
+
+        if (videoElement) {
+            // Pause video before changing src/load
+            videoElement.pause();
+
+            // Set a small timeout to avoid interrupt error
+            setTimeout(() => {
+                videoElement.load();
+
+                videoElement.play().catch(error => {
+                    console.error("Video playback error:", error);
+                });
+            }, 100); // 100ms delay
         }
     }, [video.src]);
+
 
     if (!video) return null;
 

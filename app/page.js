@@ -10,10 +10,10 @@ export default function Home() {
     return (
         <>
             <HeroCarousel />
-            <Pooja/>
-            <HelicopterPackages />
-            <TourPackages />
-            <Contact/>
+            {/* <Pooja/> */}
+            {/* <HelicopterPackages /> */}
+            {/* <TourPackages /> */}
+            {/* <Contact/> */}
         </>
     );
 }

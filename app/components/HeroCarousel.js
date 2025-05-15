@@ -9,15 +9,6 @@ const HeroCarousel = () => {
     
     const [currentIndex, setCurrentIndex] = useState(0);
 
-   
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % videoData.length);
-        }, 5000);
-
-        return () => clearInterval(interval);
-    }, []);
-
     const goToNext = () => {
         setCurrentIndex((prev) => (prev + 1) % videoData.length);
     };
