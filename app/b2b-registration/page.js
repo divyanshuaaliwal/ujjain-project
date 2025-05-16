@@ -34,13 +34,13 @@ export default function B2BRegistrationForm() {
         } else if (!formData.phone.match(/^[6-9]\d{9}$/)) {
             newErrors.phone = 'Valid 10-digit phone number required';
         }
-        
+
         if (!formData.email.trim()) {
             newErrors.email = 'Email is required';
         } else if (!formData.email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
             newErrors.email = 'Valid email required';
         }
-        
+
         if (formData.pincode && !/^\d{6}$/.test(formData.pincode)) {
             newErrors.pincode = 'Valid 6-digit pincode required';
         }
@@ -52,8 +52,7 @@ export default function B2BRegistrationForm() {
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
-        
-        // Clear the error for this field when user starts typing
+
         if (errors[name]) {
             setErrors({ ...errors, [name]: '' });
         }
@@ -63,16 +62,12 @@ export default function B2BRegistrationForm() {
         e.preventDefault();
         if (validate()) {
             setIsSubmitting(true);
-            
+
             try {
-                // Simulate API call
                 await new Promise(resolve => setTimeout(resolve, 1000));
                 console.log('B2B Form Submitted:', formData);
-                
-                // Success state
                 setIsSuccess(true);
-                
-                // Reset form after 3 seconds
+
                 setTimeout(() => {
                     setFormData({
                         businessName: '',
@@ -105,15 +100,15 @@ export default function B2BRegistrationForm() {
             <div className={styles.formContainer}>
                 <h1 className={styles.heading}>B2B Registration Form</h1>
                 <div className={styles.titleUnderline}></div>
-                
+
                 {isSuccess ? (
                     <div className={styles.successMessage}>
                         <svg className={styles.checkmark} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
-                            <circle className={styles.checkmarkCircle} cx="26" cy="26" r="25" fill="none"/>
-                            <path className={styles.checkmarkCheck} fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                            <circle className={styles.checkmarkCircle} cx="26" cy="26" r="25" fill="none" />
+                            <path className={styles.checkmarkCheck} fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
                         </svg>
                         <h2>Thank you for registering!</h2>
-                        <p>We've received your business registration.</p>
+                        <p>{"We&apos;ve received your business registration."}</p>
                     </div>
                 ) : (
                     <form onSubmit={handleSubmit} className={styles.form}>
@@ -122,11 +117,11 @@ export default function B2BRegistrationForm() {
                             <div className={styles.formGroup}>
                                 <div className={styles.inputGroup}>
                                     <label htmlFor="businessName">Business Name*</label>
-                                    <input 
+                                    <input
                                         id="businessName"
-                                        name="businessName" 
-                                        value={formData.businessName} 
-                                        onChange={handleChange} 
+                                        name="businessName"
+                                        value={formData.businessName}
+                                        onChange={handleChange}
                                         className={errors.businessName ? styles.errorInput : ''}
                                     />
                                     {errors.businessName && <p className={styles.error}>{errors.businessName}</p>}
@@ -134,12 +129,12 @@ export default function B2BRegistrationForm() {
 
                                 <div className={styles.inputGroup}>
                                     <label htmlFor="businessType">Business Type</label>
-                                    <input 
+                                    <input
                                         id="businessType"
-                                        name="businessType" 
-                                        placeholder="e.g., Retailer, Distributor" 
-                                        value={formData.businessType} 
-                                        onChange={handleChange} 
+                                        name="businessType"
+                                        placeholder="e.g., Retailer, Distributor"
+                                        value={formData.businessType}
+                                        onChange={handleChange}
                                     />
                                 </div>
                             </div>
@@ -147,23 +142,23 @@ export default function B2BRegistrationForm() {
                             <div className={styles.formGroup}>
                                 <div className={styles.inputGroup}>
                                     <label htmlFor="industry">Industry</label>
-                                    <input 
+                                    <input
                                         id="industry"
-                                        name="industry" 
-                                        placeholder="e.g., Electronics, Agriculture" 
-                                        value={formData.industry} 
-                                        onChange={handleChange} 
+                                        name="industry"
+                                        placeholder="e.g., Electronics, Agriculture"
+                                        value={formData.industry}
+                                        onChange={handleChange}
                                     />
                                 </div>
 
                                 <div className={styles.inputGroup}>
                                     <label htmlFor="gstNumber">GST Number</label>
-                                    <input 
+                                    <input
                                         id="gstNumber"
-                                        name="gstNumber" 
-                                        placeholder="If applicable" 
-                                        value={formData.gstNumber} 
-                                        onChange={handleChange} 
+                                        name="gstNumber"
+                                        placeholder="If applicable"
+                                        value={formData.gstNumber}
+                                        onChange={handleChange}
                                     />
                                 </div>
                             </div>
@@ -171,10 +166,10 @@ export default function B2BRegistrationForm() {
                             <div className={styles.formGroup}>
                                 <div className={styles.inputGroup}>
                                     <label htmlFor="companySize">Company Size</label>
-                                    <select 
+                                    <select
                                         id="companySize"
-                                        name="companySize" 
-                                        value={formData.companySize} 
+                                        name="companySize"
+                                        value={formData.companySize}
                                         onChange={handleChange}
                                     >
                                         <option value="">Select company size</option>
@@ -188,12 +183,12 @@ export default function B2BRegistrationForm() {
 
                                 <div className={styles.inputGroup}>
                                     <label htmlFor="website">Website</label>
-                                    <input 
+                                    <input
                                         id="website"
-                                        name="website" 
-                                        placeholder="https://" 
-                                        value={formData.website} 
-                                        onChange={handleChange} 
+                                        name="website"
+                                        placeholder="https://"
+                                        value={formData.website}
+                                        onChange={handleChange}
                                     />
                                 </div>
                             </div>
@@ -204,11 +199,11 @@ export default function B2BRegistrationForm() {
                             <div className={styles.formGroup}>
                                 <div className={styles.inputGroup}>
                                     <label htmlFor="contactPerson">Contact Person*</label>
-                                    <input 
+                                    <input
                                         id="contactPerson"
-                                        name="contactPerson" 
-                                        value={formData.contactPerson} 
-                                        onChange={handleChange} 
+                                        name="contactPerson"
+                                        value={formData.contactPerson}
+                                        onChange={handleChange}
                                         className={errors.contactPerson ? styles.errorInput : ''}
                                     />
                                     {errors.contactPerson && <p className={styles.error}>{errors.contactPerson}</p>}
@@ -216,12 +211,12 @@ export default function B2BRegistrationForm() {
 
                                 <div className={styles.inputGroup}>
                                     <label htmlFor="email">Email Address*</label>
-                                    <input 
+                                    <input
                                         id="email"
-                                        name="email" 
-                                        type="email" 
-                                        value={formData.email} 
-                                        onChange={handleChange} 
+                                        name="email"
+                                        type="email"
+                                        value={formData.email}
+                                        onChange={handleChange}
                                         className={errors.email ? styles.errorInput : ''}
                                     />
                                     {errors.email && <p className={styles.error}>{errors.email}</p>}
@@ -231,12 +226,12 @@ export default function B2BRegistrationForm() {
                             <div className={styles.formGroup}>
                                 <div className={styles.inputGroup}>
                                     <label htmlFor="phone">Phone Number*</label>
-                                    <input 
+                                    <input
                                         id="phone"
-                                        name="phone" 
-                                        type="tel" 
-                                        value={formData.phone} 
-                                        onChange={handleChange} 
+                                        name="phone"
+                                        type="tel"
+                                        value={formData.phone}
+                                        onChange={handleChange}
                                         className={errors.phone ? styles.errorInput : ''}
                                     />
                                     {errors.phone && <p className={styles.error}>{errors.phone}</p>}
@@ -248,33 +243,33 @@ export default function B2BRegistrationForm() {
                             <h2>Business Address</h2>
                             <div className={styles.inputGroup}>
                                 <label htmlFor="address">Full Address</label>
-                                <textarea 
+                                <textarea
                                     id="address"
-                                    name="address" 
-                                    value={formData.address} 
-                                    onChange={handleChange} 
-                                    rows={3} 
+                                    name="address"
+                                    value={formData.address}
+                                    onChange={handleChange}
+                                    rows={3}
                                 />
                             </div>
 
                             <div className={styles.formGroup}>
                                 <div className={styles.inputGroup}>
                                     <label htmlFor="city">City</label>
-                                    <input 
+                                    <input
                                         id="city"
-                                        name="city" 
-                                        value={formData.city} 
-                                        onChange={handleChange} 
+                                        name="city"
+                                        value={formData.city}
+                                        onChange={handleChange}
                                     />
                                 </div>
 
                                 <div className={styles.inputGroup}>
                                     <label htmlFor="state">State</label>
-                                    <input 
+                                    <input
                                         id="state"
-                                        name="state" 
-                                        value={formData.state} 
-                                        onChange={handleChange} 
+                                        name="state"
+                                        value={formData.state}
+                                        onChange={handleChange}
                                     />
                                 </div>
                             </div>
@@ -282,11 +277,11 @@ export default function B2BRegistrationForm() {
                             <div className={styles.formGroup}>
                                 <div className={styles.inputGroup}>
                                     <label htmlFor="pincode">Pincode</label>
-                                    <input 
+                                    <input
                                         id="pincode"
-                                        name="pincode" 
-                                        value={formData.pincode} 
-                                        onChange={handleChange} 
+                                        name="pincode"
+                                        value={formData.pincode}
+                                        onChange={handleChange}
                                         className={errors.pincode ? styles.errorInput : ''}
                                     />
                                     {errors.pincode && <p className={styles.error}>{errors.pincode}</p>}
@@ -308,14 +303,14 @@ export default function B2BRegistrationForm() {
                             </div>
                         </section>
 
-                        <button 
-                            type="submit" 
+                        <button
+                            type="submit"
                             className={styles.submitButton}
                             disabled={isSubmitting}
                         >
                             {isSubmitting ? 'Submitting...' : 'Complete Registration'}
                         </button>
-                        
+
                         <p className={styles.requiredFields}>* Required fields</p>
                     </form>
                 )}
