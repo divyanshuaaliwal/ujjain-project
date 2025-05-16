@@ -10,6 +10,9 @@ import trishul from "../assets/trishul.jpg";
 import Damroo from "../assets/Damroo.png";
 import Image from "next/image";
 
+import { menuLinks, navMenu } from "../Data/navData";
+
+
 export default function ChardhamTourUI() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
@@ -17,26 +20,21 @@ export default function ChardhamTourUI() {
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth <= 768);
-            if (window.innerWidth > 768) {
-                setMenuOpen(false);
-            }
+            const mobile = window.innerWidth < 768;
+            setIsMobile(mobile);
+            if (!mobile) setMenuOpen(false);
         };
 
-        // Prevent body scrolling when menu is open
-        if (menuOpen) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = 'auto';
-        }
-
-        handleResize(); // Initial check
+        handleResize();
         window.addEventListener("resize", handleResize);
 
         return () => {
             window.removeEventListener("resize", handleResize);
-            document.body.style.overflow = 'auto'; // Cleanup
-        }
+        };
+    }, []);
+
+    useEffect(() => {
+        document.body.style.overflow = menuOpen ? "hidden" : "auto";
     }, [menuOpen]);
 
     const toggleDropdown = (index) => {
@@ -46,35 +44,6 @@ export default function ChardhamTourUI() {
         }));
     };
 
-    const menuLinks = [
-        { title: "Home", path: "/" },
-        { title: "Mahakaleshwar", path: "/destination/mahakaleshwar" },
-        { title: "Harsiddhi Mata", path: "/destination/harsiddhi-mata" },
-        { title: "Kal Bhairav", path: "/destination/kal-bhairav" },
-        { title: "Mangalnath Mandir", path: "/destination/mangalnath-mandir" },
-        { title: "Blog", path: "/blog" },
-        { title: "Booking Form", path: "/booking-form" },
-        { title: "B2B Registration", path: "/b2b-registration" },
-        { title: "Bhasm Aarti", path: "/bhasm-aarti" },
-        { title: "Pay Online", path: "/pay-online" },
-    ];
-
-    const navMenu = [
-        {
-            title: "Darshan Tours",
-            dropdown: false,
-            dropdownItems: [
-                { title: "Tour 1", link: "/tours/tour-1" },
-                { title: "Tour 2", link: "/tours/tour-2" }
-            ]
-        },
-        { title: "Ujjain Yatra", dropdown: false, link: "/ujjain-yatra" },
-        { title: "Temple Wise Darshan", dropdown: false, link: "/temple-wise-darshan" },
-        { title: "Hotels Near Mandir", dropdown: false, link: "/hotels-near-mandir" },
-        { title: "Useful Links", dropdown: false, link: "/useful-links" },
-        { title: "Travel Community", dropdown: false, link: "/travel-community" },
-        { title: "Customer Support", dropdown: false, link: "/support" },
-    ];
 
     const closeMobileMenu = () => {
         setMenuOpen(false);
@@ -82,24 +51,22 @@ export default function ChardhamTourUI() {
 
     return (
         <div className="navbar">
-            {/* Mobile menu toggle */}
-            <div className="mobile-menu-toggle">
-                
-                <button
-                    className="hamburger"
-                    onClick={() => setMenuOpen(!menuOpen)}
-                    aria-label={menuOpen ? "Close menu" : "Open menu"}
-                >
-                    {menuOpen ? <X size={24} /> : <Menu size={24} />}
-                </button>
-            </div>
-
-
+            {/* Mobile hamburger icon */}
+            {isMobile && (
+                <div className="mobile-menu-toggle">
+                    <button
+                        className="hamburger"
+                        onClick={() => setMenuOpen(!menuOpen)}
+                        aria-label={menuOpen ? "Close menu" : "Open menu"}
+                    >
+                        {menuOpen ? <X size={24} /> : <Menu size={24} />}
+                    </button>
+                </div>
+            )}
 
             {/* Desktop Navigation */}
             {!isMobile && (
                 <>
-                    {/* Top navigation - desktop only */}
                     <div className="top-nav">
                         {menuLinks.map((item, index) => (
                             <Link key={index} href={item.path} className="nav-link">
@@ -108,7 +75,6 @@ export default function ChardhamTourUI() {
                         ))}
                     </div>
 
-                    {/* Logo + contact - always visible */}
                     <div className="logo-section">
                         <div className="logo-left">
                             <div>
@@ -124,7 +90,7 @@ export default function ChardhamTourUI() {
                         <div className="middle-assets">
                             <Image src={shivji} alt="Shiva" width={70} height={70} />
                             <Image src={temple} alt="Temple" width={70} height={70} />
-                            <Image src={trishul} alt="trishul" width={70} height={70} />
+                            <Image src={trishul} alt="Trishul" width={70} height={70} />
                             <Image src={Damroo} alt="Damroo" width={70} height={70} />
                         </div>
 
@@ -142,7 +108,6 @@ export default function ChardhamTourUI() {
                         </div>
                     </div>
 
-                    {/* Bottom Navigation - desktop only */}
                     <div className="bottom-nav">
                         <ul>
                             {navMenu.map((item, index) => (
@@ -174,8 +139,8 @@ export default function ChardhamTourUI() {
             )}
 
             {/* Mobile Sidebar */}
-            {isMobile && (
-                <div className={`mobile-sidebar ${menuOpen ? "open" : ""}`}>
+            {isMobile && menuOpen && (
+                <div className="mobile-sidebar open">
                     <div className="mobile-sidebar-content">
                         <div className="mobile-menu-header">
                             <h2>Menu</h2>
