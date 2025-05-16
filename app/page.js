@@ -10,9 +10,9 @@ export default function Home() {
     return (
         <>
             <HeroCarousel />
-            <Pooja/>
             <HelicopterPackages />
             <TourPackages />
+            <Pooja/>
             <Contact/>
         </>
     );

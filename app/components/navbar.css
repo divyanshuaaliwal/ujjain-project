@@ -5,7 +5,7 @@
 }
 
 .navbar {
-    font-family: Arial, sans-serif;
+    /* font-family :Arial, sans-serif; */
     position: relative;
 }
 
@@ -105,111 +105,6 @@
     text-decoration: underline;
 }
 
-/* Bottom Navigation */
-.bottom-nav {
-    background: linear-gradient(to right, #f17525, #e46e0f, #d45600);
-    padding: 0;
-    border-bottom: 3px solid rgba(0, 0, 0, 0.1);
-}
-
-.bottom-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.nav-item {
-    position: relative;
-}
-
-.nav-title {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    padding: 15px 20px;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-}
-
-.nav-title:hover {
-    background-color: rgba(255, 255, 255, 0.15);
-}
-
-.nav-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 3px;
-    background-color: white;
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
-}
-
-.nav-title:hover::after {
-    width: 80%;
-}
-
-.dropdown-icon {
-    margin-left: 6px;
-    transition: transform 0.3s;
-}
-
-.nav-item:hover .dropdown-icon {
-    transform: rotate(180deg);
-}
-
-/* Dropdown */
-.dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: white;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    min-width: 220px;
-    z-index: 1000;
-    padding: 8px 0;
-    border-radius: 8px;
-    overflow: hidden;
-    transform-origin: top center;
-}
-
-.nav-item:hover .dropdown {
-    display: block;
-    animation: growDown 0.3s ease-in-out forwards;
-}
-
-.dropdown-link {
-    display: block;
-    padding: 12px 20px;
-    text-decoration: none;
-    color: #444;
-    transition: all 0.2s ease;
-    font-weight: 500;
-    border-left: 3px solid transparent;
-}
-
-.dropdown-link:hover {
-    background-color: #f8f8f8;
-    color: #e46e0f;
-    border-left: 3px solid #e46e0f;
-    padding-left: 24px;
-}
-
-.dropdown li {
-    list-style: none;
-}
-
-.dropdown li:last-child .dropdown-link {
-    border-bottom: none;
-}
 
 /* Mobile Menu Toggle */
 .mobile-menu-toggle {

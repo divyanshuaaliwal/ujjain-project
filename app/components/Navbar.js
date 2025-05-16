@@ -3,14 +3,14 @@
 import Link from "next/link";
 import { Phone, Mail, ChevronDown, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
-import "./navbar.css";
+import "./Navbar.css";
 import shivji from "../assets/shiv.avif";
 import temple from "../assets/temple.jpg";
 import trishul from "../assets/trishul.jpg";
 import Damroo from "../assets/Damroo.png";
 import Image from "next/image";
-
 import { menuLinks, navMenu } from "../Data/navData";
+import BottomNav from "./BottomNav";
 
 
 export default function ChardhamTourUI() {
@@ -108,33 +108,9 @@ export default function ChardhamTourUI() {
                         </div>
                     </div>
 
-                    <div className="bottom-nav">
-                        <ul>
-                            {navMenu.map((item, index) => (
-                                <li key={index} className="nav-item">
-                                    <a
-                                        href={item.dropdown ? "#" : item.link || "#"}
-                                        className="nav-title"
-                                        onClick={(e) => item.dropdown && e.preventDefault()}
-                                    >
-                                        {item.title}
-                                        {item.dropdown && <ChevronDown size={14} className="dropdown-icon" />}
-                                    </a>
-                                    {item.dropdown && item.dropdownItems?.length > 0 && (
-                                        <ul className="dropdown">
-                                            {item.dropdownItems.map((subItem, subIndex) => (
-                                                <li key={subIndex}>
-                                                    <Link href={subItem.link} className="dropdown-link">
-                                                        {subItem.title}
-                                                    </Link>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    )}
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+                    <BottomNav navMenu={navMenu}/>
+
+                   
                 </>
             )}
 

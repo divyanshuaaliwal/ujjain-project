@@ -1,0 +1,285 @@
+.card {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 auto;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Hero Section */
+.heroContainer {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+
+.heroImage {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.heroContainer:hover .heroImage {
+  transform: scale(1.05);
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 28, 67, 0.6), rgba(0, 28, 67, 0.85));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  color: white;
+  text-align: center;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 4px;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 20px;
+  color: #ff5722;
+}
+
+.itineraryButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.itineraryButton:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Destination Thumbnails */
+.thumbnailsContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.thumbnailWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 4px;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 80px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.thumbnailImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.thumbnailHovered {
+  transform: scale(1.08);
+}
+
+.destinationLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ff5722;
+  text-align: center;
+}
+
+/* Details Section */
+.detailsSection {
+  padding: 16px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.packageInfo {
+  margin-bottom: 16px;
+}
+
+.packageTitle {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 12px;
+  color: #001c43;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #555;
+}
+
+.infoIcon {
+  color: #ff5722;
+}
+
+.priceContainer {
+  display: flex;
+  align-items: baseline;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.currencySymbol {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ff5722;
+}
+
+.currentPrice {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ff5722;
+  margin-right: 8px;
+}
+
+.originalPrice {
+  font-size: 16px;
+  color: #999;
+  text-decoration: line-through;
+  margin-right: 8px;
+}
+
+.perPerson {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Action Buttons */
+.actionButtons {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.readMoreButton, .enquiryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex: 1;
+}
+
+.readMoreButton {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border: none;
+}
+
+.readMoreButton:hover {
+  background-color: #c8e6c9;
+}
+
+.enquiryButton {
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+}
+
+.enquiryButton:hover {
+  background-color: #b71c1c;
+}
+
+/* Features Section */
+.featuresContainer {
+  display: flex;
+  justify-content: space-around;
+  padding: 16px;
+  background-color: #f8f9fa;
+}
+
+.featureItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.featureIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #001c43;
+  transition: transform 0.2s ease;
+}
+
+.featureItem:hover .featureIcon {
+  transform: translateY(-2px);
+  color: #ff5722;
+}
+
+.featureLabel {
+  font-size: 12px;
+  font-weight: 600;
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .title {
+    font-size: 24px;
+  }
+  
+  .subtitle {
+    font-size: 16px;
+  }
+  
+  .actionButtons {
+    flex-direction: column;
+  }
+  
+  .currentPrice {
+    font-size: 24px;
+  }
+  
+  .featureLabel {
+    font-size: 11px;
+  }
+}

@@ -1,0 +1,139 @@
+.parent {
+    background: var(--gradient-bg);
+    padding: 4rem 0;
+
+}
+
+.tourOverview {
+    background: var(--gradient-bg);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sectionHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+}
+
+.sectionIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(15, 43, 91, 0.1);
+    color: #0F2B5B;
+    margin-right: 1rem;
+}
+
+.sectionTitle {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--primary-orange);
+    margin: 0;
+    flex-grow: 1;
+}
+
+.seeMoreBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    color: #0F2B5B;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.seeMoreBtn:hover {
+    color: #FF5722;
+}
+
+.overviewContent {
+    padding: 0 1rem;
+}
+
+.overviewContent>p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 3rem;
+}
+
+.overviewCards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.overviewCard {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.overviewCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-color: #0F2B5B;
+}
+
+.cardIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(15, 43, 91, 0.1);
+    color: #0F2B5B;
+    margin-bottom: 1.5rem;
+}
+
+.overviewCard h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #0F2B5B;
+    margin-bottom: 1rem;
+}
+
+.overviewCard p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+@media (max-width: 1024px) {
+    .overviewCards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .overviewCards {
+        grid-template-columns: 1fr;
+    }
+
+    .tourOverview {
+        padding: 3rem 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .sectionHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .seeMoreBtn {
+        align-self: flex-end;
+    }
+}
