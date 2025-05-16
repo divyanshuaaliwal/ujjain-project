@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import './globals.css';
 
 export const metadata = {
-    title: 'Ujjain Project',
+    title: 'Ujjain Mahakal',
     description: 'Spiritual Tour Website',
 };
 
@@ -13,7 +13,6 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body>
-
                 <Navbar />
                 {children}
                 <Footer />

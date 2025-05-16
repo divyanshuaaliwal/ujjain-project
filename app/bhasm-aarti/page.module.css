@@ -1,46 +1,61 @@
 .container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px;
-  font-family: Arial, sans-serif;
-  color: #333;
+    padding: 40px 5%;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .sectionTitle {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #2d2d2d;
-  text-align: center;
+    font-size: 2.25rem;
+    color: var(--primary-orange);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+
+@media (min-width: 768px) {
+    .sectionTitle {
+        font-size: 2.75rem;
+    }
+}
+
+
+.titleUnderline {
+    width: 6rem;
+    height: 0.25rem;
+    background-color: var(--primary-orange);
+    margin: 0 auto 1.5rem;
 }
 
 .formSection,
 .infoSection {
-  margin-bottom: 3rem;
+    margin-bottom: 3rem;
 }
 
 .form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
 }
 
 .formGroup {
-  flex: 1 1 45%;
-  display: flex;
-  flex-direction: column;
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
 }
 
 .fullWidth {
-  flex: 1 1 100%;
+    flex: 1 1 100%;
 }
 
 .label {
-  margin-bottom: 6px;
-  font-weight: bold;
+    margin-bottom: 6px;
+    font-weight: bold;
 }
 
 .required {
-  color: red;
+    color: red;
 }
 
 .input,
@@ -48,111 +63,111 @@
 .textarea,
 .phoneInput,
 .countryCode {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-  width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 100%;
 }
 
 .phoneInputContainer {
-  display: flex;
-  gap: 10px;
-  align-items: center;
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 
 .phoneInput {
-  flex: 1;
+    flex: 1;
 }
 
 .countryCode {
-  max-width: 120px;
+    max-width: 120px;
 }
 
 .checkboxGroup {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .checkboxItem {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .checkbox {
-  width: 18px;
-  height: 18px;
+    width: 18px;
+    height: 18px;
 }
 
 .checkboxLabel {
-  font-size: 0.95rem;
+    font-size: 0.95rem;
 }
 
 .textarea {
-  resize: vertical;
-  min-height: 100px;
+    resize: vertical;
+    min-height: 100px;
 }
 
 .submitButton {
-  padding: 12px 24px;
-  background-color: #3c3cff;
-  color: white;
-  font-size: 1.1rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  margin-top: 1.5rem;
-  transition: background-color 0.3s;
+    padding: 12px 24px;
+    background-color: var(--primary-orange);
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s;
 }
 
 .submitButton:hover {
-  background-color: #2d2db3;
+    background-color: var(--hover-orange);
 }
 
 .infoGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
 }
 
 .infoCard {
-  padding: 1rem;
-  border: 1px solid #eee;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  text-align: center;
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: center;
 }
 
 .footer {
-  margin-top: 4rem;
-  text-align: center;
-  font-size: 0.95rem;
-  color: #777;
+    margin-top: 4rem;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #777;
 }
 
 /* 🔁 Responsive Styles */
 @media screen and (max-width: 768px) {
-  .formGroup {
-    flex: 1 1 100%;
-  }
+    .formGroup {
+        flex: 1 1 100%;
+    }
 
-  .phoneInputContainer {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+    .phoneInputContainer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-  .countryCode {
-    max-width: 100%;
-  }
+    .countryCode {
+        max-width: 100%;
+    }
 
-  .sectionTitle {
-    font-size: 1.5rem;
-  }
+    .sectionTitle {
+        font-size: 1.5rem;
+    }
 
-  .submitButton {
-    width: 100%;
-  }
+    .submitButton {
+        width: 100%;
+    }
 }

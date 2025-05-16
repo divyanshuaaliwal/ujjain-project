@@ -85,7 +85,8 @@ export default function BhasmAarti() {
            
             <section className={styles.formSection}>
                 <h2 className={styles.sectionTitle}>Register for Attendance</h2>
-                <form className={styles.form} onSubmit={handleSubmit}>
+                <div className={styles.titleUnderline}></div>
+                  <form className={styles.form} onSubmit={handleSubmit}>
                     <div className={styles.formGroup}>
                         <label htmlFor="name" className={styles.label}>
                             Full Name <span className={styles.required}>*</span>
@@ -402,7 +403,8 @@ export default function BhasmAarti() {
 
             <section className={styles.infoSection}>
                 <h2 className={styles.sectionTitle}>Important Information</h2>
-                <div className={styles.infoGrid}>
+                  <div className={styles.titleUnderline}></div>
+                  <div className={styles.infoGrid}>
                     <div className={styles.infoCard}>
                         <h3>Timings</h3>
                         <p>The Bhasm Aarti is performed daily between 4:00 AM and 5:30 AM</p>

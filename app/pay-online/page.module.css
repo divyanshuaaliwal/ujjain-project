@@ -1,0 +1,105 @@
+
+.parent {
+  background: var(--gradient-bg);
+  padding: 25px 15px;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.contactTitle {
+  font-size: 2.25rem;
+  color: var(--primary-orange);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .contactTitle {
+    font-size: 2.75rem;
+  }
+}
+
+.titleUnderline {
+  width: 6rem;
+  height: 0.25rem;
+  background-color: var(--primary-orange);
+  margin: 0 auto 1.5rem;
+}
+
+.description {
+  text-align: center;
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.input,
+.select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.input:focus,
+.select:focus {
+  border-color: var(--primary-orange);
+  outline: none;
+}
+
+.button {
+  padding: 12px;
+  background-color: var(--primary-orange);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background-color: var(--hover-orange);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+  .container {
+    padding: 20px 15px;
+  }
+
+  .contactTitle {
+    font-size: 1.75rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+}
