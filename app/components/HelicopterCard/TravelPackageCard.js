@@ -4,27 +4,34 @@ import Image from 'next/image';
 import { ArrowRight, Clock, MapPin } from 'lucide-react';
 import { PackageFeatures } from './PackageFeatures';
 import styles from './TravelPackageCard.module.css';
+import Link from 'next/link';
+import Rating from '@mui/material/Rating';
+import Stack from '@mui/material/Stack';
 
 export default function TravelPackageCard({ pkg }) {
 
-    console.log(pkg);
+    // console.log(pkg);
     return (
         <div className={styles.card}>
             {/* Hero Section */}
             <div className={styles.heroContainer}>
-                <Image
-                    src={pkg.heroImage}
-                    alt={pkg.title}
-                    width={500}
-                    height={300}
-                    className={styles.heroImage}
-                />
+                
+                <Link href={`/helicopter-tours/${pkg.id}`}>
+                    <Image
+                        src={pkg.heroImage}
+                        alt={pkg.title}
+                        width={500}
+                        height={300}
+                        className={styles.heroImage}
+                    />
+                </Link>
             </div>
 
             {/* Details Section */}
             <div className={styles.detailsSection}>
                 <div className={styles.packageInfo}>
                     <h3 className={styles.packageTitle}>{pkg.title}</h3>
+                    
 
                     <div className={styles.infoItem}>
                         <Clock size={18} className={styles.infoIcon} />
@@ -43,6 +50,14 @@ export default function TravelPackageCard({ pkg }) {
                         <span className={styles.perPerson}>per person</span>
                     </div>
                 </div>
+                
+                
+                <Stack spacing={1} direction="row" alignItems="center" className={styles.ratingParent}>
+                    <span className={styles.ratingLabel}>Customer Rating:</span>
+                    <Rating name="half-rating-read" defaultValue={pkg.rating} precision={0.5} readOnly size="small" />
+                    <span className={styles.ratingValue}>{pkg.rating}</span>
+                </Stack>
+
 
                 <div className={styles.actionButtons}>
                     <button className={styles.readMoreButton}>
@@ -52,6 +67,8 @@ export default function TravelPackageCard({ pkg }) {
                         Enquiry Now <ArrowRight size={16} />
                     </button>
                 </div>
+
+                
             </div>
 
             {/* Features Section */}

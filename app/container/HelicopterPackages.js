@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './HelicopterPackages.module.css';
 
-import TravelPackageCard from '@/HelicopterCard/TravelPackageCard';
-import {travelPackages}  from "../Data/travelPackages"
+import TravelPackageCard from '@/app/components/HelicopterCard/TravelPackageCard';
+import {travelPackages}  from "../Data/helicopterTravelPackagesData"
 
 export default function Home() {
 

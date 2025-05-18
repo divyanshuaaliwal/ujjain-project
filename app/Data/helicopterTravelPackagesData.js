@@ -1,18 +1,16 @@
-
-import mahakalPackage1 from '../assets/mahakalPackage1.jpg';
-import mahakalPackage2 from '../assets/mahakalPackage2.png';
-import mahakalPackage3 from '../assets/mahakalPackage3.jpg';
-import mahakalPackage4 from '../assets/mahakalPackage4.jpg';
-
+import helicopter1 from '../assets/helicopter1.png';
+import helicopter2 from '../assets/helicopter2.jpeg';
+import helicopter3 from '../assets/helicopter3.jpeg';
+import helicopter4 from '../assets/helicopter4.jpeg';
 
 export const travelPackages = [
     {
         id: 1,
-        title: "Ujjain Helicopter Tour - Day Trip",
-        subtitle: "Same Day VIP Darshan",
-        heroImage: mahakalPackage1,
-        duration: "6 Days & 5 Nights",
-        startLocation: "Dehradun → Yamunotri → Gangotri...",
+        title: "1-Day Ujjain Helicopter Tour",
+        subtitle: "VIP Darshan at Mahakaleshwar Temple",
+        heroImage: helicopter1,
+        duration: "1 Day Trip",
+        startLocation: "Indore → Ujjain → Indore",
         currentPrice: "25,000/-",
         originalPrice: "30,000/-",
         rating: 4.7,
@@ -63,11 +61,11 @@ export const travelPackages = [
     },
     {
         id: 2,
-        title: "Ujjain Helicopter Tour - 2 Days",
-        subtitle: "Mahakaleshwar + Harsiddhi Mata Darshan",
-        heroImage: mahakalPackage2,
-        duration: "6 Days & 5 Nights",
-        startLocation: "Dehradun → Yamunotri → Gangotri...",
+        title: "2-Day Ujjain Temple Helicopter Tour",
+        subtitle: "Mahakaleshwar & Harsiddhi Mata Darshan",
+        heroImage: helicopter2,
+        duration: "2 Days & 1 Night",
+        startLocation: "Bhopal → Ujjain → Bhopal",
         currentPrice: "40,000/-",
         originalPrice: "45,000/-",
         rating: 4.6,
@@ -122,11 +120,11 @@ export const travelPackages = [
     },
     {
         id: 3,
-        title: "Ujjain Helicopter Tour - 3 Days",
+        title: "3-Day Ujjain Temple Circuit Tour",
         subtitle: "Mahakaleshwar, Harsiddhi & Kal Bhairav Temples",
-        heroImage: mahakalPackage3,
-        duration: "6 Days & 5 Nights",
-        startLocation: "Dehradun → Yamunotri → Gangotri...",
+        heroImage: helicopter3,
+        duration: "3 Days & 2 Nights",
+        startLocation: "Indore → Ujjain Local → Indore",
         currentPrice: "55,000/-",
         originalPrice: "60,000/-",
         rating: 4.9,
@@ -186,11 +184,11 @@ export const travelPackages = [
     },
     {
         id: 4,
-        title: "Ujjain Full Week Pilgrimage Tour",
-        subtitle: "7 Days Spiritual Helicopter Experience",
-        heroImage: mahakalPackage4,
-        duration: "6 Days & 5 Nights",
-        startLocation: "Dehradun → Yamunotri → Gangotri...",
+        title: "7-Day Ujjain Pilgrimage Experience",
+        subtitle: "Full Week of Spiritual Exploration",
+        heroImage: helicopter4,
+        duration: "7 Days & 6 Nights",
+        startLocation: "Delhi → Ujjain → Temples Tour → Delhi",
         currentPrice: "1,15,000/-",
         originalPrice: "1,30,000/-",
         rating: 5.0,
