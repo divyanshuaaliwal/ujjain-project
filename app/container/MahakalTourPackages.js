@@ -11,6 +11,7 @@ import {
     ArrowRightCircle,
     Ban
 } from 'lucide-react';
+import { SectionHeader, Wrapper } from '../MainLayouts';
 
 const PackageCard = ({ pkg }) => {
     return (
@@ -97,22 +98,25 @@ const PackageCard = ({ pkg }) => {
     );
 };
 
-const TourPackages = () => {
+const MahakalTourPackages = () => {
     return (
-        <section className={styles.tourSection}>
-            <h2 className={styles.sectionTitle}>Mahakal Tour Packages</h2>
-            <div className={styles.TitleUnderline}></div>
-            <p className={styles.sectionDesc}>
-                Embark on a divine journey with our carefully curated spiritual experiences.
-            </p>
+        <Wrapper>
+
+            <SectionHeader
+                title="Mahakal Tour Packages"
+                description="Embark on a divine journey with our carefully curated spiritual experiences"
+            />
 
             <div className={styles.tourGrid}>
-                {tourPackagesData.map((pkg) => (
-                    <PackageCard key={pkg.id} pkg={pkg} />
-                ))}
+                {
+                    tourPackagesData.map((pkg) => (
+                        <PackageCard key={pkg.id} pkg={pkg} />
+                    ))
+                }
             </div>
-        </section>
+
+        </Wrapper>
     );
 };
 
-export default TourPackages;
+export default MahakalTourPackages;

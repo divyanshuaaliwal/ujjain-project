@@ -2,6 +2,7 @@ import styles from './VehiclesPackages.module.css';
 import Image from 'next/image';
 import { vehiclePackages } from '../Data/vehiclePackagesData';
 import { MapPin, Briefcase, Users } from 'lucide-react'; // Lucide Icons
+import { SectionHeader, Wrapper } from '../MainLayouts';
 
 const Card = ({ tour }) => {
     const {
@@ -64,17 +65,20 @@ const Card = ({ tour }) => {
 
 export default function Page() {
     return (
-        <main className={styles.wrapper}>
-            <div className={styles.container}>
-                <h1 className={styles.heading}>Ujjain Yatra Packages</h1>
-                <div className={styles.TitleUnderline}></div>
-
+        <Wrapper>
+            
+                <SectionHeader
+                    title="Ujjain Yatra Packages"
+                    description="Comfortable and affordable vehicle packages for your Ujjain journey"
+                />
                 <div className={styles.cardGrid}>
-                    {vehiclePackages.map((tour) => (
-                        <Card key={tour.id} tour={tour} />
-                    ))}
+                    {
+                        vehiclePackages.map((tour) => (
+                            <Card key={tour.id} tour={tour} />
+                        ))
+                    }
                 </div>
-            </div>
-        </main>
+            
+        </Wrapper>
     );
 }

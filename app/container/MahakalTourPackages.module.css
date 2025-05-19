@@ -1,36 +1,9 @@
-.tourSection {
-    padding: 60px 20px;
-    background: var(--gradient-bg);
-}
-
-.sectionTitle {
-    font-size: 2.5rem;
-    text-align: center;
-    color: var(--primary-orange);
-    font-weight: 700;
-}
-
-.TitleUnderline {
-    width: 80px;
-    height: 4px;
-    background-color: var(--primary-orange);
-    margin: 10px auto 20px;
-    border-radius: 2px;
-}
-
-.sectionDesc {
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: #444;
-    max-width: 700px;
-    margin: 0 auto 40px;
-}
 
 .tourGrid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
     gap: 20px;
+    padding: 20px;
 }
 
 .tourCard {
@@ -181,15 +154,4 @@
     background-color: #999 !important;
     pointer-events: none;
     opacity: 0.7;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .sectionTitle {
-        font-size: 2rem;
-    }
-
-    .sectionDesc {
-        font-size: 1rem;
-    }
 }

@@ -2,8 +2,8 @@
 import Contact from './components/Contact';
 import HeroCarousel from './components/HeroCarousel';
 import HelicopterPackages from './container/HelicopterPackages';
-import Pooja from './container/Pooja';
-import TourPackages from './container/MahakalTourPackages';
+import PoojaBooking from './container/PoojaBooking';
+import MahakalTourPackages from './container/MahakalTourPackages';
 import VehiclesPackages from './container/VehiclesPackages';
 import './globals.css';
 import PlacesNearUjjain from './components/PlacesNearUjjain';
@@ -13,9 +13,9 @@ export default function Home() {
         <>
             <HeroCarousel />
             <HelicopterPackages />
-            <TourPackages />
+            <MahakalTourPackages />
             <VehiclesPackages/>
-            <Pooja/>
+            <PoojaBooking/>
             <PlacesNearUjjain/>
             <Contact/>
         </>
