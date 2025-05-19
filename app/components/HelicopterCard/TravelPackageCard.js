@@ -55,7 +55,7 @@ export default function TravelPackageCard({ pkg }) {
                 <Stack spacing={1} direction="row" alignItems="center" className={styles.ratingParent}>
                     <span className={styles.ratingLabel}>Customer Rating:</span>
                     <Rating name="half-rating-read" defaultValue={pkg.rating} precision={0.5} readOnly size="small" />
-                    <span className={styles.ratingValue}>{pkg.rating}</span>
+                    <span className={styles.ratingValue}>({pkg.rating})</span>
                 </Stack>
 
 

@@ -6,7 +6,7 @@ import {travelPackages}  from "../Data/helicopterTravelPackagesData"
 
 export default function Home() {
 
-  console.log(travelPackages);
+//   console.log(travelPackages);
   
     return (
         <div className={styles.parentContainer}>

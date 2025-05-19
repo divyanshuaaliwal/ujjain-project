@@ -28,7 +28,7 @@ const HeroCarousel = () => {
                 <div className={styles.controls}>
                     <button onClick={goToPrev} className={styles.navButton}>⟨</button>
                     <div className={styles.muteButton}>
-                        {"🔱 Spiritual Energy"}
+                        {videoData[currentIndex].slug}
                     </div>
                     <button onClick={goToNext} className={styles.navButton}>⟩</button>
                 </div>
