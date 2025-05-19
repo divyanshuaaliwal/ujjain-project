@@ -1,12 +1,10 @@
 "use client"
 import React, { useState } from "react";
-import styles from './HeroCarousel.module.css'; // Make sure styles are defined
+import styles from './HeroCarousel.module.css'; 
 import VideoSlide from "./VideoSlide";
-import {videoData}  from "../Data/videoData";
+import { videoData } from "../Data/videoData";
 
 const HeroCarousel = () => {
-    
-    
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const goToNext = () => {
@@ -17,9 +15,23 @@ const HeroCarousel = () => {
         setCurrentIndex((prev) => (prev - 1 + videoData.length) % videoData.length);
     };
 
+    const handleBookingClick = () => {
+        alert("Booking clicked!");
+    };
+
+    const handlePremiumClick = () => {
+        alert("Premium Slot clicked!");
+    };
+
     return (
         <div className={styles.carouselContainer}>
             <VideoSlide video={videoData[currentIndex]} />
+
+            {/* buttons directly below video */}
+            <div className={styles.buttonGroup}>
+                <button onClick={handleBookingClick} className={styles.bookingButton}>Booking</button>
+                <button onClick={handlePremiumClick} className={styles.premiumButton}>Premium Slot</button>
+            </div>
 
             <div className={styles.contentOverlay}>
                 <h1 className={styles.title}>{videoData[currentIndex].title}</h1>

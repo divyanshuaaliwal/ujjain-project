@@ -4,7 +4,6 @@ import React from "react";
 import { Clock, MapPin, Check, Star } from "lucide-react";
 import './Packages.css';
 import Image from "next/image";
-import { useParams } from "next/navigation";
 
 
 const Package = ({ PackageList = [], slug}) => {

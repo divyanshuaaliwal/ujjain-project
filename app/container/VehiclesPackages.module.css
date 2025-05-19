@@ -1,0 +1,131 @@
+.wrapper {
+    background: var(--gradient-bg);
+    padding: 25px 0;
+}
+
+
+.container {
+  max-width: 95vw;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.heading {
+    font-size: 2.25rem;
+    color: var(--primary-orange);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+
+@media (min-width: 768px) {
+    .heading {
+        font-size: 2.75rem;
+    }
+}
+
+.TitleUnderline {
+    width: 6rem;
+    height: 0.25rem;
+    background-color: var(--primary-orange);
+    margin: 0 auto 1.5rem;
+}
+
+
+.cardGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+.cardContent {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.innerData {
+    display: flex;
+    justify-content: space-between;
+}
+
+.details {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.priceBox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.currentPrice {
+    color: #e53935;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.originalPrice {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.discount {
+    background-color: #e0f2f1;
+    color: #00796b;
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.destinations {
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.bookNow {
+    margin-top: auto;
+    display: inline-block;
+    text-align: center;
+    background-color: #3f51b5;
+    color: #fff;
+    padding: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.bookNow:hover {
+    background-color: #2c387e;
+}
