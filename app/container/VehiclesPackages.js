@@ -1,18 +1,17 @@
 import styles from './VehiclesPackages.module.css';
 import Image from 'next/image';
 import { vehiclePackages } from '../Data/vehiclePackagesData';
-import { MapPin, Briefcase, Users } from 'lucide-react'; // Lucide Icons
+import { MapPin, Briefcase, Users } from 'lucide-react';
 import { SectionHeader, Wrapper } from '../MainLayouts';
 
 const Card = ({ tour }) => {
     const {
-        package_name,
+        vehicle_type,
         price_per_person,
         discount,
         km,
         luggage,
         total_person_capacity,
-        destinations_covered,
         image,
         booking_url
     } = tour;
@@ -22,19 +21,21 @@ const Card = ({ tour }) => {
             <div className={styles.imageWrapper}>
                 <Image
                     src={image}
-                    alt={package_name}
+                    alt={vehicle_type}
                     layout="fill"
                     objectFit="cover"
                 />
             </div>
             <div className={styles.cardContent}>
-                <h2 className={styles.title}>{package_name}</h2>
+                <h2 className={styles.title}>{vehicle_type}</h2>
+               
 
-                <div className={styles.innerData}>
-                    <p className={styles.details}>
+             <p className={styles.details}>
                         <MapPin size={16} style={{ marginRight: '6px' }} />
-                        {km} km
+                        {km}    
                     </p>
+                <div className={styles.innerData}>
+                   
                     <p className={styles.details}>
                         <Briefcase size={16} style={{ marginRight: '6px' }} />
                         {luggage}
@@ -51,10 +52,6 @@ const Card = ({ tour }) => {
                     <span className={styles.discount}>{discount.discount_percentage}% OFF</span>
                 </div>
 
-                <p className={styles.destinations}>
-                    <strong>Destinations:</strong> {destinations_covered.join(', ')}
-                </p>
-
                 <a href={booking_url} target="_blank" rel="noopener noreferrer" className={styles.bookNow}>
                     Book Now
                 </a>
@@ -68,7 +65,7 @@ export default function Page() {
         <Wrapper>
             
                 <SectionHeader
-                    title="Ujjain Yatra Packages"
+                    title="Vehicle Booking"
                     description="Comfortable and affordable vehicle packages for your Ujjain journey"
                 />
                 <div className={styles.cardGrid}>

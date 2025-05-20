@@ -3,7 +3,7 @@
     gap: 40px;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 20px;
+    padding: 20px 60px;
 }
 
 .contactLeft {
@@ -64,6 +64,7 @@
 
 .formRow {
     display: flex;
+    flex-direction: column; /* stack fields vertically */
     gap: 15px;
     width: 100%;
 }

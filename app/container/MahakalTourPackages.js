@@ -103,7 +103,7 @@ const MahakalTourPackages = () => {
         <Wrapper>
 
             <SectionHeader
-                title="Mahakal Tour Packages"
+                title="Mahakal Top Hotels Booking"
                 description="Embark on a divine journey with our carefully curated spiritual experiences"
             />
 

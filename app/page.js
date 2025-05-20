@@ -7,6 +7,8 @@ import MahakalTourPackages from './container/MahakalTourPackages';
 import VehiclesPackages from './container/VehiclesPackages';
 import './globals.css';
 import PlacesNearUjjain from './components/PlacesNearUjjain';
+import ThingsToDoInUjjain from './container/ThingsToDoInUjjain';
+import Awards from './container/Awards';
 
 export default function Home() {
     return (
@@ -16,7 +18,9 @@ export default function Home() {
             <MahakalTourPackages />
             <VehiclesPackages/>
             <PoojaBooking/>
+            <ThingsToDoInUjjain/>
             <PlacesNearUjjain/>
+            <Awards/>
             <Contact/>
         </>
     );

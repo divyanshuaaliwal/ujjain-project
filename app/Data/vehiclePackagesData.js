@@ -11,317 +11,361 @@ export const vehiclePackages = [
     {
         "id": 1,
         "image": vehicle1,
-        "package_name": "Mahakaleshwar Jyotirlinga Darshan",
+        "vehicle_type": "Tempo Traveller",
+        "package_name": "12-Seater Tempo Traveller AC Rental",
         "price_per_person": 3200,
         "discount": {
             "original_price": 3700,
             "discount_amount": 500,
             "discount_percentage": 13
         },
-        "duration": "1 Day",
-        "meals_included": ["Lunch"],
-        "starting_point": "Ujjain Railway Station",
-        "ending_point": "Ujjain Railway Station",
-        "destinations_covered": ["Mahakaleshwar Temple", "Harshiddhi Temple", "Ram Ghat"],
-        "km": 50,
-        "luggage": "2 medium bags",
-        "total_person_capacity": 4,
+        "duration": "Per Day",
+        "features": ["AC", "Comfortable Seats", "Ample Legroom"],
+        "starting_point": "Ujjain City Limits",
+        "ending_point": "Ujjain City Limits",
+        "specifications": {
+            "fuel_type": "Diesel",
+            "transmission": "Manual",
+            "engine": "2.5L Turbocharged"
+        },
+        "km": "100 km included (extra ₹15/km)",
+        "luggage": "2 medium bags per person",
+        "total_person_capacity": 12,
         "inclusions": [
-            "Local transport by AC vehicle.",
-            "Darshan assistance at Mahakaleshwar Temple.",
-            "Lunch at a local restaurant.",
-            "All applicable taxes."
+            "Professional driver",
+            "Fuel charges for included kilometers",
+            "Toll taxes and parking",
+            "All applicable taxes"
         ],
         "exclusions": [
-            "Pooja charges, Rudrabhishek, or Bhasma Aarti ticket.",
-            "Personal expenses.",
-            "Hotel stay."
+            "Night allowance (₹500 extra)",
+            "Interstate permits if applicable",
+            "Driver accommodation"
         ],
         "contact": {
             "phone": "+91-9999999991",
-            "email": "ujjain@yatradarshan.com",
+            "email": "rentals@ujjaintour.in",
             "whatsapp": "https://api.whatsapp.com/send?phone=919999999991"
         },
-        "booking_url": "https://www.ujjaintour.in/mahakaleshwar-darshan.html",
+        "booking_url": "https://www.ujjaintour.in/tempo-traveller-rental.html",
         "notes": [
-            "Ideal for pilgrims with short time.",
-            "Bhasma Aarti on request (advance booking)."
+            "Ideal for group travel",
+            "Child seats available on request"
         ]
     },
     {
         "id": 2,
         "image": vehicle2,
-        "package_name": "Ujjain-Omkareshwar Tour",
+        "vehicle_type": "Toyota Innova Crysta",
+        "package_name": "Premium Innova Crysta 7-Seater Rental",
         "price_per_person": 6800,
         "discount": {
             "original_price": 7500,
             "discount_amount": 700,
             "discount_percentage": 9
         },
-        "duration": "2 Days / 1 Night",
-        "meals_included": ["Breakfast", "Dinner"],
+        "duration": "Per Day",
+        "features": ["Automatic Transmission", "Leather Seats", "Touchscreen Infotainment"],
         "starting_point": "Ujjain",
         "ending_point": "Ujjain",
-        "destinations_covered": ["Mahakaleshwar", "Omkareshwar", "Mamleshwar", "Kshipra Ghat"],
-        "km": 300,
+        "specifications": {
+            "fuel_type": "Diesel",
+            "transmission": "Automatic",
+            "engine": "2.4L GD Series"
+        },
+        "km": "200 km included (extra ₹18/km)",
         "luggage": "4 medium bags",
         "total_person_capacity": 6,
         "inclusions": [
-            "AC vehicle transport.",
-            "Hotel accommodation (standard).",
-            "Meals as per plan.",
-            "Temple darshan assistance."
+            "Experienced chauffeur",
+            "Complimentary water bottles",
+            "24/7 road assistance",
+            "Insurance coverage"
         ],
         "exclusions": [
-            "Personal puja materials.",
-            "Boat ride at Omkareshwar.",
-            "GST (5%)."
+            "Airport pickup charges if applicable",
+            "Overtime charges beyond 10 hours",
+            "State tax if crossing borders"
         ],
         "contact": {
             "phone": "+91-9999999992",
             "email": "support@ujjaintour.in",
             "whatsapp": "https://api.whatsapp.com/send?phone=919999999992"
         },
-        "booking_url": "https://www.ujjaintour.in/ujjain-omkareshwar.html",
+        "booking_url": "https://www.ujjaintour.in/innova-rental.html",
         "notes": [
-            "2 Jyotirlingas in one trip.",
-            "Best for religious groups."
+            "Most popular premium rental option",
+            "GPS navigation system included"
         ]
     },
     {
         "id": 3,
         "image": vehicle3,
-        "package_name": "Ujjain with Indore City Sightseeing",
+        "vehicle_type": "Maruti Swift Dzire",
+        "package_name": "Economy Sedan Rental (Swift Dzire)",
         "price_per_person": 5200,
         "discount": {
             "original_price": 5800,
             "discount_amount": 600,
             "discount_percentage": 10
         },
-        "duration": "2 Days / 1 Night",
-        "meals_included": ["Breakfast"],
+        "duration": "Per Day",
+        "features": ["AC", "Fuel Efficient", "Compact Size"],
         "starting_point": "Ujjain",
-        "ending_point": "Indore",
-        "destinations_covered": ["Mahakaleshwar", "Harshiddhi Temple", "Rajwada Palace", "Khajrana Ganesh", "Chappan Dukan"],
-        "km": 150,
-        "luggage": "3 medium bags",
-        "total_person_capacity": 5,
+        "ending_point": "Anywhere in Madhya Pradesh",
+        "specifications": {
+            "fuel_type": "Petrol",
+            "transmission": "Manual",
+            "engine": "1.2L K-Series"
+        },
+        "km": "150 km included (extra ₹12/km)",
+        "luggage": "2 medium bags",
+        "total_person_capacity": 4,
         "inclusions": [
-            "AC vehicle transport.",
-            "1 Night hotel stay in Ujjain.",
-            "Breakfast included.",
-            "Sightseeing with guide."
+            "Skilled driver",
+            "Basic insurance",
+            "24/7 customer support",
+            "First aid kit"
         ],
         "exclusions": [
-            "Lunch/Dinner.",
-            "Entry fees to monuments.",
-            "GST extra."
+            "Night charges (10pm-6am)",
+            "Additional driver fees",
+            "Damage protection waiver"
         ],
         "contact": {
             "phone": "+91-9999999993",
             "email": "bookings@ujjaintour.in",
             "whatsapp": "https://api.whatsapp.com/send?phone=919999999993"
         },
-        "booking_url": "https://www.ujjaintour.in/ujjain-indore-package.html",
+        "booking_url": "https://www.ujjaintour.in/sedan-rental.html",
         "notes": [
-            "Best for family tours.",
-            "Cultural + spiritual combo."
+            "Best for budget travelers",
+            "Easy maneuverability in city traffic"
         ]
     },
     {
         "id": 4,
         "image": vehicle4,
-        "package_name": "Ujjain Darshan with Night Stay",
+        "vehicle_type": "Mahindra Scorpio",
+        "package_name": "SUV Rental (Scorpio S11)",
         "price_per_person": 3999,
         "discount": {
             "original_price": 4499,
             "discount_amount": 500,
             "discount_percentage": 11
         },
-        "duration": "2 Days / 1 Night",
-        "meals_included": ["Breakfast"],
+        "duration": "Per Day",
+        "features": ["4WD Capability", "Sunroof", "Premium Audio"],
         "starting_point": "Ujjain",
         "ending_point": "Ujjain",
-        "destinations_covered": ["Mahakaleshwar", "Ram Ghat", "Sandipani Ashram", "Mangalnath", "Kal Bhairav"],
-        "km": 80,
+        "specifications": {
+            "fuel_type": "Diesel",
+            "transmission": "Manual",
+            "engine": "2.2L mHawk"
+        },
+        "km": "120 km included (extra ₹16/km)",
         "luggage": "3 medium bags",
-        "total_person_capacity": 4,
+        "total_person_capacity": 7,
         "inclusions": [
-            "1-night hotel accommodation.",
-            "Sightseeing by private vehicle.",
-            "Driver allowance and parking.",
-            "All applicable taxes."
+            "Professional driver",
+            "Off-road assistance",
+            "Child seat option",
+            "Roadside emergency kit"
         ],
         "exclusions": [
-            "Any personal expenses.",
-            "Meals not mentioned.",
-            "Extra sightseeing."
+            "Hill station charges if applicable",
+            "Additional mileage beyond package",
+            "Damage security deposit"
         ],
         "contact": {
             "phone": "+91-9999999994",
             "email": "help@ujjaintour.in",
             "whatsapp": "https://api.whatsapp.com/send?phone=919999999994"
         },
-        "booking_url": "https://www.ujjaintour.in/night-stay-package.html",
+        "booking_url": "https://www.ujjaintour.in/suv-rental.html",
         "notes": [
-            "Perfect for weekend getaways.",
-            "Early check-in subject to availability."
+            "Perfect for adventurous trips",
+            "High ground clearance for rough terrain"
         ]
     },
     {
         "id": 5,
         "image": vehicle5,
-        "package_name": "Mahakal Bhasma Aarti VIP Darshan",
+        "vehicle_type": "Force Traveller",
+        "package_name": "20-Seater Mini Bus Rental",
         "price_per_person": 2500,
         "discount": {
             "original_price": 3000,
             "discount_amount": 500,
             "discount_percentage": 17
         },
-        "duration": "Half Day",
-        "meals_included": [],
+        "duration": "Per Day",
+        "features": ["AC", "PA System", "Comfortable Seating"],
         "starting_point": "Ujjain",
         "ending_point": "Ujjain",
-        "destinations_covered": ["Mahakaleshwar Temple", "Bhasma Aarti"],
-        "km": 30,
-        "luggage": "1 small bag",
-        "total_person_capacity": 3,
+        "specifications": {
+            "fuel_type": "Diesel",
+            "transmission": "Manual",
+            "engine": "3.0L CRDe"
+        },
+        "km": "80 km included (extra ₹20/km)",
+        "luggage": "1 small bag per person",
+        "total_person_capacity": 20,
         "inclusions": [
-            "Pickup & drop from hotel/station.",
-            "VIP Darshan coordination for Bhasma Aarti.",
-            "Guide assistance."
+            "Experienced bus driver",
+            "Public address system",
+            "First aid facilities",
+            "Seat belts for all passengers"
         ],
         "exclusions": [
-            "Hotel stay.",
-            "Any meals.",
-            "Pooja samagri."
+            "Guide charges if required",
+            "Entry fees at monuments",
+            "State border permits"
         ],
         "contact": {
             "phone": "+91-9999999995",
-            "email": "bhasmaarti@ujjaintour.in",
+            "email": "busrental@ujjaintour.in",
             "whatsapp": "https://api.whatsapp.com/send?phone=919999999995"
         },
-        "booking_url": "https://www.ujjaintour.in/mahakal-bhasma-aarti.html",
+        "booking_url": "https://www.ujjaintour.in/minibus-rental.html",
         "notes": [
-            "Limited slots – book in advance.",
-            "Original ID proof required for entry."
+            "Ideal for large groups and events",
+            "Ample storage space underneath"
         ]
     },
     {
         "id": 6,
         "image": vehicle6,
-        "package_name": "Ujjain Kalwa & Udaithan Tour",
+        "vehicle_type": "Toyota Eeco",
+        "package_name": "6-Seater Eeco Car Rental",
         "price_per_person": 4500,
         "discount": {
             "original_price": 5000,
             "discount_amount": 500,
             "discount_percentage": 10
         },
-        "duration": "1 Day",
-        "meals_included": ["Lunch"],
+        "duration": "Per Day",
+        "features": ["AC", "Spacious Interior", "Economical"],
         "starting_point": "Ujjain",
         "ending_point": "Ujjain",
-        "destinations_covered": ["Mahakaleshwar", "Kalwa Hanuman", "Udaithan Hanuman"],
-        "km": 120,
+        "specifications": {
+            "fuel_type": "Petrol",
+            "transmission": "Manual",
+            "engine": "1.5L 4-cylinder"
+        },
+        "km": "100 km included (extra ₹10/km)",
         "luggage": "2 medium bags",
-        "total_person_capacity": 4,
+        "total_person_capacity": 6,
         "inclusions": [
-            "Travel in AC vehicle.",
-            "Temple darshan support.",
-            "Packed lunch."
+            "Professional driver",
+            "Basic maintenance kit",
+            "Standard insurance",
+            "24/7 support"
         ],
         "exclusions": [
-            "Any offerings or rituals.",
-            "Camera or entry charges.",
-            "Accommodation."
+            "Waiting charges beyond 1 hour",
+            "Additional pickup/drop locations",
+            "Damage protection"
         ],
         "contact": {
             "phone": "+91-9999999996",
-            "email": "templetour@ujjaintour.in",
+            "email": "eecorental@ujjaintour.in",
             "whatsapp": "https://api.whatsapp.com/send?phone=919999999996"
         },
-        "booking_url": "https://www.ujjaintour.in/kalwa-udaithan-tour.html",
+        "booking_url": "https://www.ujjaintour.in/eeco-rental.html",
         "notes": [
-            "Peaceful offbeat tour.",
-            "Suitable for spiritual seekers."
+            "Budget-friendly people mover",
+            "Great for short distance travel"
         ]
     },
     {
         "id": 7,
         "image": vehicle7,
-        "package_name": "Ujjain Heritage Walk & Ghat Aarti",
+        "vehicle_type": "Tata Nexon EV",
+        "package_name": "Electric SUV Rental (Nexon EV)",
         "price_per_person": 1800,
         "discount": {
             "original_price": 2200,
             "discount_amount": 400,
             "discount_percentage": 18
         },
-        "duration": "Evening Tour",
-        "meals_included": [],
-        "starting_point": "Ram Ghat",
-        "ending_point": "Mahakaleshwar",
-        "destinations_covered": ["Ram Ghat", "Harsiddhi Temple", "Mahakaleshwar Corridor"],
-        "km": 5,
+        "duration": "8 Hours Package",
+        "features": ["Zero Emission", "Fast Charging", "Sunroof"],
+        "starting_point": "Ujjain City Center",
+        "ending_point": "Ujjain City Center",
+        "specifications": {
+            "fuel_type": "Electric",
+            "transmission": "Automatic",
+            "range": "300 km per charge"
+        },
+        "km": "100 km included (extra ₹8/km)",
         "luggage": "1 small bag",
-        "total_person_capacity": 10,
+        "total_person_capacity": 5,
         "inclusions": [
-            "Certified heritage guide.",
-            "Walk-through access to Mahakal corridor.",
-            "Evening Ghat Aarti experience."
+            "Eco-friendly transport",
+            "Fast charging support",
+            "Roadside assistance",
+            "Navigation system"
         ],
         "exclusions": [
-            "Meals and transportation.",
-            "Tips and donations."
+            "Charging station access fees",
+            "Out-of-city travel",
+            "Late return penalties"
         ],
         "contact": {
             "phone": "+91-9999999997",
-            "email": "heritage@ujjaintour.in",
+            "email": "evrental@ujjaintour.in",
             "whatsapp": "https://api.whatsapp.com/send?phone=919999999997"
         },
-        "booking_url": "https://www.ujjaintour.in/heritage-walk.html",
+        "booking_url": "https://www.ujjaintour.in/ev-rental.html",
         "notes": [
-            "Great for photography lovers.",
-            "Evening slots only."
+            "Environmentally conscious choice",
+            "Silent and smooth driving experience"
         ]
     },
     {
         "id": 8,
         "image": vehicle8,
-        "package_name": "Ujjain Spiritual Retreat",
+        "vehicle_type": "Volvo Luxury Coach",
+        "package_name": "24-Seater Luxury Coach Rental",
         "price_per_person": 8500,
         "discount": {
             "original_price": 9500,
             "discount_amount": 1000,
             "discount_percentage": 11
         },
-        "duration": "3 Days / 2 Nights",
-        "meals_included": ["Breakfast", "Dinner"],
+        "duration": "Per Day",
+        "features": ["Recliner Seats", "Onboard Entertainment", "WiFi"],
         "starting_point": "Ujjain",
         "ending_point": "Ujjain",
-        "destinations_covered": ["Mahakaleshwar", "Mangalnath", "Sandipani Ashram", "Kal Bhairav", "Ram Ghat", "Vedhshala"],
-        "km": 100,
+        "specifications": {
+            "fuel_type": "Diesel",
+            "transmission": "Automatic",
+            "engine": "5.0L Turbocharged"
+        },
+        "km": "150 km included (extra ₹25/km)",
         "luggage": "4 medium bags",
-        "total_person_capacity": 6,
+        "total_person_capacity": 24,
         "inclusions": [
-            "AC accommodation for 2 nights.",
-            "Daily breakfast and dinner.",
-            "Private AC transport for sightseeing.",
-            "Rudrabhishek arrangements (on request)."
+            "Professional coach driver",
+            "Onboard attendant",
+            "USB charging ports",
+            "Complimentary refreshments"
         ],
         "exclusions": [
-            "Personal rituals.",
-            "Lunch.",
-            "Travel to/from Ujjain city."
+            "Interstate travel permits",
+            "Overnight parking fees",
+            "Special event surcharges"
         ],
         "contact": {
             "phone": "+91-9999999998",
-            "email": "retreats@ujjaintour.in",
+            "email": "luxurycoach@ujjaintour.in",
             "whatsapp": "https://api.whatsapp.com/send?phone=919999999998"
         },
-        "booking_url": "https://www.ujjaintour.in/spiritual-retreat.html",
+        "booking_url": "https://www.ujjaintour.in/luxury-coach.html",
         "notes": [
-            "Ideal for peace seekers and meditators.",
-            "Group bookings get extra discount."
+            "Premium travel experience",
+            "Ideal for corporate events and weddings"
         ]
     }
 ];
