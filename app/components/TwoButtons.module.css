@@ -1,0 +1,25 @@
+.buttonContainer {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.button {
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #7F00FF, #E100FF); /* Premium gradient */
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(127, 0, 255, 0.4);
+}

@@ -1,0 +1,98 @@
+.attractionsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.attractionCard {
+    border-radius: 8px;
+     background: white;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.attractionCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.imageContainer {
+    height: 200px;
+    overflow: hidden;
+}
+
+.attractionImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.attractionCard:hover .attractionImage {
+    transform: scale(1.05);
+}
+
+.attractionInfo {
+    padding: 20px;
+}
+
+.attractionInfo h3 {
+    color: #d35400;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.attractionInfo p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+    color: #555;
+}
+
+.readMoreButton {
+    background-color: #d35400;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.readMoreButton:hover {
+    background-color: #e67e22;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+    .attractionsGrid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .attractionsGrid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .attractionsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .attractionCard {
+        max-width: 100vw; /* Increase card width */
+        margin: 0 auto;   /* Center it */
+    }
+
+
+    .imageContainer {
+        height: 200px;
+    }
+}

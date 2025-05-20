@@ -3,7 +3,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
 }
 
 .circleCard {
@@ -20,43 +20,6 @@
     flex-shrink: 0;
 }
 
-@media (max-width: 768px) {
-    .circleCard {
-        width: 120px;
-        height: 120px;
-    }
-
-    .name {
-        font-size: 1rem;
-    }
-
-    .meta {
-        font-size: 0.75rem;
-    }
-
-    .cardGrid {
-        gap: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .circleCard {
-        width: 100px;
-        height: 100px;
-    }
-
-    .name {
-        font-size: 0.1rem;
-    }
-
-    .meta {
-        font-size: 0.7rem;
-    }
-
-    .section {
-        padding: 40px 10px;
-    }
-}
 
 .image {
     width: 100%;
@@ -91,7 +54,7 @@
 
 .name {
     color: white;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
     margin-bottom: 5px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
@@ -101,4 +64,46 @@
     color: #f0f0f0;
     font-size: 0.9rem;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+@media (max-width: 768px) {
+    
+    .circleCard {
+        width: 120px;
+        height: 120px;
+    }
+
+    .name {
+        font-size: 1rem;
+    }
+
+    .meta {
+        font-size: 0.75rem;
+    }
+
+    .cardGrid {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .circleCard {
+        width: 100px;
+        height: 100px;
+    }
+
+    .name {
+        font-size: 1rem;
+    }
+
+
+    .meta {
+        font-size: 0.75rem;
+    }
+
+    .section {
+        padding: 40px 10px;
+    }
 }

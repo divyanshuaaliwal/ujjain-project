@@ -25,14 +25,10 @@ const HeroCarousel = () => {
 
     return (
         <div className={styles.carouselContainer}>
+            
             <VideoSlide video={videoData[currentIndex]} />
 
-            {/* buttons directly below video */}
-            <div className={styles.buttonGroup}>
-                <button onClick={handleBookingClick} className={styles.bookingButton}>Booking</button>
-                <button onClick={handlePremiumClick} className={styles.premiumButton}>Premium Slot</button>
-            </div>
-
+            {/* Overlay */}
             <div className={styles.contentOverlay}>
                 <h1 className={styles.title}>{videoData[currentIndex].title}</h1>
                 <p className={styles.description}>{videoData[currentIndex].description}</p>
@@ -44,6 +40,13 @@ const HeroCarousel = () => {
                     </div>
                     <button onClick={goToNext} className={styles.navButton}>⟩</button>
                 </div>
+            </div>
+
+
+            {/* buttons directly below video */}
+            <div className={styles.buttonGroup}>
+                <button onClick={handleBookingClick} className={styles.bookingButton}>Aarti Booking</button>
+                <button onClick={handlePremiumClick} className={styles.premiumButton}>Premium Slot</button>
             </div>
         </div>
     );

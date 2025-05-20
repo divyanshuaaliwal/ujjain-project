@@ -16,7 +16,7 @@ const PlacesNearUjjain = () => {
 
             <div className={styles.cardGrid}>
                 {
-                    placesNearUjjain.map(place => (
+                    placesNearUjjain.map( (place) => (
                         <div className={styles.circleCard} key={place.id}>
                             <Image
                                 src={place.image}

@@ -72,3 +72,55 @@
 .muteButton:hover {
     background: rgba(255, 255, 255, 0.4);
 }
+
+.buttonGroup {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1.5rem;
+    z-index: 10;
+}
+
+/* Booking Button */
+.bookingButton {
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    cursor: pointer;
+    backdrop-filter: blur(6px);
+    transition: all 0.4s ease;
+}
+
+.bookingButton:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    /* color: #111; */
+    transform: scale(1.07);
+    border-color: white;
+}
+
+/* Premium Button */
+.premiumButton {
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #7F00FF, #E100FF, #FF416C, #FF4B2B);
+
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+}
+
+.premiumButton:hover {
+    background: linear-gradient(135deg, #FFD600, #FF6F00, #D500F9);
+    transform: translateY(-5px) scale(1.07);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+}

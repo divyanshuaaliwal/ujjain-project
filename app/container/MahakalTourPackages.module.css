@@ -38,12 +38,10 @@
 .imageFix {
     object-fit: cover;
     transition: transform 0.4s ease-in-out;
-    /* Smooth transition */
 }
 
 .tourCard:hover .imageFix {
     transform: scale(1.08);
-    /* Slight zoom on hover */
 }
 
 .packageDuration {
@@ -79,7 +77,6 @@
 }
 
 .packagePrice {
-    /* margin: 16px 0; */
     font-size: 1.5rem;
     font-weight: 600;
     color: #f5a623;
@@ -91,9 +88,6 @@
     margin-left: 6px;
 }
 
-.packageDetails {
-    /* margin-top: auto; */
-}
 
 .packageDetails h4 {
     font-size: 1rem;
@@ -154,4 +148,27 @@
     background-color: #999 !important;
     pointer-events: none;
     opacity: 0.7;
+}
+
+
+@media (max-width: 768px) {
+    .cardContainer {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .tourGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .tourCard {
+        max-width: 100vw; /* Increase card width */
+        margin: 0 auto;   /* Center it */
+    }
+
+
+    .cardImageWrapper {
+        height: 200px;
+    }
 }
