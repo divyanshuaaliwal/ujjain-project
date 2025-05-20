@@ -1,9 +1,4 @@
-import React from 'react';
-import { SectionHeader, Wrapper } from '../MainLayouts';
-import styles from "./Awards.module.css";
-
-const Awards = () => {
-const awards = [
+export const awards = [
     {
         id: 1,
         title: "India's Best Heritage Destination",
@@ -37,36 +32,3 @@ const awards = [
         description: "Awarded for offering unforgettable spiritual journeys and attracting global tourists to witness the mesmerizing Bhasm Aarti and ancient rituals."
     }
 ];
-
-
-
-    return (
-        <Wrapper>
-                <SectionHeader
-                    title="Our Recognitions & Awards"
-                    description="Awarded for heritage preservation and exceptional experiences"
-                />
-
-                <div className={styles.awardsContainer}>
-                    {
-                        awards.map( (award) => (
-                            <div key={award.id} className={styles.awardCard}>
-                                <div className={styles.awardContent}>
-                                    <div className={styles.awardHeader}>
-                                        <h3 className={styles.awardTitle}>{award.title}</h3>
-                                        <div className={styles.yearBadge}>{award.year}</div>
-                                    </div>
-                                    <div className={styles.awardBody}>
-                                        <p className={styles.awardIssuer}>Issued by: {award.issuedBy}</p>
-                                        <p className={styles.awardDescription}>{award.description}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        ))
-                    }
-                </div>
-        </Wrapper>
-    );
-};
-
-export default Awards;

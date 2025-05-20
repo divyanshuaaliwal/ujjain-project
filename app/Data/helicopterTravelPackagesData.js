@@ -6,50 +6,115 @@ import helicopter4 from '../assets/helicopter4.jpeg';
 export const travelPackages = [
     {
         id: 1,
-        title: "1-Day Ujjain Helicopter Tour",
-        subtitle: "VIP Darshan at Mahakaleshwar Temple",
+        title: "1-Day VIP Mahakaleshwar Darshan",
+        subtitle: "Exclusive Bhasma Aarti Experience with Helicopter Transfer",
         heroImage: helicopter1,
-        duration: "1 Day Trip",
+        duration: "1 Day Trip (Early Morning to Evening)",
         startLocation: "Indore → Ujjain → Indore",
         currentPrice: "25,000/-",
         originalPrice: "30,000/-",
-        rating: 4.7,
-        reviews: [
-            {
-                name: "Suman Tiwari",
-                comment: "Best way to visit Mahakaleshwar in one day! Totally worth it.",
-                date: "2025-01-05",
-                rating: 5
-            }
-        ],
+        saving: "5,000/-",
+        rating: 4.8,
+        overview: "Experience the divine Mahakaleshwar Temple like never before with our exclusive helicopter tour. This VIP package includes special Bhasma Aarti darshan, avoiding long queues and crowds. Perfect for devotees with limited time who want a seamless spiritual experience.",
         highlights: [
-            "Helicopter ride from Indore to Ujjain",
-            "VIP Darshan at Mahakaleshwar Temple",
-            "Same-day return"
+            "15-minute scenic helicopter ride from Indore to Ujjain",
+            "Guaranteed VIP entry for Bhasma Aarti (4:30 AM)",
+            "Special darshan at Mahakaleshwar Jyotirlinga",
+            "Visit to Harsiddhi Mata Temple and Ram Ghat",
+            "Panditji for guided rituals and pooja",
+            "Complimentary Mahakal prasad and Rudraksha",
+            "Same-day return with lifetime memories"
         ],
         itinerary: [
             {
-                day: "Day 1",
-                location: "Indore to Ujjain",
-                description: "Helicopter ride, VIP darshan at Mahakaleshwar, sightseeing, and return"
+                time: "3:30 AM",
+                activity: "Reporting at Indore Helipad",
+                description: "Briefing and safety instructions"
+            },
+            {
+                time: "4:00 AM",
+                activity: "Helicopter Departure",
+                description: "Scenic flight to Ujjain (15 mins)"
+            },
+            {
+                time: "4:30 AM",
+                activity: "Bhasma Aarti Darshan",
+                description: "VIP entry with special privileges"
+            },
+            {
+                time: "6:30 AM",
+                activity: "Guided Temple Tour",
+                description: "Mahakaleshwar complex exploration"
+            },
+            {
+                time: "8:00 AM",
+                activity: "Breakfast",
+                description: "Satvik breakfast at premium restaurant"
+            },
+            {
+                time: "9:30 AM",
+                description: "Harsiddhi Mata Temple visit"
+            },
+            {
+                time: "11:00 AM",
+                description: "Ram Ghat visit & Kshipra River rituals"
+            },
+            {
+                time: "1:00 PM",
+                activity: "Lunch",
+                description: "Traditional Malwa thali"
+            },
+            {
+                time: "3:00 PM",
+                activity: "Free Time",
+                description: "Shopping for religious artifacts"
+            },
+            {
+                time: "5:00 PM",
+                activity: "Return to Helipad",
+                description: "Preparation for return journey"
+            },
+            {
+                time: "5:30 PM",
+                activity: "Helicopter Departure",
+                description: "Return to Indore"
             }
         ],
         inclusions: [
-            "Helicopter Transfers",
-            "VIP Darshan Pass",
-            "Local Sightseeing",
-            "Snacks and Water"
+            "Round-trip helicopter transfers (Indore-Ujjain-Indore)",
+            "VIP Bhasma Aarti pass (Front row seating)",
+            "All temple entry fees and donations",
+            "Expert priest services for rituals",
+            "2 meals (breakfast & lunch at premium restaurants)",
+            "Mineral water and snacks throughout",
+            "Dedicated tour coordinator",
+            "All applicable taxes"
+        ],
+        exclusions: [
+            "Personal expenses",
+            "Pony/Palki charges (if used)",
+            "Additional rituals not mentioned",
+            "Camera charges at temples"
         ],
         thingsToCarry: [
-            "ID Proof",
-            "Light Clothing",
-            "Camera",
-            "Power Bank"
+            "Original ID Proof (Aadhar/Passport mandatory)",
+            "Dress: Men - Dhoti/Kurta, Women - Saree/Salwar (White preferred)",
+            "Small prayer kit (optional)",
+            "Medications if any",
+            "Mobile phone with pouch (temples allow phones without cameras)"
         ],
         importantInfo: [
-            "Max weight limit per person: 80kg",
-            "Weather-dependent service",
-            "Carry only handbags (no luggage)"
+            "Maximum weight limit: 80kg per person (including hand baggage)",
+            "Reporting time strictly 3:30 AM - Latecomers will miss Bhasma Aarti",
+            "No leather items allowed in temple premises",
+            "Pregnancy or serious health conditions not recommended",
+            "Subject to weather conditions - Full refund if cancelled due to weather"
+        ],
+        cancellationPolicy: [
+            "15+ days before: 90% refund",
+            "07-14 days before: 50% refund",
+            "01-06 days before: 10% refund",
+            "0 days before / No show: No refund"
         ],
         features: [
             { icon: "highlights", label: "Highlights" },
@@ -57,122 +122,250 @@ export const travelPackages = [
             { icon: "helicopter", label: "Helicopter" },
             { icon: "meals", label: "Meals" },
             { icon: "sightseeing", label: "Sightseeing" },
+        ],
+        templeRules: [
+            "Maintain complete silence during Bhasma Aarti",
+            "Follow dress code strictly",
+            "Mobile phones must be switched off in sanctum sanctorum",
+            "No touching of idols or interfering with priests"
         ]
     },
     {
         id: 2,
-        title: "2-Day Ujjain Temple Helicopter Tour",
-        subtitle: "Mahakaleshwar & Harsiddhi Mata Darshan",
+        title: "2-Day Ujjain Spiritual Retreat",
+        subtitle: "Mahakaleshwar & 5 Ancient Temples with Helicopter Transfer",
         heroImage: helicopter2,
         duration: "2 Days & 1 Night",
-        startLocation: "Bhopal → Ujjain → Bhopal",
+        startLocation: "Indore → Ujjain → Indore",
         currentPrice: "40,000/-",
         originalPrice: "45,000/-",
-        rating: 4.6,
-        reviews: [
-            {
-                name: "Rajeev Kapoor",
-                comment: "Good stay and peaceful darshan experience.",
-                date: "2025-03-12",
-                rating: 4.5
-            }
-        ],
+        saving: "5,000/-",
+        rating: 4.7,
+        overview: "Immerse yourself in Ujjain's spiritual aura with this comprehensive tour covering Mahakaleshwar and other powerful shrines. Includes night stay near temple for evening and morning darshans.",
         highlights: [
-            "Mahakaleshwar & Harsiddhi Temple Visits",
-            "Night Stay in Ujjain",
-            "Helicopter Ride from Bhopal"
+            "Extended darshan at Mahakaleshwar (both morning and evening)",
+            "Special Sandhya Aarti experience",
+            "Visit to Kal Bhairav, Harsiddhi, Chintaman Ganesh, Mangalnath and Ram Ghat",
+            "Stay at 4-star heritage property",
+            "Guided heritage walk through ancient lanes"
         ],
         itinerary: [
             {
-                day: "Day 1",
-                location: "Bhopal to Ujjain",
-                description: "Helicopter ride, Mahakaleshwar darshan, check-in to hotel"
+                time: "3:30 AM",
+                activity: "Reporting at Indore Helipad",
+                description: "Briefing and safety instructions"
             },
             {
-                day: "Day 2",
-                location: "Ujjain Exploration",
-                description: "Harsiddhi Mata Temple visit, sightseeing & return"
+                time: "4:00 AM",
+                activity: "Helicopter Departure",
+                description: "Scenic flight to Ujjain (15 mins)"
+            },
+            {
+                time: "4:30 AM",
+                activity: "Bhasma Aarti Darshan",
+                description: "VIP entry with special privileges"
+            },
+            {
+                time: "6:30 AM",
+                activity: "Guided Temple Tour",
+                description: "Mahakaleshwar complex exploration"
+            },
+            {
+                time: "8:00 AM",
+                activity: "Breakfast",
+                description: "Satvik breakfast at premium restaurant"
+            },
+            {
+                time: "9:30 AM",
+                description: "Harsiddhi Mata Temple visit"
+            },
+            {
+                time: "11:00 AM",
+                description: "Ram Ghat visit & Kshipra River rituals"
+            },
+            {
+                time: "1:00 PM",
+                activity: "Lunch",
+                description: "Traditional Malwa thali"
+            },
+            {
+                time: "3:00 PM",
+                activity: "Free Time",
+                description: "Shopping for religious artifacts"
+            },
+            {
+                time: "5:00 PM",
+                activity: "Return to Helipad",
+                description: "Preparation for return journey"
+            },
+            {
+                time: "5:30 PM",
+                activity: "Helicopter Departure",
+                description: "Return to Indore"
             }
         ],
         inclusions: [
-            "Helicopter Transfers",
-            "1 Night Hotel Stay",
-            "Temple VIP Darshan",
-            "All Meals"
+            "Round-trip helicopter transfers (Indore-Ujjain-Indore)",
+            "VIP Bhasma Aarti pass (Front row seating)",
+            "All temple entry fees and donations",
+            "Expert priest services for rituals",
+            "2 meals (breakfast & lunch at premium restaurants)",
+            "Mineral water and snacks throughout",
+            "Dedicated tour coordinator",
+            "All applicable taxes"
+        ],
+        exclusions: [
+            "Personal expenses",
+            "Pony/Palki charges (if used)",
+            "Additional rituals not mentioned",
+            "Camera charges at temples"
         ],
         thingsToCarry: [
-            "ID Proof",
-            "Clothes for 2 days",
-            "Personal Essentials"
+            "Original ID Proof (Aadhar/Passport mandatory)",
+            "Dress: Men - Dhoti/Kurta, Women - Saree/Salwar (White preferred)",
+            "Small prayer kit (optional)",
+            "Medications if any",
+            "Mobile phone with pouch (temples allow phones without cameras)"
         ],
         importantInfo: [
-            "Soft luggage only (max 7 kg)",
-            "Subject to weather clearance",
-            "Limited seats available"
+            "Maximum weight limit: 80kg per person (including hand baggage)",
+            "Reporting time strictly 3:30 AM - Latecomers will miss Bhasma Aarti",
+            "No leather items allowed in temple premises",
+            "Pregnancy or serious health conditions not recommended",
+            "Subject to weather conditions - Full refund if cancelled due to weather"
         ],
+        cancellationPolicy: [
+            "15+ days before: 90% refund",
+            "07-14 days before: 50% refund",
+            "01-06 days before: 10% refund",
+            "0 days before / No show: No refund"
+        ],
+
         features: [
             { icon: "highlights", label: "Highlights" },
             { icon: "hotel", label: "Hotel" },
             { icon: "helicopter", label: "Helicopter" },
             { icon: "meals", label: "Meals" },
             { icon: "sightseeing", label: "Sightseeing" },
+        ],
+        templeRules: [
+            "Maintain complete silence during Bhasma Aarti",
+            "Follow dress code strictly",
+            "Mobile phones must be switched off in sanctum sanctorum",
+            "No touching of idols or interfering with priests"
         ]
     },
     {
         id: 3,
-        title: "3-Day Ujjain Temple Circuit Tour",
-        subtitle: "Mahakaleshwar, Harsiddhi & Kal Bhairav Temples",
+        title: "3-Day Ujjain Moksha Experience",
+        subtitle: "Complete Temple Circuit with Kshipra Snan and Rituals",
         heroImage: helicopter3,
         duration: "3 Days & 2 Nights",
-        startLocation: "Indore → Ujjain Local → Indore",
+        startLocation: "Bhopal → Ujjain → Bhopal",
         currentPrice: "55,000/-",
         originalPrice: "60,000/-",
+        saving: "5,000/-",
         rating: 4.9,
-        reviews: [
-            {
-                name: "Meena Agrawal",
-                comment: "Spiritual and luxurious experience, well arranged!",
-                date: "2025-02-20",
-                rating: 5
-            }
-        ],
+        overview: "For those seeking complete spiritual immersion, this package includes all major temples, Kshipra river rituals, and personalized pujas conducted by senior priests.",
         highlights: [
-            "Helicopter tour covering 3 key temples",
-            "Cultural experience and guided visits",
-            "Comfortable stay with all meals"
+            "15-minute scenic helicopter ride from Indore to Ujjain",
+            "Guaranteed VIP entry for Bhasma Aarti (4:30 AM)",
+            "Special darshan at Mahakaleshwar Jyotirlinga",
+            "Visit to Harsiddhi Mata Temple and Ram Ghat",
+            "Panditji for guided rituals and pooja",
+            "Complimentary Mahakal prasad and Rudraksha",
+            "Same-day return with lifetime memories"
         ],
         itinerary: [
             {
-                day: "Day 1",
-                location: "Arrival in Ujjain",
-                description: "Pickup, hotel check-in, Mahakaleshwar darshan"
+                time: "3:30 AM",
+                activity: "Reporting at Indore Helipad",
+                description: "Briefing and safety instructions"
             },
             {
-                day: "Day 2",
-                location: "Temple Visits",
-                description: "Harsiddhi Mata and Kal Bhairav temple visits"
+                time: "4:00 AM",
+                activity: "Helicopter Departure",
+                description: "Scenic flight to Ujjain (15 mins)"
             },
             {
-                day: "Day 3",
-                location: "City Tour & Departure",
-                description: "Visit local markets, return via helicopter"
+                time: "4:30 AM",
+                activity: "Bhasma Aarti Darshan",
+                description: "VIP entry with special privileges"
+            },
+            {
+                time: "6:30 AM",
+                activity: "Guided Temple Tour",
+                description: "Mahakaleshwar complex exploration"
+            },
+            {
+                time: "8:00 AM",
+                activity: "Breakfast",
+                description: "Satvik breakfast at premium restaurant"
+            },
+            {
+                time: "9:30 AM",
+                description: "Harsiddhi Mata Temple visit"
+            },
+            {
+                time: "11:00 AM",
+                description: "Ram Ghat visit & Kshipra River rituals"
+            },
+            {
+                time: "1:00 PM",
+                activity: "Lunch",
+                description: "Traditional Malwa thali"
+            },
+            {
+                time: "3:00 PM",
+                activity: "Free Time",
+                description: "Shopping for religious artifacts"
+            },
+            {
+                time: "5:00 PM",
+                activity: "Return to Helipad",
+                description: "Preparation for return journey"
+            },
+            {
+                time: "5:30 PM",
+                activity: "Helicopter Departure",
+                description: "Return to Indore"
             }
         ],
         inclusions: [
-            "Helicopter Transfer (Round trip)",
-            "2 Nights Stay",
-            "Temple Visits with VIP Entry",
-            "Guide, Local Transport, All Meals"
+            "Round-trip helicopter transfers (Indore-Ujjain-Indore)",
+            "VIP Bhasma Aarti pass (Front row seating)",
+            "All temple entry fees and donations",
+            "Expert priest services for rituals",
+            "2 meals (breakfast & lunch at premium restaurants)",
+            "Mineral water and snacks throughout",
+            "Dedicated tour coordinator",
+            "All applicable taxes"
+        ],
+        exclusions: [
+            "Personal expenses",
+            "Pony/Palki charges (if used)",
+            "Additional rituals not mentioned",
+            "Camera charges at temples"
         ],
         thingsToCarry: [
-            "ID Proof",
-            "Comfortable Footwear",
-            "Seasonal Clothing"
+            "Original ID Proof (Aadhar/Passport mandatory)",
+            "Dress: Men - Dhoti/Kurta, Women - Saree/Salwar (White preferred)",
+            "Small prayer kit (optional)",
+            "Medications if any",
+            "Mobile phone with pouch (temples allow phones without cameras)"
         ],
         importantInfo: [
-            "Flight availability based on weather",
-            "Book in advance for preferred slots",
-            "No alcohol/smoking during the tour"
+            "Maximum weight limit: 80kg per person (including hand baggage)",
+            "Reporting time strictly 3:30 AM - Latecomers will miss Bhasma Aarti",
+            "No leather items allowed in temple premises",
+            "Pregnancy or serious health conditions not recommended",
+            "Subject to weather conditions - Full refund if cancelled due to weather"
+        ],
+        cancellationPolicy: [
+            "15+ days before: 90% refund",
+            "07-14 days before: 50% refund",
+            "01-06 days before: 10% refund",
+            "0 days before / No show: No refund"
         ],
         features: [
             { icon: "highlights", label: "Highlights" },
@@ -180,85 +373,125 @@ export const travelPackages = [
             { icon: "helicopter", label: "Helicopter" },
             { icon: "meals", label: "Meals" },
             { icon: "sightseeing", label: "Sightseeing" },
+        ],
+        templeRules: [
+            "Maintain complete silence during Bhasma Aarti",
+            "Follow dress code strictly",
+            "Mobile phones must be switched off in sanctum sanctorum",
+            "No touching of idols or interfering with priests"
         ]
     },
     {
         id: 4,
-        title: "7-Day Ujjain Pilgrimage Experience",
-        subtitle: "Full Week of Spiritual Exploration",
+        title: "7-Day Mahakal Spiritual Retreat",
+        subtitle: "Complete Ujjain Experience with Nearby Pilgrimages",
         heroImage: helicopter4,
         duration: "7 Days & 6 Nights",
-        startLocation: "Delhi → Ujjain → Temples Tour → Delhi",
+        startLocation: "Mumbai → Ujjain → Omkareshwar → Mumbai",
         currentPrice: "1,15,000/-",
         originalPrice: "1,30,000/-",
+        saving: "15,000/-",
         rating: 5.0,
-        reviews: [
-            {
-                name: "Shyam Sunder",
-                comment: "Most divine and immersive spiritual journey I’ve ever had.",
-                date: "2025-04-01",
-                rating: 5
-            }
-        ],
+        overview: "The ultimate spiritual package combining Ujjain's Mahakaleshwar with Omkareshwar Jyotirlinga. Includes extended meditation sessions and personalized spiritual counseling.",
         highlights: [
-            "7-day temple hopping around Ujjain",
-            "Cultural events, spiritual sessions",
-            "VIP darshan and helicopter transfers"
+            "15-minute scenic helicopter ride from Indore to Ujjain",
+            "Guaranteed VIP entry for Bhasma Aarti (4:30 AM)",
+            "Special darshan at Mahakaleshwar Jyotirlinga",
+            "Visit to Harsiddhi Mata Temple and Ram Ghat",
+            "Panditji for guided rituals and pooja",
+            "Complimentary Mahakal prasad and Rudraksha",
+            "Same-day return with lifetime memories"
         ],
         itinerary: [
             {
-                day: "Day 1",
-                location: "Delhi to Ujjain",
-                description: "Flight from Delhi, helicopter ride to Ujjain, hotel check-in"
+                time: "3:30 AM",
+                activity: "Reporting at Indore Helipad",
+                description: "Briefing and safety instructions"
             },
             {
-                day: "Day 2",
-                location: "Mahakaleshwar",
-                description: "VIP Darshan, Bhasma Aarti experience"
+                time: "4:00 AM",
+                activity: "Helicopter Departure",
+                description: "Scenic flight to Ujjain (15 mins)"
             },
             {
-                day: "Day 3",
-                location: "Kal Bhairav & Harsiddhi",
-                description: "Temple visits and cultural storytelling"
+                time: "4:30 AM",
+                activity: "Bhasma Aarti Darshan",
+                description: "VIP entry with special privileges"
             },
             {
-                day: "Day 4",
-                location: "Mangalnath & Sandipani Ashram",
-                description: "Religious places visit"
+                time: "6:30 AM",
+                activity: "Guided Temple Tour",
+                description: "Mahakaleshwar complex exploration"
             },
             {
-                day: "Day 5",
-                location: "Local Ujjain Tour",
-                description: "Markets, Ghats, and heritage walk"
+                time: "8:00 AM",
+                activity: "Breakfast",
+                description: "Satvik breakfast at premium restaurant"
             },
             {
-                day: "Day 6",
-                location: "Free Day",
-                description: "Optional meditation & wellness"
+                time: "9:30 AM",
+                description: "Harsiddhi Mata Temple visit"
             },
             {
-                day: "Day 7",
-                location: "Return",
-                description: "Return helicopter ride and flight back to Delhi"
+                time: "11:00 AM",
+                description: "Ram Ghat visit & Kshipra River rituals"
+            },
+            {
+                time: "1:00 PM",
+                activity: "Lunch",
+                description: "Traditional Malwa thali"
+            },
+            {
+                time: "3:00 PM",
+                activity: "Free Time",
+                description: "Shopping for religious artifacts"
+            },
+            {
+                time: "5:00 PM",
+                activity: "Return to Helipad",
+                description: "Preparation for return journey"
+            },
+            {
+                time: "5:30 PM",
+                activity: "Helicopter Departure",
+                description: "Return to Indore"
             }
         ],
         inclusions: [
-            "Helicopter + Flight Transfers",
-            "6-Night Hotel Stay",
-            "VIP Darshan Passes",
-            "All Meals & Local Transport",
-            "Cultural Events Access"
+            "Round-trip helicopter transfers (Indore-Ujjain-Indore)",
+            "VIP Bhasma Aarti pass (Front row seating)",
+            "All temple entry fees and donations",
+            "Expert priest services for rituals",
+            "2 meals (breakfast & lunch at premium restaurants)",
+            "Mineral water and snacks throughout",
+            "Dedicated tour coordinator",
+            "All applicable taxes"
+        ],
+        exclusions: [
+            "Personal expenses",
+            "Pony/Palki charges (if used)",
+            "Additional rituals not mentioned",
+            "Camera charges at temples"
         ],
         thingsToCarry: [
-            "ID Proof",
-            "Clothing for 7 days",
-            "Daily essentials",
-            "Comfortable shoes"
+            "Original ID Proof (Aadhar/Passport mandatory)",
+            "Dress: Men - Dhoti/Kurta, Women - Saree/Salwar (White preferred)",
+            "Small prayer kit (optional)",
+            "Medications if any",
+            "Mobile phone with pouch (temples allow phones without cameras)"
         ],
         importantInfo: [
-            "Advance booking mandatory",
-            "Non-refundable in case of weather cancellations",
-            "Helicopter ride subject to clearance"
+            "Maximum weight limit: 80kg per person (including hand baggage)",
+            "Reporting time strictly 3:30 AM - Latecomers will miss Bhasma Aarti",
+            "No leather items allowed in temple premises",
+            "Pregnancy or serious health conditions not recommended",
+            "Subject to weather conditions - Full refund if cancelled due to weather"
+        ],
+        cancellationPolicy: [
+            "15+ days before: 90% refund",
+            "07-14 days before: 50% refund",
+            "01-06 days before: 10% refund",
+            "0 days before / No show: No refund"
         ],
         features: [
             { icon: "highlights", label: "Highlights" },
@@ -266,6 +499,12 @@ export const travelPackages = [
             { icon: "helicopter", label: "Helicopter" },
             { icon: "meals", label: "Meals" },
             { icon: "sightseeing", label: "Sightseeing" },
+        ],
+        templeRules: [
+            "Maintain complete silence during Bhasma Aarti",
+            "Follow dress code strictly",
+            "Mobile phones must be switched off in sanctum sanctorum",
+            "No touching of idols or interfering with priests"
         ]
     }
 ];

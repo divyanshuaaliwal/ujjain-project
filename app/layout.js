@@ -1,7 +1,5 @@
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-// import HeroCarousel from './components/HeroCarousel';
-
 import './globals.css';
 
 export const metadata = {

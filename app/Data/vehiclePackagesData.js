@@ -29,7 +29,7 @@ export const vehiclePackages = [
             "engine": "2.5L Turbocharged"
         },
         "km": "100 km included (extra ₹15/km)",
-        "luggage": "2 medium bags per person",
+        "luggage": "2 medium bags",
         "total_person_capacity": 12,
         "inclusions": [
             "Professional driver",
@@ -209,7 +209,7 @@ export const vehiclePackages = [
             "engine": "3.0L CRDe"
         },
         "km": "80 km included (extra ₹20/km)",
-        "luggage": "1 small bag per person",
+        "luggage": "1 small bag",
         "total_person_capacity": 20,
         "inclusions": [
             "Experienced bus driver",

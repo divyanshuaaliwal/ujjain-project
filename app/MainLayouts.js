@@ -5,7 +5,9 @@ export const SectionHeader = ({ title, description }) => {
     return (
         <>
             <h2 className={styles.sectionTitle}>{title}</h2>
-            <div className={styles.TitleUnderline}></div>
+             <div className={styles.divider}>
+                        <span className={styles.dividerIcon}>🔱</span>
+                    </div>
             <p className={styles.description}>{description}</p>
         </>
     );
@@ -18,4 +20,13 @@ export const Wrapper = ({children}) => {
             {children}
         </div>
     )
+};
+
+export const InternalPageHeading = ({ title }) => {
+    return (
+        <>
+            <h2 className={styles.sectionTitle}>{title}</h2>
+            <div className={styles.TitleUnderline}></div>
+        </>
+    );
 };

@@ -1,8 +1,9 @@
-"use client"
+"use client";
 
 import { useState } from "react";
 import styles from "./Contact.module.css";
 import { SectionHeader, Wrapper } from "../MainLayouts";
+import { MapPin, Phone, Mail } from "lucide-react"; // Lucide icons
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -18,10 +19,7 @@ export default function Contact() {
     const validate = () => {
         const newErrors = {};
 
-        if (!formData.name.trim()) {
-            newErrors.name = "Name is required";
-        }
-
+        if (!formData.name.trim()) newErrors.name = "Name is required";
         if (!formData.email.trim()) {
             newErrors.email = "Email is required";
         } else if (
@@ -29,21 +27,13 @@ export default function Contact() {
         ) {
             newErrors.email = "Invalid email address";
         }
-
         if (formData.phone && !/^\+?\d{7,15}$/.test(formData.phone.trim())) {
             newErrors.phone = "Invalid phone number";
         }
-
-        if (!formData.subject.trim()) {
-            newErrors.subject = "Subject is required";
-        }
-
-        if (!formData.message.trim()) {
-            newErrors.message = "Message is required";
-        }
+        if (!formData.subject.trim()) newErrors.subject = "Subject is required";
+        if (!formData.message.trim()) newErrors.message = "Message is required";
 
         setErrors(newErrors);
-
         return Object.keys(newErrors).length === 0;
     };
 
@@ -57,9 +47,7 @@ export default function Contact() {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (validate()) {
-            // Form is valid - proceed with form submission (e.g., send data to API)
             alert("Form submitted successfully!");
-            // Reset form if you want
             setFormData({
                 name: "",
                 email: "",
@@ -73,30 +61,30 @@ export default function Contact() {
 
     return (
         <Wrapper>
-
-            <SectionHeader 
+            <SectionHeader
                 title="Contact Us"
                 description="Get in touch for customized travel plans and temple visit assistance."
             />
-            
+
             <div className={styles.contactContent}>
                 <div className={styles.contactLeft}>
                     <div className={styles.contactInfo}>
                         <div className={styles.infoItem}>
-                            <h3>📍 Address</h3>
+                            <h3><MapPin size={20} /> Address</h3>
                             <p>Mahakaleshwar Temple Road, Ujjain, Madhya Pradesh 456006</p>
                         </div>
 
                         <div className={styles.infoItem}>
-                            <h3>📞 Phone</h3>
+                            <h3><Phone size={20} /> Phone</h3>
                             <p>+91 1234567890</p>
                         </div>
 
                         <div className={styles.infoItem}>
-                            <h3>📧 Email</h3>
+                            <h3><Mail size={20} /> Email</h3>
                             <p>info@mahakaleshwartemple.com</p>
                         </div>
                     </div>
+
                     <div className={styles.mapContainer}>
                         <iframe
                             title="Google Map"
@@ -120,9 +108,7 @@ export default function Contact() {
                                 onChange={handleChange}
                                 required
                             />
-                            {errors.name && (
-                                <p className={styles.errorText}>{errors.name}</p>
-                            )}
+                            {errors.name && <p className={styles.errorText}>{errors.name}</p>}
                         </div>
                         <div className={styles.formGroup}>
                             <label htmlFor="email">Email</label>
@@ -134,9 +120,7 @@ export default function Contact() {
                                 onChange={handleChange}
                                 required
                             />
-                            {errors.email && (
-                                <p className={styles.errorText}>{errors.email}</p>
-                            )}
+                            {errors.email && <p className={styles.errorText}>{errors.email}</p>}
                         </div>
                     </div>
                     <div className={styles.formRow}>
@@ -149,9 +133,7 @@ export default function Contact() {
                                 value={formData.phone}
                                 onChange={handleChange}
                             />
-                            {errors.phone && (
-                                <p className={styles.errorText}>{errors.phone}</p>
-                            )}
+                            {errors.phone && <p className={styles.errorText}>{errors.phone}</p>}
                         </div>
                         <div className={styles.formGroup}>
                             <label htmlFor="subject">Subject</label>
@@ -163,9 +145,7 @@ export default function Contact() {
                                 onChange={handleChange}
                                 required
                             />
-                            {errors.subject && (
-                                <p className={styles.errorText}>{errors.subject}</p>
-                            )}
+                            {errors.subject && <p className={styles.errorText}>{errors.subject}</p>}
                         </div>
                     </div>
                     <div className={styles.formGroup}>
@@ -178,9 +158,7 @@ export default function Contact() {
                             onChange={handleChange}
                             required
                         ></textarea>
-                        {errors.message && (
-                            <p className={styles.errorText}>{errors.message}</p>
-                        )}
+                        {errors.message && <p className={styles.errorText}>{errors.message}</p>}
                     </div>
                     <button type="submit" className={styles.submitButton}>
                         Send Message

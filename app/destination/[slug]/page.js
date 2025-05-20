@@ -1,13 +1,13 @@
 "use client";
 import { useParams } from "next/navigation";
-import { templesData } from "@/app/Data/templesData";
-import { hotels } from "@/app/Data/hotelsData";
-import { tourPackages } from "@/app/Data/tourPackagesData";
+import { templesData } from "../../Data/templesData";
+import { hotels } from "../../Data/hotelsData";
+import { tourPackages } from "../../Data/tourPackagesData";
 
 
-import Temples from "@/app/container/Temples";
-import Hotels from "@/app/container/Hotels";
-import Packages from "@/app/container/Packages";
+import Temples from "../../container/Temples";
+import Hotels from "../../container/Hotels";
+import Packages from "../../container/Packages";
 const TemplePage = () => {
 
     const { slug } = useParams();

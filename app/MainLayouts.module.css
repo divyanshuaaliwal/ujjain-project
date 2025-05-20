@@ -1,5 +1,5 @@
 .wrapper {
-    padding: 25px 0;
+    padding: 50px 0;
     background: var(--gradient-bg);
 }
 
@@ -8,15 +8,30 @@
     text-align: center;
     color: var(--primary-orange);
     font-weight: 700;
-    margin-top: 25px;
+    /* margin-top: 25px; */
 }
 
-.TitleUnderline {
-    width: 80px;
-    height: 4px;
-    background-color: var(--primary-orange);
-    margin: 10px auto 20px;
-    border-radius: 2px;
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+}
+
+.divider::before, .divider::after {
+    content: "";
+    height: 1px;
+    background: linear-gradient(to right, transparent, #d1a054, transparent);
+    flex: 1;
+}
+
+.dividerIcon {
+    margin: 0 15px;
+    color: #d1a054;
+    font-size: 24px;
 }
 
 .description {
@@ -29,7 +44,17 @@
 }
 
 
+.TitleUnderline {
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary-orange);
+    margin: 10px auto 40px;
+    border-radius: 2px;
+}
+
+
 @media (min-width: 768px) {
+    
     .sectionTitle {
         font-size: 2.75rem;
     }

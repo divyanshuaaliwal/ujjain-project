@@ -1,6 +1,6 @@
 "use client";
 
-import { templesData } from '@/app/Data/templesData';
+import { templesData } from '../../../../Data/templesData';
 import styles from './page.module.css';
 import Image from 'next/image';
 import Link from 'next/link';

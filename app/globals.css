@@ -1,18 +1,22 @@
-
 :root {
-  --primary-orange: #ea580c;
-  --hover-orange: #c94a0a; 
-  --text-dark: #1f2937;
-  --card-shadow: rgba(0, 0, 0, 0.1);
-  --button-color: #6b46c1;
-  --button-hover: #5531a7;
-  --button-shadow: rgba(107, 70, 193, 0.4);
-  --gradient-bg: linear-gradient(to bottom, #fff3e0, #ffffff);
+    --primary-orange: #ea580c;
+    --hover-orange: #c94a0a;
+    --text-dark: #1f2937;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+    --button-color: #6b46c1;
+    --button-hover: #5531a7;
+    --button-shadow: rgba(107, 70, 193, 0.4);
+    --gradient-bg: linear-gradient(to bottom, #fff3e0, #ffffff);
 
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
+
+
+section::-webkit-scrollbar {
+    width: 0px;
+} 
