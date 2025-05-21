@@ -89,6 +89,10 @@
 
 @media (max-width: 480px) {
     
+    .cardGrid {
+        gap: 40px;
+    }
+
     .circleCard {
         width: 100px;
         height: 100px;

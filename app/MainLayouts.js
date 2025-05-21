@@ -33,11 +33,11 @@ export const InternalPageWrapper = ({children}) => {
 
 export const InternalPageHeading = ({ title }) => {
     return (
-        <>
+        <div className={styles.internalPagesHeadingContainer}>
             <h2 className={styles.internalPagesTitle}>{title}</h2>
             <div className={styles.internalPagesDivider}>
                 <span className={styles.dividerIcon}>🔱</span>
             </div>
-        </>
+        </div>
     );
 };

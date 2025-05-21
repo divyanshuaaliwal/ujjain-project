@@ -1,6 +1,6 @@
 import styles from './PlacesNearUjjain.module.css';
 import Image from 'next/image';
-import { placesNearUjjain } from '../Data/placesNearUjjain';
+import { placesNearUjjain } from '../Data/placesNearUjjainData';
 import { SectionHeader, Wrapper } from '../MainLayouts';
 
 const PlacesNearUjjain = () => {
