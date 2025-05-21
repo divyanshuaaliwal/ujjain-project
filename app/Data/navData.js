@@ -21,10 +21,11 @@ export const navMenu = [
         ]
     },
     { title: "Ujjain Darshan", dropdown: false, link: "/ujjain-darshan" },
-     { title: "Bhasm Aarti", dropdown: false, link: "/bhasm-aarti" },
+    { title: "Bhasm Aarti", dropdown: false, link: "/bhasm-aarti" },
     { title: "Omkareshwar Visit", dropdown: false, link: "/omkareshwar-visit" },
     { title: "Madhya Pradesh Tour", dropdown: false, link: "/madhya-pradesh-tour" },
-   
+    { title: "Hotels", dropdown: false, link: "/hotels" },
+
     {
         title: "Useful Links",
         dropdown: true,
@@ -35,7 +36,6 @@ export const navMenu = [
             { title: "Things to Carry", link: "/things-to-carry" }
         ]
     },
-    { title: "Travel Community", dropdown: false, link: "/travel-community" },
     { title: "Customer Center", dropdown: false, link: "/customer-center" },
     { title: "Contact US", dropdown: false, link: "/contact-us" },
 ];

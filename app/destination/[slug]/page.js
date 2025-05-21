@@ -6,8 +6,8 @@ import { tourPackages } from "../../Data/tourPackagesData";
 
 
 import Temples from "../../container/Temples";
-// import Hotels from "../../container/Hotels";
-// import Packages from "../../container/Packages";
+import Hotels from "../../container/Hotels";
+import Packages from "../../container/Packages";
 const TemplePage = () => {
 
     const { slug } = useParams();
