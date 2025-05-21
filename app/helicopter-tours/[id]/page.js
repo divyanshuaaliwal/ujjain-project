@@ -102,7 +102,6 @@ export default function HelicopterTourPage() {
 
 
             <div className={styles.heroGrid}>
-                
                 <div>
                     <div className={styles.tabContainer}>
                         {

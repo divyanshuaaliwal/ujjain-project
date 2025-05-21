@@ -16,7 +16,21 @@
     margin: 0;
 }
 
-/* webkit browsers */
 section::-webkit-scrollbar {
-    width: 5px;
+    width: 8px;
+}
+
+section::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+
+section::-webkit-scrollbar-thumb {
+    
+    background: var(--primary-orange);
+    border-radius: 100px;
+
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    box-sizing: border-box;
 }
