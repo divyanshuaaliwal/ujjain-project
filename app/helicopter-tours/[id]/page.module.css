@@ -1,15 +1,10 @@
-.container {
-	margin: 0 auto;
-	padding: 0 4rem;	
-	color: #1e293b;
-}
 
 .heroGrid {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 2rem;
-	margin-bottom: 2rem;
 	align-items: stretch;
+	padding: 1rem;
 }
 
 .heroImageWrapper {
@@ -29,10 +24,7 @@
 }
 
 .overviewCard {
-	background: white;
-	padding: 2rem;
-	border-radius: 12px;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+	padding: 1rem 2rem 2rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -89,23 +81,23 @@
 }
 
 .ratingParent {
-    display: flex;
+	display: flex;
 }
 
 .rating {
-    display: flex;
-    align-items: center;
-    gap: 6px;
+	display: flex;
+	align-items: center;
+	gap: 6px;
 }
 
 .ratingLabel {
-    font-weight: 900;
-    color: #4b5563;
+	font-weight: 900;
+	color: #4b5563;
 }
 
 .ratingValue {
-    font-size: 14px;
-    color: #666;
+	font-size: 14px;
+	color: #666;
 }
 
 .bookNowButtonHero {
@@ -127,14 +119,13 @@
 
 .section {
 	background: white;
-	padding: 2rem ;	
+	padding: 2rem;
 	border-radius: 12px;
-	margin-bottom:  2rem;
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 	transition: transform 0.3s ease;
-	
+
 	height: auto;
-	max-height: 294px;
+	max-height: 255px;
 	overflow-y: auto;
 }
 
@@ -142,16 +133,17 @@
 	background: white;
 	padding: 2rem;
 	border-radius: 12px;
-	margin-bottom:  2rem;
+	/* margin-bottom: 2rem; */
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 	transition: transform 0.3s ease;
-	
+
 	height: auto;
-	max-height: 600px;	
+	max-height: 600px;
 	overflow-y: auto;
 }
 
-.section:hover, .section2:hover {
+.section:hover,
+.section2:hover {
 	transform: translateY(-4px);
 }
 
@@ -183,7 +175,7 @@
 .tabContainer {
 	display: flex;
 	gap: 0.5rem;
-	margin-bottom: 2rem;
+	margin-bottom: 1rem;
 	flex-wrap: wrap;
 	justify-content: center;
 }
@@ -249,7 +241,7 @@
 	text-align: center;
 	padding: 4rem 0;
 	font-size: 1.75rem;
-	color: #dc2626;
+	color: var(--primary-orange);
 	font-weight: 600;
 }
 
@@ -265,6 +257,7 @@
 }
 
 @media (max-width: 768px) {
+
 	.container {
 		padding: 1.5rem;
 	}
@@ -276,7 +269,12 @@
 }
 
 @media (max-width: 480px) {
-	
+
+	.container {
+		padding: 0;
+	}
+
+
 	.heroImageWrapper {
 		height: 200px;
 	}

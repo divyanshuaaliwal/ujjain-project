@@ -3,12 +3,24 @@
     background: var(--gradient-bg);
 }
 
+.InternalPageWrapper {
+    padding: 50px 1rem;
+    background: white;
+}
+
 .sectionTitle {
     font-size: 2.5rem;
     text-align: center;
     color: var(--primary-orange);
     font-weight: 700;
     /* margin-top: 25px; */
+}
+
+.internalPagesTitle {
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--primary-orange);
+    font-weight: 700;
 }
 
 .divider {
@@ -21,7 +33,7 @@
     position: relative;
 }
 
-.divider::before, .divider::after {
+.divider::before, .divider::after, .internalPagesDivider::before, .internalPagesDivider::after {
     content: "";
     height: 1px;
     background: linear-gradient(to right, transparent, #d1a054, transparent);
@@ -44,12 +56,14 @@
 }
 
 
-.TitleUnderline {
-    width: 80px;
-    height: 4px;
-    background-color: var(--primary-orange);
-    margin: 10px auto 40px;
-    border-radius: 2px;
+.internalPagesDivider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto 30px;
+    width: 100%;
+    max-width: 500px;
+    position: relative;
 }
 
 
@@ -61,5 +75,10 @@
 
     .description {
         font-size: 1.375rem;
+    }
+
+       
+    .internalPagesTitle {
+        font-size: 2.75rem;
     }
 }

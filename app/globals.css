@@ -16,7 +16,7 @@
     margin: 0;
 }
 
-
+/* webkit browsers */
 section::-webkit-scrollbar {
-    width: 0px;
-} 
+    width: 5px;
+}

@@ -27,59 +27,32 @@ export const travelPackages = [
         ],
         itinerary: [
             {
-                time: "3:30 AM",
-                activity: "Reporting at Indore Helipad",
-                description: "Briefing and safety instructions"
+                day: "Day 1",
+                activity: "Arrival & Welcome Briefing",
+                description: "Reach Indore, meet tour coordinator, and receive instructions for the upcoming journey."
             },
             {
-                time: "4:00 AM",
-                activity: "Helicopter Departure",
-                description: "Scenic flight to Ujjain (15 mins)"
+                day: "Day 2",
+                activity: "Helicopter Ride to Ujjain",
+                description: "Board the early morning helicopter to Ujjain and enjoy the aerial view of the sacred region."
             },
             {
-                time: "4:30 AM",
-                activity: "Bhasma Aarti Darshan",
-                description: "VIP entry with special privileges"
+                day: "Day 3",
+                activity: "Mahakaleshwar Darshan & Rituals",
+                description: "Attend the divine Bhasma Aarti with VIP entry and perform spiritual rituals with priest guidance."
             },
             {
-                time: "6:30 AM",
-                activity: "Guided Temple Tour",
-                description: "Mahakaleshwar complex exploration"
+                day: "Day 4",
+                activity: "Temple Visits & Local Exploration",
+                description: "Visit Harsiddhi Mata Temple, Ram Ghat, and explore religious and cultural heritage of Ujjain."
             },
             {
-                time: "8:00 AM",
-                activity: "Breakfast",
-                description: "Satvik breakfast at premium restaurant"
-            },
-            {
-                time: "9:30 AM",
-                description: "Harsiddhi Mata Temple visit"
-            },
-            {
-                time: "11:00 AM",
-                description: "Ram Ghat visit & Kshipra River rituals"
-            },
-            {
-                time: "1:00 PM",
-                activity: "Lunch",
-                description: "Traditional Malwa thali"
-            },
-            {
-                time: "3:00 PM",
-                activity: "Free Time",
-                description: "Shopping for religious artifacts"
-            },
-            {
-                time: "5:00 PM",
-                activity: "Return to Helipad",
-                description: "Preparation for return journey"
-            },
-            {
-                time: "5:30 PM",
-                activity: "Helicopter Departure",
-                description: "Return to Indore"
+                day: "Day 5",
+                activity: "Return Journey & Departure",
+                description: "Enjoy leisure time before your return helicopter ride to Indore and conclude the divine journey."
             }
         ],
+
         inclusions: [
             "Round-trip helicopter transfers (Indore-Ujjain-Indore)",
             "VIP Bhasma Aarti pass (Front row seating)",
@@ -151,59 +124,32 @@ export const travelPackages = [
         ],
         itinerary: [
             {
-                time: "3:30 AM",
-                activity: "Reporting at Indore Helipad",
-                description: "Briefing and safety instructions"
+                day: "Day 1",
+                activity: "Journey Begins – Indore Arrival",
+                description: "Arrive in Indore, meet your tour coordinator, and receive welcome briefing with travel kit."
             },
             {
-                time: "4:00 AM",
-                activity: "Helicopter Departure",
-                description: "Scenic flight to Ujjain (15 mins)"
+                day: "Day 2",
+                activity: "Helicopter Ride to Ujjain",
+                description: "Take an early morning helicopter from Indore to Ujjain with stunning aerial views of Madhya Pradesh."
             },
             {
-                time: "4:30 AM",
-                activity: "Bhasma Aarti Darshan",
-                description: "VIP entry with special privileges"
+                day: "Day 3",
+                activity: "VIP Bhasma Aarti & Temple Rituals",
+                description: "Attend the sacred Bhasma Aarti at Mahakaleshwar with VIP access and participate in guided pooja rituals."
             },
             {
-                time: "6:30 AM",
-                activity: "Guided Temple Tour",
-                description: "Mahakaleshwar complex exploration"
+                day: "Day 4",
+                activity: "Explore Ujjain’s Sacred Sites",
+                description: "Visit Harsiddhi Mata Temple, Ram Ghat, and perform holy rituals at the Kshipra River banks."
             },
             {
-                time: "8:00 AM",
-                activity: "Breakfast",
-                description: "Satvik breakfast at premium restaurant"
-            },
-            {
-                time: "9:30 AM",
-                description: "Harsiddhi Mata Temple visit"
-            },
-            {
-                time: "11:00 AM",
-                description: "Ram Ghat visit & Kshipra River rituals"
-            },
-            {
-                time: "1:00 PM",
-                activity: "Lunch",
-                description: "Traditional Malwa thali"
-            },
-            {
-                time: "3:00 PM",
-                activity: "Free Time",
-                description: "Shopping for religious artifacts"
-            },
-            {
-                time: "5:00 PM",
-                activity: "Return to Helipad",
-                description: "Preparation for return journey"
-            },
-            {
-                time: "5:30 PM",
-                activity: "Helicopter Departure",
-                description: "Return to Indore"
+                day: "Day 5",
+                activity: "Return to Indore & Tour Conclusion",
+                description: "Enjoy local shopping before boarding your helicopter back to Indore and conclude your spiritual journey."
             }
-        ],
+        ]
+        ,
         inclusions: [
             "Round-trip helicopter transfers (Indore-Ujjain-Indore)",
             "VIP Bhasma Aarti pass (Front row seating)",
@@ -278,59 +224,42 @@ export const travelPackages = [
         ],
         itinerary: [
             {
-                time: "3:30 AM",
-                activity: "Reporting at Indore Helipad",
-                description: "Briefing and safety instructions"
+                day: "Day 1",
+                activity: "Arrival and Reporting at Helipad",
+                description: "Arrive at Indore Helipad, meet our coordinator, and attend a quick safety briefing session."
             },
             {
-                time: "4:00 AM",
-                activity: "Helicopter Departure",
-                description: "Scenic flight to Ujjain (15 mins)"
+                day: "Day 2",
+                activity: "Helicopter Journey to Ujjain",
+                description: "Board the helicopter for a scenic 15-minute flight from Indore to Ujjain."
             },
             {
-                time: "4:30 AM",
-                activity: "Bhasma Aarti Darshan",
-                description: "VIP entry with special privileges"
+                day: "Day 3",
+                activity: "VIP Bhasma Aarti Darshan",
+                description: "Witness the sacred Bhasma Aarti at Mahakaleshwar Temple with special VIP access."
             },
             {
-                time: "6:30 AM",
-                activity: "Guided Temple Tour",
-                description: "Mahakaleshwar complex exploration"
+                day: "Day 4",
+                activity: "Temple Exploration & Breakfast",
+                description: "Take a guided tour of Mahakaleshwar complex followed by a Satvik breakfast at a premium restaurant."
             },
             {
-                time: "8:00 AM",
-                activity: "Breakfast",
-                description: "Satvik breakfast at premium restaurant"
+                day: "Day 5",
+                activity: "Harsiddhi Mata & Ram Ghat Visit",
+                description: "Seek blessings at Harsiddhi Mata Temple and perform holy rituals at the Ram Ghat on the Kshipra River."
             },
             {
-                time: "9:30 AM",
-                description: "Harsiddhi Mata Temple visit"
+                day: "Day 6",
+                activity: "Lunch and Local Shopping",
+                description: "Enjoy an authentic Malwa thali followed by free time for shopping religious items and souvenirs."
             },
             {
-                time: "11:00 AM",
-                description: "Ram Ghat visit & Kshipra River rituals"
-            },
-            {
-                time: "1:00 PM",
-                activity: "Lunch",
-                description: "Traditional Malwa thali"
-            },
-            {
-                time: "3:00 PM",
-                activity: "Free Time",
-                description: "Shopping for religious artifacts"
-            },
-            {
-                time: "5:00 PM",
-                activity: "Return to Helipad",
-                description: "Preparation for return journey"
-            },
-            {
-                time: "5:30 PM",
-                activity: "Helicopter Departure",
-                description: "Return to Indore"
+                day: "Day 7",
+                activity: "Return to Indore",
+                description: "Head back to the helipad and fly back to Indore, concluding your spiritual journey."
             }
-        ],
+        ]
+        ,
         inclusions: [
             "Round-trip helicopter transfers (Indore-Ujjain-Indore)",
             "VIP Bhasma Aarti pass (Front row seating)",
@@ -404,59 +333,62 @@ export const travelPackages = [
         ],
         itinerary: [
             {
-                time: "3:30 AM",
+                day: "Day 1",
                 activity: "Reporting at Indore Helipad",
                 description: "Briefing and safety instructions"
             },
             {
-                time: "4:00 AM",
+                day: "Day 2",
                 activity: "Helicopter Departure",
                 description: "Scenic flight to Ujjain (15 mins)"
             },
             {
-                time: "4:30 AM",
+                day: "Day 3",
                 activity: "Bhasma Aarti Darshan",
                 description: "VIP entry with special privileges"
             },
             {
-                time: "6:30 AM",
+                day: "Day 4",
                 activity: "Guided Temple Tour",
                 description: "Mahakaleshwar complex exploration"
             },
             {
-                time: "8:00 AM",
+                day: "Day 5",
                 activity: "Breakfast",
                 description: "Satvik breakfast at premium restaurant"
             },
             {
-                time: "9:30 AM",
-                description: "Harsiddhi Mata Temple visit"
+                day: "Day 6",
+                activity: "Harsiddhi Mata Temple Visit",
+                description: "Seek blessings at the historic Harsiddhi Mata Temple"
             },
             {
-                time: "11:00 AM",
-                description: "Ram Ghat visit & Kshipra River rituals"
+                day: "Day 7",
+                activity: "Ram Ghat Visit",
+                description: "Perform rituals at the sacred Kshipra River on Ram Ghat"
             },
             {
-                time: "1:00 PM",
+                day: "Day 8",
                 activity: "Lunch",
                 description: "Traditional Malwa thali"
             },
             {
-                time: "3:00 PM",
+                day: "Day 9",
                 activity: "Free Time",
                 description: "Shopping for religious artifacts"
             },
             {
-                time: "5:00 PM",
+                day: "Day 10",
                 activity: "Return to Helipad",
                 description: "Preparation for return journey"
             },
             {
-                time: "5:30 PM",
+                day: "Day 11",
                 activity: "Helicopter Departure",
                 description: "Return to Indore"
             }
-        ],
+        ]
+        ,
         inclusions: [
             "Round-trip helicopter transfers (Indore-Ujjain-Indore)",
             "VIP Bhasma Aarti pass (Front row seating)",
