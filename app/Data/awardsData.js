@@ -1,34 +1,35 @@
+import trophy from "../assets/trophy.png";
+import google from "../assets/google.png";
+import ISO from "../assets/ISO.png";
+import icon24x7 from "../assets/icon24x7.png";
+
 export const awards = [
     {
         id: 1,
-        title: "India's Best Heritage Destination",
-        year: "2023",
-        issuedBy: "Ministry of Tourism",
-        highlight: "Cultural heritage preserved with devotion.",
-        description: "Mahakaleshwar Temple was honored for maintaining its timeless architectural legacy and offering visitors a deeply spiritual experience amidst centuries-old traditions."
+        title: "5 Lac + Customers",
+        image: trophy,
+        highlight: "Happy customers across 5 Lac + experiences",
+        description: "5 Lac+ happy customers have trusted us with their journeys, making us one of the most loved and trusted platforms in the spiritual travel domain."
     },
     {
         id: 2,
-        title: "Approved by MP Tourism",
-        year: "2022",
-        issuedBy: "Madhya Pradesh Tourism Board",
-        highlight: "A must-visit landmark in the heart of India.",
-        description: "Recognized as a top spiritual and cultural destination in Madhya Pradesh, endorsed by MP Tourism for attracting millions of pilgrims and tourists every year."
+        title: "4.5/5 Rating on Google",
+        image: google,
+        highlight: "6K+ verified reviews with 90% excellent score",
+        description: "Thousands of guests have rated us highly on Google for our seamless service, expert assistance, and spiritual guidance."
     },
     {
         id: 3,
-        title: "National Cultural Landmark",
-        year: "2021",
-        issuedBy: "Archaeological Survey of India",
-        highlight: "A pillar of India’s cultural identity.",
-        description: "Recognized for its profound historical and spiritual significance, the temple stands as a living monument of India’s deep-rooted heritage."
+        title: "In the Media & Certified",
+        image: ISO,
+        highlight: "Recognized by Tourism & Certification Boards",
+        description: "Recommended by the Ministry of Tourism, IATA, Himachal Tourism and ISO certified for delivering consistent quality and service."
     },
     {
         id: 4,
-        title: "Top Global Spiritual Tourism Site",
-        year: "2020",
-        issuedBy: "World Tourism Organization",
-        highlight: "A divine destination for global pilgrims.",
-        description: "Awarded for offering unforgettable spiritual journeys and attracting global tourists to witness the mesmerizing Bhasm Aarti and ancient rituals."
+        title: "24 x 7 Help Center",
+        image: icon24x7,
+        highlight: "Live chat with local experts, anytime",
+        description: "Round-the-clock assistance for all your queries through live chat with local experts who understand your journey."
     }
 ];
