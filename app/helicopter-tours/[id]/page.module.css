@@ -258,7 +258,7 @@
 
 @media (max-width: 768px) {
 
-	.container {
+	.heroGrid {
 		padding: 1.5rem;
 	}
 
@@ -270,7 +270,7 @@
 
 @media (max-width: 480px) {
 
-	.container {
+	.heroGrid {
 		padding: 0;
 	}
 

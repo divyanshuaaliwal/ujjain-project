@@ -102,10 +102,11 @@ export default function HelicopterTourPage() {
 
 
             <div className={styles.heroGrid}>
+                
                 <div>
                     <div className={styles.tabContainer}>
                         {
-                            tabs.map((tab) => (
+                            tabs.map( (tab) => (
                                 <button
                                     key={tab}
                                     className={`${styles.tabButton} ${activeTab === tab ? styles.activeTab : ''}`}
@@ -117,7 +118,6 @@ export default function HelicopterTourPage() {
                         }
                     </div>
 
-
                     <section className={styles.section}>
                         <h3 className={styles.sectionTitle}>{getSubtitle(activeTab)}</h3>
                         <ul className={styles.list}>
@@ -128,44 +128,39 @@ export default function HelicopterTourPage() {
                             }
                         </ul>
                     </section>
-
-
-
-
                 </div>
 
                 <div>
                     <section className={styles.section2}>
                         <h3 className={styles.sectionTitle}>Temple Rules</h3>
                         <ul className={styles.list}>
-                            {tour.templeRules.map((item, i) => (
-                                <li key={i} className={styles.listItem}>{item}</li>
-                            ))}
+                            {
+                                tour.templeRules.map((item, i) => (
+                                    <li key={i} className={styles.listItem}>{item}</li>
+                                ))
+                            }
                         </ul>
                     </section>
                 </div>
             </div>
 
             <div className={styles.heroGrid}>
-
                 <div>
                     <ItineraryAccordion itinerary={tour.itinerary} />
-
                 </div>
-
+               
                 <div>
-
                     <section className={styles.section2}>
                         <h3 className={styles.sectionTitle}>Cancellation Policy</h3>
                         <ul className={styles.list}>
-                            {tour.cancellationPolicy.map((item, i) => (
-                                <li key={i} className={styles.listItem}>{item}</li>
-                            ))}
+                            {
+                                tour.cancellationPolicy.map((item, i) => (
+                                    <li key={i} className={styles.listItem}>{item}</li>
+                                ))
+                            }
                         </ul>
                     </section>
-
                 </div>
-
             </div>
 
         </InternalPageWrapper>

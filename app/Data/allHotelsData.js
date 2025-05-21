@@ -121,7 +121,7 @@ export const hotelDetails = [
                 comment: "Excellent service but rooms could be better soundproofed."
             }
         ],
-        gallery: [hotel1, hotel2, hotel3, hotel4]
+             gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
     },
     {
         id: 2,
@@ -226,7 +226,7 @@ export const hotelDetails = [
                 comment: "Beautiful property but slightly far from main temple."
             }
         ],
-        gallery: [hotel2, hotel1, hotel4, hotel3]
+               gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
     },
     {
         id: 3,
@@ -328,7 +328,7 @@ export const hotelDetails = [
                 comment: "Basic but clean. Good value for money."
             }
         ],
-        gallery: [hotel3, hotel1, hotel2, hotel4]
+              gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
     },
     {
         id: 4,
@@ -433,7 +433,7 @@ export const hotelDetails = [
                 comment: "Perfect blend of history and luxury. Worth every penny."
             }
         ],
-        gallery: [hotel4, hotel2, hotel3, hotel1]
+               gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
     },
     {
         id: 5,
@@ -547,7 +547,7 @@ export const hotelDetails = [
                 comment: "Excellent service but rooms could be better soundproofed."
             }
         ],
-        gallery: [hotel1, hotel2, hotel3, hotel4]
+             gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
     },
     {
         id: 6,
@@ -652,7 +652,7 @@ export const hotelDetails = [
                 comment: "Beautiful property but slightly far from main temple."
             }
         ],
-        gallery: [hotel2, hotel1, hotel4, hotel3]
+                gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
     },
     {
         id: 7,
@@ -754,7 +754,7 @@ export const hotelDetails = [
                 comment: "Basic but clean. Good value for money."
             }
         ],
-        gallery: [hotel3, hotel1, hotel2, hotel4]
+                gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
     },
     {
         id: 8,
@@ -859,6 +859,6 @@ export const hotelDetails = [
                 comment: "Perfect blend of history and luxury. Worth every penny."
             }
         ],
-        gallery: [hotel4, hotel2, hotel3, hotel1]
+        gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
     },
 ];
