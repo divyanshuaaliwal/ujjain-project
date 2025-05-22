@@ -48,6 +48,15 @@ export const allHotels = [
                 amenities: ["Free WiFi", "LED TV", "Minibar", "Bathrobe", "Slippers"]
             },
             {
+                name: "Premium Room",
+                description: "Spacious top-floor room with private terrace and panoramic temple views",
+                size: "320 sq ft",
+                occupancy: "2 Adults",
+                price: "₹10,200",
+                amenities: ["AC", "Private Terrace", "Wi-Fi", "Complimentary Breakfast"]
+            },
+
+            {
                 name: "Maharaja Suite",
                 description: "Luxurious heritage-style suite with antique furniture and private pooja room",
                 size: "650 sq ft",
@@ -121,7 +130,7 @@ export const allHotels = [
                 comment: "Excellent service but rooms could be better soundproofed."
             }
         ],
-        gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
+        // gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
     },
     {
         id: 2,
@@ -226,7 +235,7 @@ export const allHotels = [
                 comment: "Beautiful property but slightly far from main temple."
             }
         ],
-        gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
+        // gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
     },
     {
         id: 3,
@@ -328,7 +337,7 @@ export const allHotels = [
                 comment: "Basic but clean. Good value for money."
             }
         ],
-        gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
+        // gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
     },
     {
         id: 4,
@@ -433,7 +442,7 @@ export const allHotels = [
                 comment: "Perfect blend of history and luxury. Worth every penny."
             }
         ],
-        gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
+        // gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
     },
     {
         id: 5,
@@ -547,7 +556,7 @@ export const allHotels = [
                 comment: "Excellent service but rooms could be better soundproofed."
             }
         ],
-        gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
+        // gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
     },
     {
         id: 6,
@@ -652,7 +661,7 @@ export const allHotels = [
                 comment: "Beautiful property but slightly far from main temple."
             }
         ],
-        gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
+        // gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
     },
     {
         id: 7,
@@ -754,7 +763,7 @@ export const allHotels = [
                 comment: "Basic but clean. Good value for money."
             }
         ],
-        gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
+        // gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
     },
     {
         id: 8,
@@ -859,7 +868,7 @@ export const allHotels = [
                 comment: "Perfect blend of history and luxury. Worth every penny."
             }
         ],
-        gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
+        // gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
     },
     {
         id: 9,
@@ -973,7 +982,7 @@ export const allHotels = [
                 comment: "Excellent service but rooms could be better soundproofed."
             }
         ],
-        gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
+        // gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
     },
     {
         id: 10,
@@ -1078,7 +1087,7 @@ export const allHotels = [
                 comment: "Beautiful property but slightly far from main temple."
             }
         ],
-        gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
+        // gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
     },
     {
         id: 11,
@@ -1180,7 +1189,7 @@ export const allHotels = [
                 comment: "Basic but clean. Good value for money."
             }
         ],
-        gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
+        // gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
     },
     {
         id: 12,
@@ -1285,7 +1294,7 @@ export const allHotels = [
                 comment: "Perfect blend of history and luxury. Worth every penny."
             }
         ],
-        gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
+        // gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
     },
     {
         id: 13,
@@ -1399,7 +1408,7 @@ export const allHotels = [
                 comment: "Excellent service but rooms could be better soundproofed."
             }
         ],
-        gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
+        // gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
     },
     {
         id: 14,
@@ -1504,7 +1513,7 @@ export const allHotels = [
                 comment: "Beautiful property but slightly far from main temple."
             }
         ],
-        gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
+        // gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
     },
     {
         id: 15,
@@ -1606,7 +1615,7 @@ export const allHotels = [
                 comment: "Basic but clean. Good value for money."
             }
         ],
-        gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
+        // gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
     },
     {
         id: 16,
@@ -1711,7 +1720,7 @@ export const allHotels = [
                 comment: "Perfect blend of history and luxury. Worth every penny."
             }
         ],
-        gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
+        // gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
     },
     {
         id: 17,
@@ -1825,7 +1834,7 @@ export const allHotels = [
                 comment: "Excellent service but rooms could be better soundproofed."
             }
         ],
-        gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
+        // gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
     },
     {
         id: 18,
@@ -1930,6 +1939,6 @@ export const allHotels = [
                 comment: "Beautiful property but slightly far from main temple."
             }
         ],
-        gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
+        // gallery: [hotel_1, hotel_2, hotel_3, hotel_4]
     },
 ];

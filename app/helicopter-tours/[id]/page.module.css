@@ -138,7 +138,7 @@
 	transition: transform 0.3s ease;
 
 	height: auto;
-	max-height: 600px;
+	max-height: 315;
 	overflow-y: auto;
 }
 

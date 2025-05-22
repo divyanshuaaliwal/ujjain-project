@@ -29,35 +29,31 @@ export default function Hotels() {
             updatedHotels = updatedHotels.filter(hotel => selectedStars.includes(Math.floor(hotel.rating || 0)));
         }
 
-        // Sortby filter
+        // Helper function to convert price string to number
+        const getPriceValue = (price) => {
+            if (typeof price === "string") {
+                const numeric = price.replace(/[^0-9]/g, "");
+                return parseInt(numeric, 10) || 0;
+            }
+            return typeof price === "number" ? price : 0;
+        };
+
+        // Sorting logic
         switch (sortBy) {
-
             case "price-low":
-
-                updatedHotels.sort(
-                    (a, b) =>
-                        parseInt(a.currentPrice.replace(/[^0-9]/g, "")) - parseInt(b.currentPrice.replace(/[^0-9]/g, ""))
-                );
-
+                updatedHotels.sort((a, b) => getPriceValue(a.currentPrice) - getPriceValue(b.currentPrice));
                 break;
 
             case "price-high":
-
-                updatedHotels.sort(
-                    (a, b) =>
-                        parseInt(b.currentPrice.replace(/[^0-9]/g, "")) - parseInt(a.currentPrice.replace(/[^0-9]/g, ""))
-                );
-
+                updatedHotels.sort((a, b) => getPriceValue(b.currentPrice) - getPriceValue(a.currentPrice));
                 break;
 
             case "rating":
-
-                updatedHotels.sort((a, b) => b.rating - a.rating);
-
+                updatedHotels.sort((a, b) => (b.rating || 0) - (a.rating || 0));
                 break;
 
             default:
-                // no sort, keep original order
+                // No sorting, keep original order
                 break;
         }
 
