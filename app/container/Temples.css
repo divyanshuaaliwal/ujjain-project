@@ -12,7 +12,7 @@
 
 .temples-title {
   font-size: 2.25rem;
-  color: var(--primary-orange);
+  color: var(--color-primary-orange);
   font-weight: 700;
   text-align: center;
   margin-bottom: 0.5rem;
@@ -27,7 +27,7 @@
 .title-underline {
   width: 6rem;
   height: 0.25rem;
-  background-color: var(--primary-orange);
+  background-color: var(--color-primary-orange);
   margin: 0 auto 1.5rem;
 }
 
@@ -210,7 +210,7 @@
 }
 
 .pin-icon {
-  color: var(--primary-orange);
+  color: var(--color-primary-orange);
   margin-right: 0.5rem;
 }
 
@@ -232,7 +232,7 @@
 
 .amenity-icon {
   margin-right: 0.25rem;
-  color: var(--primary-orange);
+  color: var(--color-primary-orange);
 }
 
 .price-booking {
@@ -256,7 +256,7 @@
 .price-amount {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--primary-orange);
+  color: var(--color-primary-orange);
 }
 
 .price-night {
@@ -266,7 +266,7 @@
 }
 
 .view-deal-button {
-  background-color: var(--primary-orange);
+  background-color: var(--color-primary-orange);
   color: white;
   font-weight: 500;
   padding: 0.5rem 1.5rem;

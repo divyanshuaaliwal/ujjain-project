@@ -1,7 +1,7 @@
 "use client";
 import { useParams } from "next/navigation";
 import { templesData } from "../../Data/templesData";
-import { hotels } from "../../Data/hotelsData";
+import { hotels } from "../../Data/topHotelsData";
 import { tourPackages } from "../../Data/tourPackagesData";
 
 

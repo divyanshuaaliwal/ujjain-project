@@ -39,7 +39,7 @@
 }
 
 .attractionInfo h3 {
-    color: var(--primary-orange);
+    color: var(--color-primary-orange);
     margin-bottom: 10px;
     font-size: 1.4rem;
 }

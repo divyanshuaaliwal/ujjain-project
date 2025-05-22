@@ -14,7 +14,7 @@
 
 .heading {
  font-size: 2.25rem;
-  color: var(--primary-orange);
+  color: var(--color-primary-orange);
   font-weight: 700;
   text-align: center;
   margin-bottom: 0.5rem;
@@ -141,7 +141,7 @@
     display: block;
     width: 100%;
     padding: 1rem;
-    background-color:var(--primary-orange);
+    background-color:var(--color-primary-orange);
     color: white;
     font-size: 1.1rem;
     font-weight: 600;
@@ -155,7 +155,7 @@
 }
 
 .submitButton:hover {
-    background-color:var(--hover-orange);
+    background-color:var(--color-hover-orange);
 }
 
 .submitButton:disabled {

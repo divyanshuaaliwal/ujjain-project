@@ -11,7 +11,7 @@
 .sectionTitle , .internalPagesTitle {
     font-size: 2.5rem;
     text-align: center;
-    color: var(--primary-orange);
+    color: var(--color-primary-orange);
     font-weight: 700;
 }
 

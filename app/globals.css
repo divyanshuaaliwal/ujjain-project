@@ -1,6 +1,5 @@
 :root {
-    --primary-orange: #ea580c;
-    --hover-orange: #c94a0a;
+
     --text-dark: #1f2937;
     --card-shadow: rgba(0, 0, 0, 0.1);
     --button-color: #6b46c1;
@@ -8,6 +7,12 @@
     --button-shadow: rgba(107, 70, 193, 0.4);
     --gradient-bg: linear-gradient(to bottom, #fff3e0, #ffffff);
 
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-primary-orange: #ea580c;
+    --color-hover-orange: #c94a0a;
+    --color-orange-border: #ff7300;
+    --color-yellow: rgb(250, 204, 21);
 }
 
 * {
@@ -27,7 +32,7 @@ section::-webkit-scrollbar-track {
 
 section::-webkit-scrollbar-thumb {
     
-    background: var(--primary-orange);
+    background: var(--color-primary-orange);
     border-radius: 100px;
 
     border-top: 20px solid transparent;

@@ -108,6 +108,7 @@ function HotelCard({
 }
 
 export default function Hotels({ HotelList = [], slug }) {
+    
     function capitalizeWithHyphens(str) {
         return str
             .split('-')

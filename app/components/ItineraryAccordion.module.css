@@ -8,7 +8,7 @@
 .title {
     font-size: 1.75rem;
     font-weight: 700;
-    background: var(--primary-orange);
+    background: var(--color-primary-orange);
     color: #ffffff;
     padding: 0.8rem;
     margin: 0;
@@ -84,7 +84,7 @@
 }
 
 .icon {
-    color: var(--primary-orange);
+    color: var(--color-primary-orange);
     stroke-width: 2px;
     width: 22px;
     height: 22px;
@@ -106,7 +106,7 @@
 }
 
 .chevron {
-    color: var(--primary-orange);
+    color: var(--color-primary-orange);
     width: 24px;
     height: 24px;
     opacity: 0.6;

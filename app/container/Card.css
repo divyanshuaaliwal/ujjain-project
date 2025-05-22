@@ -55,7 +55,7 @@
   border-radius: 9999px;
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--primary-orange); /* orange-600 */
+  color: var(--color-primary-orange); /* orange-600 */
 }
 
 /* Card content */
@@ -96,7 +96,7 @@
 
 
 .card:hover .card-title {
-  color: var(--primary-orange); /* orange-600 */
+  color: var(--color-primary-orange); /* orange-600 */
 }
 
 /* Description */
@@ -111,7 +111,7 @@
   display: inline-flex;
   align-items: center;
   font-weight: 500;
-  color: var(--primary-orange); /* orange-600 */
+  color: var(--color-primary-orange); /* orange-600 */
   transition: color 0.2s ease;
   align-self: flex-start;
   margin-top: auto;

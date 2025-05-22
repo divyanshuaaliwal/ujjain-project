@@ -32,7 +32,7 @@
 .sectionTitle {
     font-size: 1.75rem;
     font-weight: 700;
-    color: var(--primary-orange);
+    color: var(--color-primary-orange);
     margin: 0;
     flex-grow: 1;
 }

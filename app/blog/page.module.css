@@ -12,13 +12,13 @@
 .titleUnderline{
       width: 6rem;
   height: 0.25rem;
-  background-color: var(--primary-orange);
+  background-color: var(--color-primary-orange);
   margin: 0 auto 1.5rem;
 }
 
 .heading {
   font-size: 2.25rem;
-  color: var(--primary-orange);
+  color: var(--color-primary-orange);
   font-weight: 700;
   text-align: center;
   margin-bottom: 0.5rem;
