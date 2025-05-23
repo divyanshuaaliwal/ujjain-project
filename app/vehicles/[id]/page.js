@@ -2,45 +2,52 @@
 
 import { useParams } from 'next/navigation';
 import { useState } from 'react';
-import { travelPackages } from '../../Data/helicopterTravelPackagesData';
 import Image from 'next/image';
 import styles from './page.module.css';
 import { InternalPageHeading, InternalPageWrapper } from '../../MainLayouts';
 import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
-import { Clock, MapPin, Tag, Star, Info, CheckCircle } from 'lucide-react';
-import ItineraryAccordion from '@/app/components/ItineraryAccordion';
+import { Clock, Hotel, Route, Tag, Star, Info, CheckCircle } from 'lucide-react';
+import { vehiclePackages } from '@/app/Data/vehiclePackagesData';
+import { TrendingUp } from 'lucide-react';
 
+import { Briefcase, Users } from 'lucide-react';
 
 export default function HelicopterTourPage() {
 
     const { id } = useParams();
-    const tour = travelPackages.find((t) => t.id === Number(id));
+    const vehicle = vehiclePackages.find((hvehicle) => hvehicle.id === Number(id));
 
-    if (!tour) {
-        return <div className={styles.notFound}>Tour not found</div>;
+    if (!vehicle) {
+        return <div className={styles.notFound}>Vehicle not found</div>;
     }
 
-    const [activeTab, setActiveTab] = useState('highlights');
+    const [activeTab, setActiveTab] = useState('inclusions');
+    const [activeTab2, setActiveTab2] = useState('specifications');
+
     const [showBookingForm, setShowBookingForm] = useState(false);
-    const tabs = ['highlights', 'inclusions', 'exclusions', 'thingsToCarry', 'importantInfo'];
+
+    const tabs = ['inclusions', 'exclusions', 'notes'];
+    const tabs2 = ['specifications', 'features', 'contact'];
 
     const handleTabChange = (tab) => {
         setActiveTab(tab);
     };
 
-    const handleBookNow = () => {
-        setShowBookingForm(true);
-        setTimeout(() => {
-            document.getElementById('bookingForm')?.scrollIntoView({ behavior: 'smooth' });
-        }, 100);
+    const handleTabChange2 = (tab2) => {
+        setActiveTab2(tab2);
     };
 
-    function getSubtitle(activeTab) {
-        return activeTab.replaceAll(/([A-Z])/g, ' $1').replace(/^./, char => char.toUpperCase())
+    const handleBookNow = () => {
+        setShowBookingForm(true);
+    };
+
+
+    function getSubtitle(tab) {
+        return tab.replaceAll(/([A-Z])/g, ' $1').replace(/^./, char => char.toUpperCase())
     }
 
-        function getObjectDataListOrArrayDataList(data) {
+    function getObjectDataListOrArrayDataList(data) {
 
         if (Array.isArray(data)) {
             return (
@@ -83,54 +90,89 @@ export default function HelicopterTourPage() {
         return null;
     }
 
+
     return (
         <InternalPageWrapper>
 
-            <InternalPageHeading title={tour.title} />
+            <InternalPageHeading title={vehicle.vehicle_type} />
 
             <div className={styles.heroGrid}>
+
                 <div className={styles.heroImageWrapper}>
                     <Image
-                        src={tour.heroImage}
-                        alt={tour.title}
+                        src={vehicle.image}
+                        alt={vehicle.vehicle_type}
                         fill
                         className={styles.heroImage}
                         style={{ objectFit: 'cover' }}
                         priority
                     />
                 </div>
+
+
                 <div className={styles.overviewCard}>
                     <h3 className={styles.cardTitle}>Tour Overview</h3>
                     <div className={styles.overviewDetails}>
+
                         <p>
-                            <strong><Clock size={16} className={styles.icon} />   Duration:</strong> {tour.duration}
+                            <strong><Hotel size={16} className={styles.icon} /> About:</strong> {vehicle.package_name}
                         </p>
+
                         <p>
-                            <strong><MapPin size={16} className={styles.icon} /> Route:</strong> {tour.startLocation}
+                            <strong><TrendingUp size={16} className={styles.icon} /> Km:</strong> {vehicle.km}
                         </p>
+
+                        <div className={styles.innerContent}>
+
+
+                            <p>
+                                <strong>
+                                    <Briefcase size={16} className={styles.icon} /> Luggage:
+                                </strong>{' '}
+                                {vehicle.luggage}
+                            </p>
+
+                            <p>
+                                <strong>
+                                    <Users size={16} className={styles.icon} /> Capacity:
+                                </strong>{' '}
+                                {vehicle.total_person_capacity} persons
+                            </p>
+                        </div>
+
+                        <p>
+                            <strong><Route size={16} className={styles.icon} /> Route:</strong>{' '}
+                            {vehicle.starting_point} → {vehicle.ending_point}
+                        </p>
+
+                        <p>
+                            <strong><Clock size={16} className={styles.icon} />   Duration:</strong> {vehicle.duration}
+                        </p>
+
+
+
+
+
                         <p className={styles.priceInfo}>
                             <strong><Tag size={16} className={styles.icon} /> Price:</strong>{' '}
-                            <span className={styles.currentPrice}>₹{tour.currentPrice}</span>{' '}
-                            <span className={styles.originalPrice}>₹{tour.originalPrice}</span>{' '}
-                            <span className={styles.saving}>(Save ₹{tour.saving})</span>
+                            <span className={styles.currentPrice}>₹{vehicle.price_per_person}</span>{' '}
+                            <span className={styles.originalPrice}>₹{vehicle.discount.original_price}</span>{' '}
+                            <span className={styles.saving}>(Save ₹{vehicle.discount.discount_amount})</span>
                         </p>
                         <Stack spacing={1} direction="row" alignItems="center" className={styles.ratingParent}>
                             <Star size={16} className={styles.icon} />
                             <span className={styles.ratingLabel}> Customer Rating:</span>
                             <Rating
                                 name="half-rating-read"
-                                defaultValue={tour.rating}
+                                defaultValue={vehicle.rating}
                                 precision={0.5}
                                 readOnly
                                 size="small"
                             />
-                            <span className={styles.ratingValue}>({tour.rating})</span>
+                            <span className={styles.ratingValue}>({vehicle.rating})</span>
                         </Stack>
-                        <p className={styles.overviewText}>
-                            <Info size={16} className={styles.icon} style={{ marginRight: '6px', verticalAlign: 'middle' }} />
-                            {tour.overview}
-                        </p>
                     </div>
+
                     <button onClick={handleBookNow} className={styles.bookNowButtonHero}>
 
                         Book Now <CheckCircle size={16} className={styles.icon} style={{ marginRight: '6px', }} />
@@ -141,6 +183,8 @@ export default function HelicopterTourPage() {
 
 
             <div className={styles.heroGrid}>
+
+
                 <div>
                     <div className={styles.tabContainer}>
                         {
@@ -158,36 +202,41 @@ export default function HelicopterTourPage() {
 
                     <section className={styles.section}>
                         <h3 className={styles.sectionTitle}>{getSubtitle(activeTab)}</h3>
-                        {
-                            getObjectDataListOrArrayDataList(tour[activeTab])
-                        }
-                    </section>
-                </div>
-
-                <div>
-                    <section className={styles.section2}>
-                        <h3 className={styles.sectionTitle}>Temple Rules</h3>
                             {
-                                getObjectDataListOrArrayDataList(tour.templeRules)
-                            } 
+                                getObjectDataListOrArrayDataList(vehicle[activeTab])
+                            }
                     </section>
                 </div>
-            </div>
 
-            <div className={styles.heroGrid}>
-                <div>
-                    <ItineraryAccordion itinerary={tour.itinerary} />
-                </div>
 
                 <div>
-                    <section className={styles.section2}>
-                        <h3 className={styles.sectionTitle}>Cancellation Policy</h3>
+                    <div className={styles.tabContainer}>
                         {
-                            getObjectDataListOrArrayDataList(tour.cancellationPolicy)
+                            tabs2.map((tab2) => (
+                                <button
+                                    key={tab2}
+                                    className={`${styles.tabButton} ${activeTab2 === tab2 ? styles.active : ''}`}
+                                    onClick={() => handleTabChange2(tab2)}
+                                >
+                                    {getSubtitle(tab2)}
+                                </button>
+                            ))
+                        }
+
+                    </div>
+
+
+                    <section className={styles.section}>
+                        <h3 className={styles.sectionTitle}>{getSubtitle(activeTab2)}</h3>
+                        {
+                            getObjectDataListOrArrayDataList(vehicle[activeTab2])
                         }
                     </section>
+
+
                 </div>
             </div>
+
 
         </InternalPageWrapper>
     );

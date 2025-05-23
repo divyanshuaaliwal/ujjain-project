@@ -140,8 +140,9 @@
 
 @media (max-width: 768px) {
     .accordionContainer {
-        margin: 1.5rem 1rem;
+        /* margin: 1.5rem 1rem; */
         border-radius: 20px;
+
     }
 
     .title {
@@ -181,7 +182,6 @@
 @media (max-width: 480px) {
   
     .accordionContainer {
-        margin: 2rem 0;
         border-radius: 16px;
     }
 

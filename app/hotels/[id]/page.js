@@ -44,19 +44,60 @@ export default function HelicopterTourPage() {
         setShowBookingForm(true);
     };
 
-    function getActiveComponent(tab) {
-        return hotel?.[tab] ?? null;
-    }
-
 
     function getSubtitle(tab) {
         return tab.replaceAll(/([A-Z])/g, ' $1').replace(/^./, char => char.toUpperCase())
     }
 
+
+    function getObjectDataListOrArrayDataList(data) {
+
+        if (Array.isArray(data)) {
+            return (
+                <ul>
+                    {
+                        data.map( (item, index) => (
+                            <li key={index} className={styles.listItem}>
+                                {item}
+                            </li>
+                        ))
+                    }
+                </ul>
+            );
+        } 
+        else if (data && typeof data === 'object') {
+            return (
+                <ul>
+                    {
+                        Object.entries(data).map(([key, value]) => {
+                            const label = key
+                                .replace(/_/g, ' ') // Replace underscores with space
+                                .replace(/([A-Z])/g, ' $1') // Add space before capital letters
+                                .replace(/^./, str => str.toUpperCase()); // Capitalize first letter
+
+                            const displayValue = Array.isArray(value)
+                                ? value.join(', ')
+                                : value;
+
+                            return (
+                                <li key={key} className={styles.listItem}>
+                                    <strong>{label}:</strong> {displayValue}
+                                </li>
+                            );
+                        })
+                    }
+                </ul>
+            );
+        }
+
+        return null;
+    }
+
+
     return (
         <InternalPageWrapper>
 
-            <InternalPageHeading title={hotel.title} description={hotel.subtitle} />
+            <InternalPageHeading title={hotel.title} />
 
             <div className={styles.heroGrid}>
                 <div className={styles.heroImageWrapper}>
@@ -128,13 +169,9 @@ export default function HelicopterTourPage() {
 
                     <section className={styles.section}>
                         <h3 className={styles.sectionTitle}>{getSubtitle(activeTab)}</h3>
-                        <ul className={styles.list}>
                             {
-                                getActiveComponent(activeTab).map((item, i) => (
-                                    <li key={i} className={styles.listItem}>{item}</li>
-                                ))
+                                getObjectDataListOrArrayDataList(hotel[activeTab])
                             }
-                        </ul>
                     </section>
                 </div>
 
@@ -157,30 +194,30 @@ export default function HelicopterTourPage() {
 
                         {
                             hotel.roomTypes.filter((room) => room.name === activeRoom).map((room) => (
-                                    <ul key={room.name} className={styles.roomDetails}>
-                                        {
-                                            Object.entries(room).map( ([key, value]) => {
-                                                
-                                                if (key === "name") return null;
+                                <ul key={room.name} className={styles.roomDetails}>
+                                    {
+                                        Object.entries(room).map(([key, value]) => {
 
-                                                const label = key
-                                                    .replace(/([A-Z])/g, ' $1')   // space before capital letters
-                                                    .replace(/^./, str => str.toUpperCase()); // capitalize first letter
+                                            if (key === "name") return null;
 
-                                                // Format value (if array like amenities)
-                                                const displayValue = Array.isArray(value)
-                                                    ? value.join(', ')
-                                                    : value;
+                                            const label = key
+                                                .replace(/([A-Z])/g, ' $1')   // space before capital letters
+                                                .replace(/^./, str => str.toUpperCase()); // capitalize first letter
 
-                                                return (
-                                                    <li key={key} className={styles.listItem}>
-                                                        <strong>{label}:</strong> {displayValue}
-                                                    </li>
-                                                );
-                                            })
-                                        }
-                                    </ul>
-                                ))
+                                            // Format value (if array like amenities)
+                                            const displayValue = Array.isArray(value)
+                                                ? value.join(', ')
+                                                : value;
+
+                                            return (
+                                                <li key={key} className={styles.listItem}>
+                                                    <strong>{label}:</strong> {displayValue}
+                                                </li>
+                                            );
+                                        })
+                                    }
+                                </ul>
+                            ))
                         }
                     </section>
 
@@ -188,7 +225,7 @@ export default function HelicopterTourPage() {
             </div>
 
             <div className={styles.heroGrid}>
-                 <div>
+                <div>
                     <div className={styles.tabContainer}>
                         {
                             hotel.diningOptions.map((dining) => (
@@ -207,46 +244,42 @@ export default function HelicopterTourPage() {
 
                         {
                             hotel.diningOptions.filter((dining) => dining.name === activeDining).map((dining) => (
-                                    <ul key={dining.name} className={styles.roomDetails}>
-                                        {
-                                            Object.entries(dining).map( ([key, value]) => {
-                                                
-                                                if (key === "name") return null;
+                                <ul key={dining.name} className={styles.roomDetails}>
+                                    {
+                                        Object.entries(dining).map(([key, value]) => {
 
-                                                const label = key
-                                                    .replace(/([A-Z])/g, ' $1')   // space before capital letters
-                                                    .replace(/^./, str => str.toUpperCase()); // capitalize first letter
+                                            if (key === "name") return null;
 
-                                                // Format value (if array like amenities)
-                                                const displayValue = Array.isArray(value)
-                                                    ? value.join(', ')
-                                                    : value;
+                                            const label = key
+                                                .replace(/([A-Z])/g, ' $1')   // space before capital letters
+                                                .replace(/^./, str => str.toUpperCase()); // capitalize first letter
 
-                                                return (
-                                                    <li key={key} className={styles.listItem}>
-                                                        <strong>{label}:</strong> {displayValue}
-                                                    </li>
-                                                );
-                                            })
-                                        }
-                                    </ul>
-                                ))
+                                            // Format value (if array like amenities)
+                                            const displayValue = Array.isArray(value)
+                                                ? value.join(', ')
+                                                : value;
+
+                                            return (
+                                                <li key={key} className={styles.listItem}>
+                                                    <strong>{label}:</strong> {displayValue}
+                                                </li>
+                                            );
+                                        })
+                                    }
+                                </ul>
+                            ))
                         }
                     </section>
 
                 </div>
-               
+
 
                 <div>
                     <section className={styles.section2}>
                         <h3 className={styles.sectionTitle}>Cancellation Policy</h3>
-                        <ul className={styles.list}>
                             {
-                                hotel.cancellationPolicy.map((item, i) => (
-                                    <li key={i} className={styles.listItem}>{item}</li>
-                                ))
+                                getObjectDataListOrArrayDataList(hotel.cancellationPolicy)
                             }
-                        </ul>
                     </section>
                 </div>
             </div>

@@ -39,6 +39,13 @@
 	padding-bottom: 0.5rem;
 }
 
+.innerContent {
+  display: flex;
+  gap: 20px;
+  /* align-items: center;  */
+}
+  
+
 .overviewDetails {
 	flex-grow: 1;
 }
@@ -69,6 +76,10 @@
 	margin-right: 5px;
 }
 
+.innerData {
+    display: flex;
+    gap: 20px;
+}
 .originalPrice {
 	text-decoration: line-through;
 	color: #6b7280;
@@ -110,6 +121,7 @@
 	cursor: pointer;
 	transition: background-color 0.3s ease, transform 0.2s ease;
 	align-self: flex-start;
+		margin: 1rem 0;
 }
 
 .bookNowButtonHero:hover {
@@ -190,11 +202,11 @@
 	font-weight: 600;
 	transition: all 0.3s ease;
 }
-
+/* 
 .tabButton:hover {
 	background-color: #f97316;
 	color: white;
-}
+} */
 
 .active {
 	background-color: #f97316;
@@ -272,6 +284,7 @@
 
 	.heroGrid {
 		padding: 0;
+		margin: 0 0 2rem;
 	}
 
 

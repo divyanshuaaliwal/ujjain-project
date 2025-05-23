@@ -3,9 +3,11 @@ import Image from 'next/image';
 import { vehiclePackages } from '../Data/vehiclePackagesData';
 import { MapPin, Briefcase, Users } from 'lucide-react';
 import { SectionHeader, Wrapper } from '../MainLayouts';
+import Link from 'next/link';
 
 const Card = ({ tour }) => {
     const {
+        id,
         vehicle_type,
         price_per_person,
         discount,
@@ -13,19 +15,21 @@ const Card = ({ tour }) => {
         luggage,
         total_person_capacity,
         image,
-        booking_url
     } = tour;
 
     return (
         <div className={styles.card}>
-            <div className={styles.imageWrapper}>
-                <Image
-                    src={image}
-                    alt={vehicle_type}
-                    layout="fill"
-                    objectFit="cover"
-                />
-            </div>
+
+            <Link  href={`/vehicles/${id}`}>
+                <div className={styles.imageWrapper}>
+                    <Image
+                        src={image}
+                        alt={vehicle_type}
+                        layout="fill"
+                        objectFit="cover"
+                    />
+                </div>
+             </Link>
             <div className={styles.cardContent}>
                 <h2 className={styles.title}>{vehicle_type}</h2>
                
@@ -52,9 +56,9 @@ const Card = ({ tour }) => {
                     <span className={styles.discount}>{discount.discount_percentage}% OFF</span>
                 </div>
 
-                <a href={booking_url} target="_blank" rel="noopener noreferrer" className={styles.bookNow}>
+                 <Link  href={`/vehicles/${id}`} className={styles.bookNow}>
                     Book Now
-                </a>
+                </Link>
             </div>
         </div>
     );
