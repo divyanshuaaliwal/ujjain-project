@@ -7,11 +7,9 @@ import styles from './page.module.css';
 import { InternalPageHeading, InternalPageWrapper } from '../../MainLayouts';
 import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
-import { Clock, Hotel, Route, Tag, Star, Info, CheckCircle } from 'lucide-react';
+import { Clock, Hotel, Route, Tag, Star, Briefcase, CheckCircle, TrendingUp, Users, Info} from 'lucide-react';
 import { vehiclePackages } from '@/app/Data/vehiclePackagesData';
-import { TrendingUp } from 'lucide-react';
 
-import { Briefcase, Users } from 'lucide-react';
 
 export default function HelicopterTourPage() {
 
@@ -27,16 +25,13 @@ export default function HelicopterTourPage() {
 
     const [showBookingForm, setShowBookingForm] = useState(false);
 
-    const tabs = ['inclusions', 'exclusions', 'notes'];
-    const tabs2 = ['specifications', 'features', 'contact'];
+    const tabs = ['inclusions', 'exclusions', 'notes', 'features', 'contact'];
+
 
     const handleTabChange = (tab) => {
         setActiveTab(tab);
     };
 
-    const handleTabChange2 = (tab2) => {
-        setActiveTab2(tab2);
-    };
 
     const handleBookNow = () => {
         setShowBookingForm(true);
@@ -171,6 +166,10 @@ export default function HelicopterTourPage() {
                             />
                             <span className={styles.ratingValue}>({vehicle.rating})</span>
                         </Stack>
+                         <p className={styles.overviewText}>
+                                                    <Info size={16} className={styles.icon} style={{ marginRight: '6px', verticalAlign: 'middle' }} />
+                                                    {vehicle.overview}
+                                                </p>
                     </div>
 
                     <button onClick={handleBookNow} className={styles.bookNowButtonHero}>
@@ -210,24 +209,9 @@ export default function HelicopterTourPage() {
 
 
                 <div>
-                    <div className={styles.tabContainer}>
-                        {
-                            tabs2.map((tab2) => (
-                                <button
-                                    key={tab2}
-                                    className={`${styles.tabButton} ${activeTab2 === tab2 ? styles.active : ''}`}
-                                    onClick={() => handleTabChange2(tab2)}
-                                >
-                                    {getSubtitle(tab2)}
-                                </button>
-                            ))
-                        }
 
-                    </div>
-
-
-                    <section className={styles.section}>
-                        <h3 className={styles.sectionTitle}>{getSubtitle(activeTab2)}</h3>
+                    <section className={styles.section2}>
+                        <h3 className={styles.sectionTitle}>Specifications</h3>
                         {
                             getObjectDataListOrArrayDataList(vehicle[activeTab2])
                         }
@@ -235,8 +219,8 @@ export default function HelicopterTourPage() {
 
 
                 </div>
-            </div>
 
+            </div>
 
         </InternalPageWrapper>
     );

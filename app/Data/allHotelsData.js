@@ -82,7 +82,7 @@ export const allHotels = [
                 description: "Serves traditional Satvik meals along with continental options"
             },
             {
-                name: "Amrit - Rooftop Café",
+                name: "Amrit - Rooftop Cafe",
                 type: "Beverages & Snacks",
                 description: "Open-air café with panoramic views of Mahakal Temple"
             },
